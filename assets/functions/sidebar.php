@@ -22,9 +22,19 @@ function joints_register_sidebars() {
 	));
 
 	register_sidebar(array(
+		'id' => 'homepage0',
+		'name' => __('Homepage', 'jointswp'),
+		'description' => __('The sidebar for the homepage only. Appears below Global Sidebar', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
 		'id' => 'homepage1',
-		'name' => __('Homepage 1', 'jointswp'),
-		'description' => __('The first column on the homepage.', 'jointswp'),
+		'name' => __('Homepage Left', 'jointswp'),
+		'description' => __('The left column on the homepage.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -33,8 +43,8 @@ function joints_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'homepage2',
-		'name' => __('Homepage 2', 'jointswp'),
-		'description' => __('The second column on the homepage.', 'jointswp'),
+		'name' => __('Homepage Right', 'jointswp'),
+		'description' => __('The right column on the homepage.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

@@ -79,13 +79,16 @@
 						<?php endif; ?>
 			    </section>	 <!-- end #news -->
 			    <section class="row" id="hp-buckets">
-			    	<div class="small-12 large-6 columns hide-for-print" role="navigation"> 
-						<?php get_sidebar('homepage'); ?>
+			    	<div class="small-12 hide-for-print" role="navigation"> 
+						<?php get_sidebar('homepage-column'); ?>
 					</div>
 			    </section>							
 			</main> <!-- end #main -->
 		 	<div class="small-12 large-4 columns hide-for-print" role="navigation"> 
-				<?php get_sidebar(); ?>
+				<?php if ( is_active_sidebar( 'sidebar1' ) ) { ?>
+					<?php get_sidebar(); ?>
+				<?php } ?>
+				<?php get_sidebar('homepage'); ?>
 			</div>		
 		</div> <!-- end #inner-content -->
 
