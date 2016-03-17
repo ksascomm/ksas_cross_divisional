@@ -16,6 +16,11 @@ var gulp  = require('gulp'),
     bless = require('gulp-bless');
     argv = require('yargs').argv;
 
+var config = {
+     sassPath: './resources/sass',
+     bowerDir: './bower_components' 
+}
+
 var URL = 'bicycle.dev/hwgradaffairs';
 
 gulp.task('browser-sync', ['styles'], function() {
@@ -49,6 +54,12 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./assets/css/'))
     .pipe(browserSync.stream({match: './**/*.css'}));
 });   
+
+// Compile Fontawesome fonts, place in /fonts directory
+gulp.task('icons', function() { 
+    return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*') 
+        .pipe(gulp.dest('./assets/fonts')); 
+});
 
 //Create CSS files suitably for Internet Explorer < 10
 gulp.task('bless', function() {
@@ -128,11 +139,11 @@ gulp.task('images', function(cb) {
 
 // Create a default task 
 gulp.task('default', function() {
-  gulp.start('styles', 'site-js', 'foundation-js', 'bless');
+  gulp.start('styles', 'site-js', 'foundation-js', 'bless', 'icons');
 });
 
 // Watch files for changes
-gulp.task('watch', ['styles', 'browser-sync', 'images', 'bless'], function() {
+gulp.task('watch', ['styles', 'browser-sync', 'images', 'bless', 'icons'], function() {
 
   function logFileChange(event) {
     var fileName = require('path').relative(__dirname, event.path);
