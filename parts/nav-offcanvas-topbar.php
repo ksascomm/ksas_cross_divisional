@@ -1,6 +1,5 @@
 <!-- By default, this menu will use off-canvas for small
 	 and a topbar for medium-up -->
-
 <div class="top-bar" id="top-bar-menu">
 
 	<div id="mobile-nav">
@@ -21,9 +20,10 @@
 	</div>
 
 	<div id="desktop-nav">
+
 		<div class="small-12 columns" id="logo_nav">
 			<div class="row">
-				<div id="search-bar" class="small-12 large-3 large-offset-9 columns">
+			<div id="search-bar" class="small-12 large-3 large-offset-9 columns">
 					<?php $theme_option = flagship_sub_get_global_options(); 
 							$collection_name = $theme_option['flagship_sub_search_collection'];
 					?>
@@ -46,6 +46,7 @@
 				</div>	
 			</div>	<!-- End #search-bar	 -->
 			<div class="row">
+
 				<div class="small-12 large-3 columns">
 					<div class="logo">
 						<a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">
