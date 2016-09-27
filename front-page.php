@@ -26,7 +26,7 @@
 			    
 			    <?php endwhile; endif; ?>
 
-			   
+			   <h3><?php echo $theme_option['flagship_sub_feed_name']; ?></h3>
 			    <?php  //News Query		
 					$news_query_cond = $theme_option['flagship_sub_news_query_cond'];
 					$news_quantity = $theme_option['flagship_sub_news_quantity']; 

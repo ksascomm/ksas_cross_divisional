@@ -9,7 +9,5 @@
 		<?php the_post_thumbnail('full'); ?>
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
-						
-								
 													
 </article> <!-- end article -->

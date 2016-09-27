@@ -25,11 +25,16 @@ h1, h2, h3 {
 }
 
 
-h4, h5, h6, .semibold {
+h4, h5, h6, .semibold, blockquote {
   font-family: $font-subhead;
   font-weight: 400;
   font-style: normal;
 }
+
+blockquote, blockquote p {
+	color: $black;
+}
+
 
 .iconfont {
 	font-family:'flagship-icon';
@@ -122,6 +127,19 @@ a, a:visited {
 	}
 }
 
+#main {
+	a {
+	border-bottom: .125em dotted;
+	border-bottom-color: rgba(0,0,0,.2);
+		&:hover, &:active {
+		  color: $black;
+		  border-bottom-style: solid;
+		}
+	}
+}
+
+
+
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -199,7 +217,7 @@ HEADER STYLES
 			 	color: #fff;
 			 	margin-bottom: 1px;
 			 	display: block;
-		    	line-height: 1em;
+		    	line-height: 1.3;
 		 	}
 		 	a, a:visited {
 		 		color: #fff;
@@ -834,7 +852,6 @@ SIDEBARS & ASIDES
 		margin: 0;
 
 		li {
-			list-style: none;
 
 			&:first-child {}
 
@@ -847,6 +864,10 @@ SIDEBARS & ASIDES
 
 		}
 	}
+}
+
+.textwidget {
+	margin-bottom: 15px;
 }
 /*********************
 FOOTER STYLES

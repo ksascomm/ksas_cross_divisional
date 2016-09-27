@@ -3,6 +3,7 @@
 require_once(get_template_directory().'/assets/functions/theme-support.php');
 require_once(get_template_directory().'/assets/functions/theme-options.php'); 
 require_once(get_template_directory().'/assets/functions/theme-options-init.php'); 
+require_once(get_template_directory().'/assets/functions/page_metabox.php'); 
 
 // WP Head and other cleanup functions
 require_once(get_template_directory().'/assets/functions/cleanup.php'); 
