@@ -12,7 +12,7 @@
 					  			</div>
 					  		</div>
 					  		<div class="row">
-						  		<?php global $blog_id; if ($blog_id == 76) : ?>
+						  		<?php global $blog_id; if ($blog_id == 93) : ?>
 	   
 								  		<div class="small-12 medium-4 columns">
 							  				<a href="http://www.jhu.edu" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" alt="Johns Hopkins University"/></a>
