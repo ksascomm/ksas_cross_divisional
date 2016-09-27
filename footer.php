@@ -12,9 +12,25 @@
 					  			</div>
 					  		</div>
 					  		<div class="row">
-						  		<div class="small-12 small-centered medium-4 columns">
-					  				<a href="http://www.jhu.edu"><img src="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" /></a>
-					  			</div>
+						  		<?php global $blog_id; if ($blog_id == 76) : ?>
+	   
+								  		<div class="small-12 medium-4 columns">
+							  				<a href="http://www.jhu.edu" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" alt="Johns Hopkins University"/></a>
+							  			</div>
+							  			<div class="small-12 medium-4 columns">
+							  				<a href="http://www.press.jhu.edu" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/press.png" alt="University Press"/></a>
+							  			</div>
+							  			<div class="small-12 medium-4 columns">
+							  				<a href="http://www.krieger.jhu.edu" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.png" alt="Krieger School"/></a>
+							  			</div>
+
+									<?php  else : ?>
+		   
+								  		<div class="small-12 small-centered medium-4 columns">
+							  				<a href="http://www.jhu.edu" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" alt="Johns Hopkins University"/></a>
+							  			</div>
+							  			
+								<?php endif; ?>
 					  		</div>
 						</div> <!-- end #inner-footer -->
 					</footer> <!-- end .footer -->
