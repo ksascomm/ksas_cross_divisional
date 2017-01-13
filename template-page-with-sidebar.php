@@ -24,8 +24,6 @@ Template Name: Page with Sidebar
 				
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 					
-					<?php get_sidebar(); ?>
-
 					<!-- Page Specific Sidebar -->
 					<?php if ( have_posts()) : while ( have_posts() ) : the_post(); 
 						$sidebar = get_post_meta($post->ID, 'ecpt_page_sidebar', true);
