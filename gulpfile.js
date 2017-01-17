@@ -21,7 +21,7 @@ var config = {
      bowerDir: './bower_components' 
 }
 
-var URL = 'bicycle.dev/hwgradaffairs';
+var URL = 'pineapple.dev/';
 
 gulp.task('browser-sync', ['styles'], function() {
 

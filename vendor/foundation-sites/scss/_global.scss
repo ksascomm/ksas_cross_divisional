@@ -2,17 +2,19 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
+// scss-lint:disable ColorVariable, QualifyingElement, VendorPrefix
+
 ////
 /// @group global
 ////
 
-/// Global width of your site. Used by the grid to determine row width.
-/// @type Number
-$global-width: rem-calc(1200) !default;
-
 /// Font size attribute applied to `<html>` and `<body>`. We use 100% by default so the value is inherited from the user's browser settings.
 /// @type Number
 $global-font-size: 100% !default;
+
+/// Global width of your site. Used by the grid to determine row width.
+/// @type Number
+$global-width: rem-calc(1200) !default;
 
 /// Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px
 /// @type Number
@@ -108,7 +110,7 @@ $foundation-colors: (
   success: $success-color,
   alert: $alert-color,
   warning: $warning-color,
-);
+) !default;
 
 @mixin foundation-global-styles {
   @include -zf-normalize;
@@ -118,8 +120,7 @@ $foundation-colors: (
     font-family: '#{-zf-bp-serialize($breakpoints)}';
   }
 
-  html,
-  body {
+  html {
     font-size: $global-font-size;
     box-sizing: border-box;
   }
@@ -192,6 +193,15 @@ $foundation-colors: (
     border: 0;
     border-radius: $global-radius;
     line-height: 1;
+  }
+
+  // Internal classes to show/hide elements in JavaScript
+  .is-visible {
+    display: block !important;
+  }
+
+  .is-hidden {
+    display: none !important;
   }
 }
 
@@ -571,13 +581,14 @@ $foundation-colors: (
 
   /**
    * Define consistent border, margin, and padding.
+   * [NOTE] We don't enable this ruleset in Foundation, because we want the <fieldset> element to have plain styling.
    */
 
-  fieldset {
+  /* fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
-  }
+  } */
 
   /**
    * 1. Correct `color` not being inherited in IE 8/9/10/11.
