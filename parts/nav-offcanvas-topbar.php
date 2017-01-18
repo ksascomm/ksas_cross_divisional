@@ -8,7 +8,8 @@
 	        <div class="small-12 columns">
 	  			<div class="mobile-logo">
 	  				<a href="<?php echo network_site_url(); ?>">
-	  					<?php global $blog_id; if ($blog_id == 93) : ?>
+	  					<?php global $blog_id; $os = array(93,125);
+ 						if (in_array($blog_id, $os)) :?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="jhu logo">
 	  					<?php else : ?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.png" alt="jhu logo">
@@ -40,7 +41,8 @@
 				<div class="small-12 medium-4 large-3 columns">
 					<div class="logo">
 						<a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">
-	  					<?php global $blog_id; if ($blog_id == 93) : ?>
+	  					 <?php global $blog_id; $os = array(93,125);
+ 						if (in_array($blog_id, $os)) :?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu.png" alt="jhu logo">
 	  					<?php else : ?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo.png" alt="jhu logo">
