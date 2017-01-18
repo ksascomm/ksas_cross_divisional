@@ -10,7 +10,7 @@
 		        	//Get the top-level page slug for sidebar/widget content conditionals
 					$ancestor_id = ($ancestors) ? $ancestors[count($ancestors)-1]: $post->ID;
 			        $the_ancestor = get_page( $ancestor_id );
-			        $ancestor_url = $the_ancestor->guid;
+			        $ancestor_url = get_permalink($post->post_parent);
 			        $ancestor_title = $the_ancestor->post_title;
 		     //If there are no ancestors display a menu of children
 						?>						
