@@ -61,11 +61,12 @@ ul.nav {
     padding: 10px 0 8px 0px;
     font-size: 1.1rem;
     ul li {
-      border-top: none;
+     border-top: none;
      font-size: 1rem;
-      padding: 5px 0 0px 5px;
-      text-indent: -15px;
-      margin-left: 15px;
+     padding: 5px 0 0px 5px;
+     text-indent: -15px;
+     margin-left: 15px;
+     list-style: none;
       &:before {
         content: "\e010";
         font-family: 'flagship-icon';
@@ -129,12 +130,15 @@ a, a:visited {
 
 #main {
 	a {
-	border-bottom: .125em dotted;
-	border-bottom-color: rgba(0,0,0,.2);
+		border-bottom: .125em dotted;
+		border-bottom-color: rgba(0,0,0,.2);
 		&:hover, &:active {
-		  color: $black;
-		  border-bottom-style: solid;
+		  	color: $black;
+		  	border-bottom-style: solid;
 		}
+	}
+	ul.accordion a.accordion-title {
+	  border-bottom: 1px solid #e6e6e6;
 	}
 }
 
