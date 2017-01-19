@@ -6242,7 +6242,7 @@ body {
   font-family: "gentona-light", Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 110%; }
+  font-size: 112.5%; }
 
 h1, h2, h3 {
   font-family: "quadon", Arial, sans-serif;
@@ -6343,6 +6343,9 @@ a, a:visited {
 #main ul.accordion a.accordion-title {
   border-bottom: 1px solid #e6e6e6; }
 
+#main ul {
+  margin-left: 2rem; }
+
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -6350,13 +6353,13 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none; }
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 1.35rem; }
 
 .page-title, .entry-title.single-title {
-  font-size: 2.35rem; }
+  font-size: 2rem; }
 
 .article-header h2 {
-  font-size: 2rem; }
+  font-size: 1.5rem; }
 
 /*********************
 HEADER STYLES
@@ -6556,6 +6559,17 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.news-feed {
+  padding: 10px; }
+  .news-feed h1 {
+    font-size: 1.5rem; }
+    .news-feed h1.entry-title {
+      font-size: 1.25rem;
+      font-family: "gentona-book", Arial, sans-serif; }
+  .news-feed h2 {
+    font-size: 1.25rem;
+    font-family: "gentona-book", Arial, sans-serif; }
+
 #content #inner-content {
   padding: 1rem 0rem; }
 
@@ -6571,7 +6585,8 @@ POSTS & CONTENT STYLES
   padding: 0px; }
 
 .byline {
-  color: #999; }
+  font-family: "gentona-book", Arial, sans-serif;
+  margin-bottom: 0rem; }
 
 .entry-content img {
   max-width: 100%;
@@ -6769,6 +6784,8 @@ SIDEBARS & ASIDES
 
 .textwidget {
   margin-bottom: 15px; }
+  .textwidget ul {
+    margin-left: 1rem; }
 
 /*********************
 FOOTER STYLES

@@ -4,15 +4,16 @@
 
 		<div id="inner-content" class="row">
 	
-			<main id="main" class="large-8 medium-8 columns first" role="main">
-				<header>
-					<h1 class="archive-title"><?php _e('Search Results for:', 'jointstheme'); ?> <?php echo esc_attr(get_search_query()); ?></h1>
-				</header>
+			<main id="main" class="small-12 large-9 large-push-1 columns" role="main">
+				<h1 class="page-title">
+					<?php _e('Search Results for:', 'jointstheme'); ?> 
+					<?php echo esc_attr(get_search_query()); ?>
+				</h1>
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
+					<?php get_template_part( 'parts/loop', 'search-results' ); ?>
 				    
 				<?php endwhile; ?>	
 
@@ -25,8 +26,6 @@
 			    <?php endif; ?>
 	
 		    </main> <!-- end #main -->
-		
-		    <?php get_sidebar(); ?>
 		
 		</div> <!-- end #inner-content -->
 

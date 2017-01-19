@@ -15,7 +15,7 @@ body {
   font-family: $font-stack;
   font-weight: 300;
   font-style: normal;
-  font-size: $global-font-size * 1.1
+  font-size: $global-font-size * 1.125
 }
 
 h1, h2, h3 {
@@ -140,6 +140,9 @@ a, a:visited {
 	ul.accordion a.accordion-title {
 	  border-bottom: 1px solid #e6e6e6;
 	}
+	ul {
+	margin-left: 2rem;
+	}
 }
 
 
@@ -164,7 +167,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 1.75rem;
+	font-size: 1.35rem;
 }
 
 h4, .h4 {
@@ -176,12 +179,12 @@ h5, .h5 {
 }
 
 .page-title, .entry-title.single-title {
-	font-size: 2.35rem;
+	font-size: 2rem;
 }
 
 .article-header {
 	h2 {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 }
 
@@ -452,6 +455,22 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+
+.news-feed {
+  padding: 10px;
+  	h1 {
+	  font-size: 1.5rem;
+	  &.entry-title {
+	    font-size: 1.25rem;
+	    font-family: $font-subhead;
+	  }
+	}
+   h2 {
+		font-size: 1.25rem;
+		font-family: $font-subhead;
+   }
+}
+
 #content {
 	#inner-content {
 		padding: 1rem 0rem;
@@ -492,7 +511,8 @@ POSTS & CONTENT STYLES
 
 // Post meta  
 .byline {
-	color: #999;
+	font-family: $font-subhead;
+	margin-bottom: 0rem;
 	time {}
 }
 
@@ -872,6 +892,9 @@ SIDEBARS & ASIDES
 
 .textwidget {
 	margin-bottom: 15px;
+	ul {
+		margin-left: 1rem;
+	}
 }
 /*********************
 FOOTER STYLES

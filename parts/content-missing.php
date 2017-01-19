@@ -14,9 +14,6 @@
 		    <p><?php get_search_form(); ?></p>
 		</section> <!-- end search section -->
 		
-		<footer class="article-footer">
-			<p><?php _e("This is the error message in the parts/missing-content.php template.", "jointstheme"); ?></p>
-		</footer>
 		
 	<?php else: ?>
 	
@@ -31,10 +28,6 @@
 		<section class="search">
 		    <p><?php get_search_form(); ?></p>
 		</section> <!-- end search section -->
-		
-		<footer class="article-footer">
-		  <p><?php _e("This is the error message in the parts/missing-content.php template.", "jointstheme"); ?></p>
-		</footer>
 			
 	<?php endif; ?>
 	

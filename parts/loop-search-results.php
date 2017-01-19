@@ -8,7 +8,9 @@
 					
 	<div class="entry-content" itemprop="articleBody">
 		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
-		<?php the_content('<button class="tiny">Read more...</button>'); ?>
+		<?php $content = get_the_content();
+  		$trimmed_content = wp_trim_words( $content, 60, '[...]' ); ?>
+  		<p><?php echo $trimmed_content; ?></p>
 	</div> <!-- end article section -->
 								    						
 </article> <!-- end article -->

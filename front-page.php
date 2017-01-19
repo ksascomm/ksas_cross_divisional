@@ -19,14 +19,18 @@
 		<div id="inner-content" class="row">
 
 		    <main id="main" class="small-12 large-8 columns" role="main">
-				 
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			    	<?php get_template_part( 'parts/loop', 'page' ); ?>
-			    
-			    <?php endwhile; endif; ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			   <h3><?php echo $theme_option['flagship_sub_feed_name']; ?></h3>
+					<?php $frontpagecontent = the_content(); if($frontpagecontent != '') : ?>
+
+						<?php the_content(); ?>	
+
+					<?php endif; ?>
+					
+				<?php endwhile; endif; ?>	
+
+			   
 			    <?php  //News Query		
 					$news_query_cond = $theme_option['flagship_sub_news_query_cond'];
 					$news_quantity = $theme_option['flagship_sub_news_quantity']; 
@@ -34,14 +38,6 @@
 						if ($news_query_cond === 1) {
 							$news_query = new WP_Query(array(
 								'post_type' => 'post',
-								'tax_query' => array(
-									array(
-										'taxonomy' => 'category',
-										'field' => 'slug',
-										'terms' => array( 'books' ),
-										'operator' => 'NOT IN'
-									)
-								),
 								'posts_per_page' => $news_quantity)); 
 						} else {
 							$news_query = new WP_Query(array(
@@ -50,23 +46,36 @@
 						}
 					set_transient( 'news_mainpage_query', $news_query, 2592000 );
 					} 	
-				if ( $news_query->have_posts() ) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
-					
-						<?php get_template_part( 'parts/loop', 'news' ); ?>
+				if ( $news_query->have_posts() ) : ?>
+
+				<div class="news-feed">
+
+					<h3><?php echo $theme_option['flagship_sub_feed_name']; ?></h3>
+
+					<?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
 						
+							<?php get_template_part( 'parts/loop', 'news' ); ?>
+							
 					<?php endwhile; ?>
-						 <div class="row">
+
+					 <div class="row">
+						<h5 class="black">
 							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-								<h5 class="black">View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h5>
+								View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive
 							</a>
-						</div>
-				<?php endif; ?>
-			 
-			    <section class="row" id="hp-buckets">
-			    	<div class="small-12 hide-for-print" role="complementary"> 
-						<?php get_sidebar('homepage-column'); ?>
+						</h5>
 					</div>
-			    </section>							
+
+				<?php endif; ?>
+
+				 	<?php if ( is_active_sidebar( 'homepage-column' ) ) : ?>
+					    <div class="row" id="hp-buckets">
+					    	<div class="small-12 hide-for-print" role="complementary"> 
+								<?php get_sidebar('homepage-column'); ?>
+							</div>
+					    </div>
+				    <?php endif;?>
+			    </div>							
 			</main> <!-- end #main -->
 		 	<div class="small-12 large-4 columns hide-for-print" role="complementary"> 
 				<?php if ( is_active_sidebar( 'sidebar1' ) ) { ?>

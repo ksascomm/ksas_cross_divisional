@@ -1,16 +1,19 @@
-<section class="news" role="article">
-	<h4><?php echo $theme_option['flagship_sub_feed_name']; ?></h4>
-		<div class="row">		
-			<article class="small-12 columns">
-					<a href="<?php the_permalink(); ?>">
-						<h6><?php the_date(); ?></h6>
-						<h5 class="black"><?php the_title();?></h5>
-						<?php if ( has_post_thumbnail()) { ?> 
-							<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-						<?php } ?>
-					</a>
-						<?php the_excerpt(); ?>
-					<hr>
-			</article>
-		</div>
- </section>	 <!-- end #news -->	
+<article <?php post_class(''); ?> itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="post-<?php the_ID(); ?>">
+						
+	<header class="article-header" aria-label="<?php the_title();?>">	
+		<?php get_template_part( 'parts/content', 'byline' ); ?>
+		<h1 class="entry-title single-title" itemprop="headline">
+			<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">
+				<?php the_title();?>
+			</a>
+		</h1>
+    </header> <!-- end article header -->
+					
+    <div class="entry-content" itemprop="articleBody">
+		<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+		<?php the_excerpt(); ?>
+	</div> <!-- end article section -->
+						
+	<hr>							
+													
+</article> <!-- end article -->
