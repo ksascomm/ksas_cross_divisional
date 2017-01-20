@@ -53,7 +53,8 @@ function joints_register_sidebars() {
 
 	register_sidebar( array(
 		'name' => 'Sidebar 1',
-		'id' => 'sidebar-1',			
+		'id' => 'sidebar-1',
+		'description' => __('Sidebar #1. Call this sidebar on each page you want it to appear', 'jointswp'),			
 		'before_widget' => '<div id="%1$s" class="sidebar widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -61,7 +62,8 @@ function joints_register_sidebars() {
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 2',
-		'id' => 'sidebar-2',			
+		'id' => 'sidebar-2',
+		'description' => __('Sidebar #2. Call this sidebar on each page you want it to appear', 'jointswp'),				
 		'before_widget' => '<div id="%1$s" class="sidebar widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -69,7 +71,8 @@ function joints_register_sidebars() {
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 3',
-		'id' => 'sidebar-3',			
+		'id' => 'sidebar-3',
+		'description' => __('Sidebar #3. Call this sidebar on each page you want it to appear', 'jointswp'),				
 		'before_widget' => '<div id="%1$s" class="sidebar widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -77,7 +80,8 @@ function joints_register_sidebars() {
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 4',
-		'id' => 'sidebar-4',			
+		'id' => 'sidebar-4',
+		'description' => __('Sidebar #4. Call this sidebar on each page you want it to appear', 'jointswp'),				
 		'before_widget' => '<div id="%1$s" class="sidebar widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -85,7 +89,8 @@ function joints_register_sidebars() {
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 5',
-		'id' => 'sidebar-5',			
+		'id' => 'sidebar-5',
+		'description' => __('Sidebar #5. Call this sidebar on each page you want it to appear', 'jointswp'),				
 		'before_widget' => '<div id="%1$s" class="sidebar widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -93,7 +98,8 @@ function joints_register_sidebars() {
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 6',
-		'id' => 'sidebar-6',			
+		'id' => 'sidebar-6',
+		'description' => __('Sidebar #6. Call this sidebar on each page you want it to appear', 'jointswp'),				
 		'before_widget' => '<div id="%1$s" class="sidebar widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -101,7 +107,8 @@ function joints_register_sidebars() {
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 7',
-		'id' => 'sidebar-7',			
+		'id' => 'sidebar-7',
+		'description' => __('Sidebar #7. Call this sidebar on each page you want it to appear', 'jointswp'),				
 		'before_widget' => '<div id="%1$s" class="sidebar widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

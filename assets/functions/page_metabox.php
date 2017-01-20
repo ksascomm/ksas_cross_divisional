@@ -10,7 +10,7 @@ $page_sidebar_metabox = array(
 
 				array(
 					'name' 			=> 'Sidebar Content',
-					'desc' 			=> 'Choose which sidebar you would like to display if you are using the Page with Sidebar template',
+					'desc' 			=> '<br> Choose which sidebar widget # you want to display (must be using Page with Sidebar template)',
 					'id' 			=> 'ecpt_page_sidebar',
 					'class' 		=> 'ecpt_page_sidebar',
 					'type' 			=> 'select',

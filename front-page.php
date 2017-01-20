@@ -67,22 +67,34 @@
 					</div>
 				</div>
 				<?php endif; ?>
-				<?php if ( is_active_sidebar( 'homepage-column' ) ) : ?>
+				<?php if ( is_active_sidebar( 'homepage1' ) && is_active_sidebar( 'homepage2' )  ) : ?>
 				    <div class="row" id="hp-buckets">
-				    	<div class="small-12 hide-for-print" role="complementary"> 
-							<?php get_sidebar('homepage-column'); ?>
+				    	<div class="small-6 columns hide-for-print" role="complementary">
+				    		<div class="primary callout">
+				    			<?php dynamic_sidebar('homepage1'); ?>
+				    		</div> 
+						</div>
+						<div class="small-6 columns hide-for-print" role="complementary">
+							<div class="primary callout">
+				    			<?php dynamic_sidebar('homepage2'); ?>
+				    		</div> 
 						</div>
 				    </div>
 				<?php endif;?>
 
-			   	<div class="small-12 large-4 columns hide-for-print" role="complementary"> 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) { ?>
-						<?php get_sidebar(); ?>
-					<?php } ?>
-					<?php get_sidebar('homepage'); ?>
-				</div>
-											
-			</main> <!-- end #main -->		
+			</main> <!-- end #main -->	
+
+			
+				<?php if ( is_active_sidebar( 'sidebar1' ) || is_active_sidebar('homepage0')  ) : ?>
+					<aside class="sidebar small-12 large-4 columns hide-for-print" id="sidebar1"> 
+						<?php dynamic_sidebar( 'sidebar1' ); ?>
+						<hr>
+						<?php dynamic_sidebar( 'homepage0' ); ?>
+					</aside>
+				<?php endif; ?>
+
+
+
 		</div> <!-- end #inner-content -->
 
 	</div> <!-- end #content -->
