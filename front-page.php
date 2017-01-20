@@ -88,7 +88,9 @@
 				<?php if ( is_active_sidebar( 'sidebar1' ) || is_active_sidebar('homepage0')  ) : ?>
 					<aside class="sidebar small-12 large-4 columns hide-for-print" id="sidebar1"> 
 						<?php dynamic_sidebar( 'sidebar1' ); ?>
-						<hr>
+							<?php if ( is_active_sidebar( 'sidebar1' ) && is_active_sidebar('homepage0')  ) : ?>
+								<hr>
+							<?php endif; ?>
 						<?php dynamic_sidebar( 'homepage0' ); ?>
 					</aside>
 				<?php endif; ?>
