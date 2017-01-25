@@ -3,7 +3,7 @@
 	<!-- Start Navigation for Sibling Pages -->	
 	<?php 
 		wp_reset_query();
-		if( is_page() || is_singular() || is_tax() ) { 
+		if( is_page() || is_singular() || is_tax() || is_home() ) { 
 			global $post;
 				$the_id = $post->ID;
 		        $ancestors = get_post_ancestors( $post->ID ); // Get the array of ancestors
@@ -15,7 +15,13 @@
 		     //If there are no ancestors display a menu of children
 						?>						
 					<div class="offset-gutter" id="sidebar_header">
-						<h5 class="grey">Also in <a href="<?php echo $ancestor_url;?>" class="white bold"><?php echo $ancestor_title; ?></a></h5>
+						<h5 class="grey">Also in 
+						<?php if (is_home()) :?>
+							<a href="<?php echo site_url(); ?>/about" class="white bold">About</a>
+						<?php else : ?>
+							<a href="<?php echo $ancestor_url;?>" class="white bold"><?php echo $ancestor_title; ?></a>
+						<?php endif;?>
+						</h5>
 					</div>
 					<?php 
 						wp_nav_menu( array( 
@@ -25,7 +31,7 @@
 							'sub_menu' => true,
 						));
 					} ?>
-					
+	
 <!-- End Sidebar -->
 </div>
 

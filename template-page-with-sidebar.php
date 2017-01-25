@@ -10,7 +10,7 @@ Template Name: Page with Sidebar
 	
 		<div id="inner-content" class="row">
 	
-		    <main id="main" class="small-12 large-8 large-push-4 columns" role="main">
+		    <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
 	
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -20,7 +20,7 @@ Template Name: Page with Sidebar
 				
 			</main> <!-- end #main -->
 		    
-		    <div class="small-12 large-4 large-pull-8 columns hide-for-print" role="navigation"> 
+		    <div class="small-12 large-3 large-pull-9 columns hide-for-print" role="navigation"> 
 				
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 					

@@ -18,14 +18,14 @@ body {
   font-size: $global-font-size * 1.125
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: $font-header;
   font-weight: 400;
   font-style: normal;
 }
 
 
-h4, h5, h6, .semibold, blockquote {
+h3, h4, h5, h6, .semibold, blockquote {
   font-family: $font-subhead;
   font-weight: 400;
   font-style: normal;
@@ -59,7 +59,7 @@ ul.nav {
   list-style: none;
   li {
     padding: 10px 0 8px 0px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     ul li {
      border-top: none;
      font-size: 1rem;
@@ -140,11 +140,22 @@ a, a:visited {
 	ul.accordion a.accordion-title {
 	  border-bottom: 1px solid #e6e6e6;
 	}
-	ul {
+	ul, ol {
 	margin-left: 2rem;
 	}
 }
 
+
+.textwidget {
+	p a, ul a {
+		border-bottom: .125em dotted;
+		border-bottom-color: rgba(0,0,0,.2);
+		&:hover, &:active {
+		  	color: $black;
+		  	border-bottom-style: solid;
+		}
+	}
+}
 
 
 /*********************
@@ -158,29 +169,31 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	}
 }
 
-h1, .h1 {
+h1, .h1, .page-title, .entry-title.single-title {
+	font-size: 2rem;
+} 
 
-}
 
 h2, .h2 {
-
+font-size: 1.8rem;
+line-height: 1.3;
 }
 
 h3, .h3 {
-	font-size: 1.35rem;
+font-size: 1.6rem;
+line-height: 1.25;
 }
 
 h4, .h4 {
-	
+font-size: 1.4rem;
+line-height: 1.2;
 }
 
 h5, .h5 {
-
+font-size: 1.2rem;
 }
 
-.page-title, .entry-title.single-title {
-	font-size: 2rem;
-}
+
 
 .article-header {
 	h2 {
@@ -317,6 +330,83 @@ NAVIGATION STYLES
 	}
 }
 
+body.black {
+	.top-bar, #sidebar_header {
+		background-color: $black;
+		ul {
+			background-color: $black;
+			li {
+				background-color: $black;
+			}
+		}
+		.is-dropdown-submenu-parent.is-down-arrow > a::after {
+			border-color: #fff transparent transparent;
+		}
+	}
+	.sidebar .nav {
+		a {
+			color: $black;
+		}
+	}
+}
+body.green {
+	.top-bar, #sidebar_header {
+		background-color: $green;
+		ul {
+			background-color: $green;
+			li {
+				background-color: $green;
+			}
+		}
+		.is-dropdown-submenu-parent.is-down-arrow > a::after {
+			border-color: #fff transparent transparent;
+		}
+	}
+	.sidebar .nav {
+		a {
+			color: $green;
+		}
+	}
+}
+body.red {
+	.top-bar, #sidebar_header {
+		background-color: $red;
+		ul {
+			background-color: $red;
+			li {
+				background-color: $red;
+			}
+		}
+		.is-dropdown-submenu-parent.is-down-arrow > a::after {
+			border-color: #fff transparent transparent;
+		}
+	}
+	.sidebar  .nav {
+		a {
+			color: $red;
+		}
+	}
+}
+body.rust {
+	.top-bar, #sidebar_header {
+		background-color: $rust;
+		ul {
+			background-color: $rust;
+			li {
+				background-color: $rust;
+			}
+		}
+		.is-dropdown-submenu-parent.is-down-arrow > a::after {
+			border-color: #fff transparent transparent;
+		}
+	}
+	.sidebar  .nav {
+		a {
+			color: $rust;
+		}
+	}
+}
+
 .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
     border-color: transparent transparent transparent #fff;
 }
@@ -337,16 +427,16 @@ NAVIGATION STYLES
 }
 
 .sidebar {
-	background: #E5E2E0;
-	padding: 20px 20px 1px 20px;
-		@include breakpoint (medium) {
+	background: $grey;
+	padding: 0px 20px 1px 20px;
+		@include breakpoint (large) {
 			margin-bottom: 25px;	
 		}
 		h5 {
 			padding-left:20px;
 			margin-top:0;
 			margin-bottom:0;
-			color: #e5e2e0;
+			color: $grey;
 			 a {
 			 	color: #fff;
 			 }
@@ -367,13 +457,7 @@ NAVIGATION STYLES
 
 .sidebar.sidebar-right {
 	padding-top:0;
-	background: #e5e2e0;
-}
-
-
-.sidebar_bg ul.nav li a,.sidebar li a {
-	font-family: 'gentona-book', Arial, sans-serif;
-	color:$primary-color;
+	background: $grey;
 }
 
 .offset-gutter {
@@ -383,68 +467,42 @@ NAVIGATION STYLES
 }
 
 #search-bar {
-  background: #333;
-  border-radius: 10px;
-  color: #ccc;
-  text-transform: uppercase;
-  font-family: 'quadon', Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 5px;
-  margin-bottom: -30px;
-  .columns {
-    padding: 0;
-  }
-  a {
-    color: #FFF;
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
-  .links {
-    margin-top: inherit;
-  }
+	@include breakpoint (large) {
+		margin-top: 3.4rem;
+	}
+	@include breakpoint (small) {
+		margin-top: 1rem;
+	}	
+	background: #333;
+	color: #ccc;
+	font-family: $font-header;
+	input {
+		&[type="text"] {
+		    height: 31px;
+		    background: rgb(255, 255, 255);
+		    background: rgba(255, 255, 255, 0.75);
+		    border-top-right-radius: .5rem;
+		    border-bottom-right-radius: .5rem;
+		    float: left;
+		    width: 87%;
+		    border: none;
+		  }
+		  &[type="submit"] {
+		    background: #666;
+		    height: 31px;
+		    width: 30px;
+		    font-family: 'flagship-icon';
+		    border-top-left-radius: .5rem;
+		    border-bottom-left-radius: .5rem;
+		    font-size: 1rem;
+		    border: none;
+		    float: left;
+		    color: #ccc;
+		    margin-left: -15px;
+		  }
+		}
 }
 
-
-.links li {
-  list-style: none;
-  display: inline;
-  &:after {
-    content: " | ";
-  }
-  &:last-child:after {
-    content: "";
-  }
-}
-
-#search-bar input {
-  &[type="text"] {
-    height: 31px;
-    margin-bottom: 0px;
-    background: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0.75);
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    display: inline;
-    float: left;
-    width: 87%;
-    border: none;
-  }
-  &[type="submit"] {
-    background: #666;
-    height: 31px;
-    width: 30px;
-    font-family: 'flagship-icon';
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    font-size: 16px;
-    border: none;
-    float: left;
-    padding: 0;
-    color: #ccc;
-    margin-left: -15px;
-  }
-}
 
 @media screen and (max-width: 39.9375em) {
 	.menu > li:not(.menu-text) > a {
@@ -478,12 +536,15 @@ POSTS & CONTENT STYLES
 }
 
 .hero {
-	background: #E5E2E0;
+	background: $grey;
 }
 
 #caption {
-	@include breakpoint (medium) {
+	@include breakpoint (large) {
 		margin-top: 4em;
+	}
+	@include breakpoint (medium) {
+		margin-top: 2em;
 	}
 }
 
@@ -577,6 +638,8 @@ POSTS & CONTENT STYLES
 .post-password-form input[type="submit"] {
 	@include button;
 }
+
+
 
 /*********************
 IMAGE GALLERY STYLES
@@ -890,10 +953,17 @@ SIDEBARS & ASIDES
 	}
 }
 
-.textwidget {
+.widget_text {
+	.widgettitle {
+		padding-top:5px;
+	}
+	.textwidget {
+	padding-top: 15px;
 	margin-bottom: 15px;
-	ul {
-		margin-left: 1rem;
+	font-size: 1rem;
+		ul {
+			margin-left: 1rem;
+		}
 	}
 }
 /*********************
@@ -977,7 +1047,7 @@ footer {
       width: 80%;
       background: #4a484c;
       color: #ccc;
-      font-family: 'quadon', Arial, sans-serif;
+      font-family: $font-header;
       font-size: 16px;
       border: none;
     }

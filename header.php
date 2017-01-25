@@ -48,8 +48,8 @@
 	</head>
 	
 	<!-- Uncomment this line if using the Off-Canvas Menu --> 
-		
-	<body <?php body_class(); ?>>
+	<?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme'];?>
+	<body <?php body_class($color_scheme); ?>>
 
 		<div class="off-canvas-wrapper">
 			

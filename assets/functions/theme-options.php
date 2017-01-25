@@ -13,7 +13,6 @@ function flagship_sub_options_page_sections() {
 	$sections['select_section'] 	= __('Content Options', 'flagship_sub_textdomain');
 	$sections['footer_section'] 	= __('Footer Options', 'flagship_sub_textdomain');
 	$sections['technical_section'] 	= __('Technical Options', 'flagship_sub_textdomain');
-	$sections['directory_section']  = __('Directory Search Options', 'flagship_sub_textdomain');
 	return $sections;	
 }
 
@@ -43,15 +42,6 @@ function flagship_sub_options_page_fields() {
 		"type"    => "text",
 		"class"   => "numeric",
 		"std"    => "");
-	$options[2] =
-	array (		
-		"section" => "homepage_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_slider_style",
-		"title"   => __( 'Homepage slider style', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Choose to have a horizontal or vertical caption on your slider', 'flagship_sub_textdomain' ),
-		"type"    => "select",
-		"choices" => array("horizontal", "vertical"),
-		"std"    => "vertical");
 	$options[3] =
 	array (		
 		"section" => "select_section",
@@ -60,14 +50,6 @@ function flagship_sub_options_page_fields() {
 		"desc"    => __( 'Do you want breadcrumb navigation on your subpages?', 'flagship_sub_textdomain' ),
 		"type"    => "checkbox",
 		"std"    => "1");
-	$options[4] =
-	array (		
-		"section" => "directory_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_directory_search",
-		"title"   => __( 'Directory Search', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Do you want a search box for your people directory?', 'flagship_sub_textdomain' ),
-		"type"    => "checkbox",
-		"std"    => "1");	
 	$options[5] =
 	array (		
 		"section" => "select_section",
@@ -86,41 +68,6 @@ function flagship_sub_options_page_fields() {
 		"type"    => "text",
 		"class"   => "nohtml",
 		"std"    => "UA-40512757-1");
-	$options[7] =
-	array (		
-		"section" => "technical_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_search_collection",
-		"title"   => __( 'GSA Collection', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Enter the name of the google search appliance collection', 'flagship_sub_textdomain' ),
-		"type"    => "text",
-		"class"   => "nohtml",
-		"std"    => "krieger_collection");
-	$options[8] =
-	array (		
-		"section" => "select_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_calendar_address",
-		"title"   => __( 'Calendar URL', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Enter the URL of your Site Executive calendar instance', 'flagship_sub_textdomain' ),
-		"type"    => "text",
-		"class"   => "nohtml",
-		"std"    => "");		
-	$options[9] =
-	array (		
-		"section" => "footer_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_quicklinks",
-		"title"   => __( 'Quicklinks', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Do you want to use quicklinks from another site?', 'flagship_sub_textdomain' ),
-		"type"    => "checkbox",
-		"std"    => "1");		
-	$options[10] =
-	array (		
-		"section" => "footer_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_quicklinks_id",
-		"title"   => __( 'Quicklinks Site ID', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Enter the site ID for the quicklinks you would like to use. krieger.jhu.edu is 1', 'flagship_sub_textdomain' ),
-		"type"    => "text",
-		"class"   => "numeric",
-		"std"    => "1");
 	$options[11] =
 	array (		
 		"section" => "footer_section",
@@ -129,22 +76,6 @@ function flagship_sub_options_page_fields() {
 		"desc"    => __( 'Enter the department address', 'flagship_sub_textdomain' ),
 		"type"    => "textarea",
 		"std"    => "Zanvyl Krieger School of Arts & Sciences");
-	$options[12] =
-	array (		
-		"section" => "directory_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_role_search",
-		"title"   => __( 'Filter by Role', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Do you want to be able to filter by role (faculty, research staff, emertiti)?', 'flagship_sub_textdomain' ),
-		"type"    => "checkbox",
-		"std"    => "0");		
-	$options[13] =
-	array (		
-		"section" => "directory_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_research_search",
-		"title"   => __( 'Filter by Expertise', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Do you want to be able to filter by expertise/research area?', 'flagship_sub_textdomain' ),
-		"type"    => "checkbox",
-		"std"    => "0");	
 	$options[14] =
 	array (		
 		"section" => "homepage_section",
@@ -153,15 +84,6 @@ function flagship_sub_options_page_fields() {
 		"desc"    => __( 'Do you want to exclude faculty books from your news feeds?', 'flagship_sub_textdomain' ),
 		"type"    => "checkbox",
 		"std"    => "0");
-	$options[15] =
-	array (		
-		"section" => "technical_section",
-		"id"      => FLAGSHIP_SUB_SHORTNAME . "_isis_name",
-		"title"   => __( 'ISIS Department Name', 'flagship_sub_textdomain' ),
-		"desc"    => __( 'Enter the ISIS department name', 'flagship_sub_textdomain' ),
-		"type"    => "text",
-		"class"   => "nohtml",
-		"std"    => "");
 	$options[16] =
 	array (		
 		"section" => "select_section",
@@ -169,7 +91,7 @@ function flagship_sub_options_page_fields() {
 		"title"   => __( 'Color Scheme', 'flagship_sub_textdomain' ),
 		"desc"    => __( 'Choose your theme color scheme', 'flagship_sub_textdomain' ),
 		"type"    => "select",
-		"choices" => array('blue','black','yellow','green','purple','red','aqua'),
+		"choices" => array('blue','black','green','red', 'rust'),
 		"std"    => "blue");
 	return $options;
 		

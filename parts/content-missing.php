@@ -3,7 +3,7 @@
 	<?php if ( is_search() ) : ?>
 		
 		<header class="article-header">
-			<h1><?php _e("Sorry, No Results.", "jointswp");?></h1>
+			<h2><?php _e("Sorry, No Results.", "jointswp");?></h2>
 		</header>
 		
 		<section class="entry-content">

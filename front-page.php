@@ -15,7 +15,7 @@
 					<?php get_template_part('parts/content', 'slider'); ?>
 		   
 		   <?php endwhile; endif; ?>
-	
+    
 		<div id="inner-content" class="row">
 
 		    <main id="main" class="small-12 large-8 columns" role="main">

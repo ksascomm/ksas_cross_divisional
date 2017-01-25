@@ -6,7 +6,7 @@ $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>
 	
 		<div id="inner-content" class="row">
 	
-		     <main id="main" class="small-12 large-8 large-push-4 columns" role="main">
+		     <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
 
 		    	<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 		
@@ -27,9 +27,8 @@ $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>
 																								
 		    </main> <!-- end #main -->
 		    
-			<div class="small-12 large-4 large-pull-8 columns hide-for-print" role="navigation"> 
-				<?php get_template_part( 'parts/nav', 'breadcrumbs' ); ?>
-				<?php get_sidebar(); ?>
+			<div class="small-12 large-3 large-pull-9 columns hide-for-print archive" role="navigation"> 
+				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 			</div>
 
 		</div> <!-- end #inner-content -->
