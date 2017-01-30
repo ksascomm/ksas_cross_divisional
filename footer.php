@@ -1,14 +1,9 @@
 					<footer class="footer" role="contentinfo">
 						<div id="inner-footer" class="row">
-							<div class="small-12 small-centered medium-5 columns">
-								<nav role="navigation">
-		    						<?php joints_footer_links(); ?>
-		    					</nav>
-		    				</div>
-
 		    				<div class="row" id="copyright" role="content-info">
 								<div class="small-12 columns">
-					  				<p>&copy; <?php print date('Y'); ?> Johns Hopkins University</p>
+									<?php $theme_option = flagship_sub_get_global_options()?>
+  									<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, <?php echo $theme_option['flagship_sub_copyright'];?></p>
 					  			</div>
 					  		</div>
 					  		<div class="row">
