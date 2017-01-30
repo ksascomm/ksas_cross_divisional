@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Page with Sidebar
+Template Name: Page with Sidebar (specified widget)
 */
 ?>	
 
