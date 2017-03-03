@@ -11,9 +11,6 @@ CSS file.
 // Import normalize from vendor files
 @import "../../vendor/foundation-sites/scss/vendor/normalize";
 
-// Import mixins
-@import "mixins";
-
 // Import local Foundation overrides - Don't link to Bower version as it will be overwritten whenever updated
 @import "settings";
 
@@ -65,6 +62,9 @@ CSS file.
 // Import Font Awesome
 // Import foundation.scss from vendor files
 @import "../../vendor/fontawesome/scss/font-awesome";
+
+// Import mixins
+@import "mixins";
 
 // Import your custom styles
 @import "main";

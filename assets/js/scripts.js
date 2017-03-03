@@ -16,3 +16,9 @@ jQuery(document).ready(function() {
 	jQuery( '.archive-grid .columns' ).last().addClass( 'end' );
 
 });
+
+//if(jQuery('ul.vertical.accordion-menu li.current_page_parent ul.submenu li').hasClass('current_page_item')) {
+
+//       jQuery('li.current_page_item').parent().closest('ul.submenu').addClass('is-active');
+
+//} 

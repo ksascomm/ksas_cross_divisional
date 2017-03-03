@@ -7,9 +7,6 @@ Stylesheet: Main Stylesheet
 /*********************
 GENERAL STYLES
 *********************/
-$font-stack: 'gentona-light', Arial, sans-serif;
-$font-header: 'quadon', Arial, sans-serif;
-$font-subhead: 'gentona-book', Arial, sans-serif;
 
 body {
   font-family: $font-stack;
@@ -29,6 +26,26 @@ h3, h4, h5, h6, .semibold, blockquote {
   font-family: $font-subhead;
   font-weight: 400;
   font-style: normal;
+}
+
+strong {
+  @extend %extend_1;
+}
+b {
+  @extend %extend_1;
+}
+.bold {
+  @extend %extend_1;
+}
+.b.em {
+  @extend %extend_2;
+}
+.strong.em {
+  @extend %extend_2;
+}
+
+em, i {
+ @extend %extend_2;
 }
 
 blockquote, blockquote p {
