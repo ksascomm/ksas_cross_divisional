@@ -33,7 +33,7 @@
 				<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 			<![endif]-->
 			<meta name="msapplication-TileColor" content="#f01d4f">
-			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/win8-tile-icon.png">
+			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/favicons/apple-icon-120x120.png">
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
 
@@ -65,5 +65,10 @@
 							  To see additional nav styles, visit the /parts directory -->
 
 						 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-		 	
+		 				
+							<div class="show-for-print">
+								<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.small.horizontal.blue.jpg" alt="krieger logo">
+								<h1><?php echo get_bloginfo ( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
+							</div>						
+
 					</header> <!-- end .header -->

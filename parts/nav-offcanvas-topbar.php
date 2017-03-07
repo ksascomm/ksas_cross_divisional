@@ -1,7 +1,7 @@
 <!-- By default, this menu will use off-canvas for small
 	 and a topbar for medium-up -->
 
-<div class="top-bar" id="top-bar-menu">
+<div class="top-bar hide-for-print" id="top-bar-menu">
 
 	<div id="mobile-nav">
   		<div class="row">

@@ -20,7 +20,7 @@ Template Name: Page with Sidebar (specified widget)
 				
 			</main> <!-- end #main -->
 		    
-		    <div class="small-12 large-3 large-pull-9 columns hide-for-print" role="navigation"> 
+		    <div class="small-12 large-3 large-pull-9 columns" role="navigation"> 
 				
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 					
