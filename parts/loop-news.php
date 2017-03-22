@@ -10,7 +10,7 @@
     </header> <!-- end article header -->
 					
     <div class="entry-content" itemprop="articleBody">
-		<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+		<?php the_post_thumbnail('news', array('class'	=> "floatleft news")); ?>
 		<?php the_excerpt(); ?>
 	</div> <!-- end article section -->
 						

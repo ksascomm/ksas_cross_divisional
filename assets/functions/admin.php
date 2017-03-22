@@ -59,6 +59,34 @@ add_action('admin_menu', 'disable_default_dashboard_widgets');
 // adding any custom widgets
 add_action('wp_dashboard_setup', 'joints_custom_dashboard_widgets');
 
+
+function get_the_directory_filters($post) {
+	$directory_filters = get_the_terms( $post->ID, 'filter' );
+					if ( $directory_filters && ! is_wp_error( $directory_filters ) ) : 
+						$directory_filter_names = array();
+							foreach ( $directory_filters as $directory_filter ) {
+								$directory_filter_names[] = $directory_filter->slug;
+							}
+						$directory_filter_name = join( " ", $directory_filter_names );
+						
+					endif;
+					return $directory_filter_name;
+}
+
+function get_the_roles($post) {
+	$roles = get_the_terms( $post->ID, 'role' );
+					if ( $roles && ! is_wp_error( $roles ) ) : 
+						$role_names = array();
+							foreach ( $roles as $role ) {
+								$role_names[] = $role->slug;
+							}
+						$role_name = join( " ", $role_names );
+						
+					endif;
+					return $role_name;
+}
+
+
 /************* CUSTOMIZE ADMIN *******************/
 // Custom Backend Footer
 function joints_custom_admin_footer() {
@@ -93,8 +121,9 @@ function academic_flagship_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 125, 125, true );   // default thumb size
 	add_image_size( 'rss', 300, 150, true );
-	add_image_size( 'directory', 90, 130, true );
+	add_image_size( 'directory', 120, 173, true );
 	add_image_size( 'exhibits', 253, 150, true );
+	add_image_size( 'news', 175, 175, true );
 	add_theme_support( 'automatic-feed-links' ); // rss thingy
 	$bg_args = array(
 		'default-color'          => '#fff',

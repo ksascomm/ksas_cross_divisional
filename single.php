@@ -4,7 +4,7 @@
 
 	<div id="inner-content" class="row">
 
-		<main id="main" class="small-12 large-9 large-push-3 columns" role="main">
+		<main id="main" class="small-12 large-9 large-push-2 columns" role="main">
 			
 			<?php get_template_part( 'parts/nav', 'breadcrumbs' ); ?>
 

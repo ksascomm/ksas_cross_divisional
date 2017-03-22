@@ -21,11 +21,12 @@
 		    <main id="main" class="small-12 large-8 columns" role="main">
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
+					<div class="margin10">
 					<?php $frontpagecontent = the_content(); if($frontpagecontent != '') : ?>
-
-						<?php the_content(); ?>	
-
+						
+							<?php the_content(); ?>	
+							
+					</div>
 					<?php endif; ?>
 					
 				<?php endwhile; endif; ?>	
@@ -88,9 +89,6 @@
 				<?php if ( is_active_sidebar( 'sidebar1' ) || is_active_sidebar('homepage0')  ) : ?>
 					<aside class="sidebar small-12 large-4 columns hide-for-print" id="sidebar1"> 
 						<?php dynamic_sidebar( 'sidebar1' ); ?>
-							<?php if ( is_active_sidebar( 'sidebar1' ) && is_active_sidebar('homepage0')  ) : ?>
-								<hr>
-							<?php endif; ?>
 						<?php dynamic_sidebar( 'homepage0' ); ?>
 					</aside>
 				<?php endif; ?>

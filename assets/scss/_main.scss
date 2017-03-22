@@ -130,6 +130,15 @@ ul.nav {
     overflow: hidden;
 }
 
+.padding-five {
+  padding: 5px;
+}
+
+.floatleft, .alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
 /*********************
 LINK STYLES
 *********************/
@@ -443,27 +452,6 @@ body.rust {
 	}
 }
 
-.sidebar {
-	background: $grey;
-	padding: 0px 20px 1px 20px;
-		@include breakpoint (large) {
-			margin-bottom: 25px;	
-		}
-		h5 {
-			padding-left:20px;
-			margin-top:0;
-			margin-bottom:0;
-			color: $grey;
-			 a {
-			 	color: #fff;
-			 }
-		}
-		h6 {
-			margin-bottom:7px;
-			color:#000;
-		}
-}
-
 #sidebar_header {
 	padding:12px 15px 10px 0;
 	background: $primary-color;
@@ -481,6 +469,10 @@ body.rust {
 	margin-left: -20px;
     margin-right: -20px;
     zoom: 1;
+}
+
+.margin10 {
+	margin-top: 1rem;
 }
 
 #search-bar {
@@ -548,7 +540,26 @@ POSTS & CONTENT STYLES
 
 #content {
 	#inner-content {
-		padding: 1rem 0rem;
+		padding: 1.25rem 0rem 1rem;
+	}
+	.tabs, .tabs-content {
+		border: none;
+	}
+	.tabs-title {
+		a {
+		font-size: 1rem;
+		border-bottom: none;
+		border-bottom-color: rgba(0,0,0,.2);
+			&:hover, &:active {
+			  	color: none;
+			}
+		}
+	}
+	.tabs-title.is-active {
+		border-top: 3px solid;
+	}
+	span.contact {
+    	margin-right: .5rem;
 	}
 }
 
@@ -596,7 +607,21 @@ POSTS & CONTENT STYLES
 
 // Entry content  
 .entry-content {
-	
+	  .imageblockleft {
+	    float: left;
+	    max-width: 300px;
+	    margin-right: 1em;
+	    margin-bottom: 5px;
+	    a {
+	      border: none;
+	      &:hover, &:active {
+	        border: none;
+	      }
+	    }
+	  }
+	  .wp-post-image {
+	  margin-bottom: inherit;
+	  }	
 	img {
 		max-width: 100%;
 		height: auto;
@@ -656,6 +681,9 @@ POSTS & CONTENT STYLES
 	@include button;
 }
 
+img.news {
+	margin-bottom: 1rem !important;
+}
 
 
 /*********************
@@ -943,12 +971,32 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
+	background: $grey;
+	padding: 0px 20px 1px 20px;
+		@include breakpoint (large) {
+			margin-top: 1rem;
+			margin-bottom: 1.5rem;	
+		}
+		h5 {
+			padding-left:20px;
+			margin-top:0;
+			margin-bottom:0;
+			color: $grey;
+			 a {
+			 	color: #fff;
+			 }
+		}
+		h6 {
+			margin-bottom:7px;
+			color:#000;
+		}
 }
 
 #searchsubmit {
 }
 
 .widgettitle {
+	padding-top:5px;
 }
 
 .widget {
@@ -970,29 +1018,32 @@ SIDEBARS & ASIDES
 	}
 }
 
-.widget_text {
+.widget_text, .widget_black_studio_tinymce, .widget_recent_entries {
 	.widgettitle {
 		padding-top:5px;
 	}
 	.textwidget {
-	padding-top: 15px;
-	margin-bottom: 15px;
 	font-size: 1rem;
-		ul {
-			margin-left: 1rem;
-		}
 	}
+	ul {
+		margin-left: 1rem;
+	}
+	border-bottom: 0.0625rem solid #cacaca;
+	padding-top: .75rem;
+    padding-bottom: 1.5rem;
+    &:last-child {
+    	border: none;
+    }
 }
 /*********************
 FOOTER STYLES
 *********************/
 footer {
-	background: #2c2c33;
+	background: $black;
 }
 .footer {
   clear: both;
-  margin-top: 1em;
-  padding-top: 25px;
+  padding-top: 1.5rem;
 	a, a:visited {
 	color: #CCC;
 	    &:hover, &:focus {
@@ -1009,7 +1060,7 @@ footer {
   margin-top: 9px;
   a {
     content: none;
-    color: #2c2c33;
+    color: $black;
     background: #555;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -1018,7 +1069,7 @@ footer {
     margin-right: 10px;
     font-size: 18px;
     &:hover {
-      color: #2c2c33;
+      color: $black;
       background: #CCC;
     }
   }
@@ -1069,7 +1120,7 @@ footer {
       border: none;
     }
     &[type="submit"] {
-      background: #2c2c33;
+      background: $black;
       height: 40px;
       width: 45px;
       font-family: 'flagship-icon';
@@ -1107,4 +1158,40 @@ PLUGIN STYLES
 .gform_body ul {
     list-style: none outside none;
     margin: 0;
+}
+
+li.person {
+  margin-bottom: 15px;
+  min-height: 95px;
+  padding-left: 20px;
+  padding-top: 3px;
+  list-style: none;
+}
+
+#directory li.person.sub-head {
+  min-height: 1px;
+  margin-bottom: 0;
+  background: none;
+  padding: 0;
+}
+
+li.person {
+  &.sub-head h2 {
+    font-size: 1.75rem;
+    margin: 0 0 10px 0;
+    color: #000;
+  }
+  img {
+    max-width: 120px;
+    clear: left;
+    float: left;
+    margin-bottom: 23px;
+    margin-right: 15px;
+  }
+  h3 {
+  	font-size: 1.5rem;
+  }
+  h4{
+  	font-size: 1.125rem;
+  }
 }
