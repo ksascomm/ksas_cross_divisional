@@ -121,7 +121,7 @@ function academic_flagship_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 125, 125, true );   // default thumb size
 	add_image_size( 'rss', 300, 150, true );
-	add_image_size( 'directory', 120, 173, true );
+	add_image_size( 'directory', 150, 216, true );
 	add_image_size( 'exhibits', 253, 150, true );
 	add_image_size( 'news', 175, 175, true );
 	add_theme_support( 'automatic-feed-links' ); // rss thingy

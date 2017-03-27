@@ -7199,11 +7199,10 @@ li.person.sub-head h2 {
   color: #000; }
 
 li.person img {
-  max-width: 120px;
+  max-width: 150px;
   clear: left;
   float: left;
-  margin-bottom: 23px;
-  margin-right: 15px; }
+  margin-right: 1rem; }
 
 li.person h3 {
   font-size: 1.5rem; }
