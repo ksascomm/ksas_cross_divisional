@@ -58,7 +58,7 @@
 				    	<?php endif; ?>
 				    
 				    	<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?>
-				    		<span class="fa fa-fax" aria-hidden="true"></span><?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?><br>
+				    		<span class="fa fa-fax" aria-hidden="true"></span>  <?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?><br>
 				    	<?php endif; ?>
 				    
 				    	<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : $email = get_post_meta($post->ID, 'ecpt_email', true); ?>

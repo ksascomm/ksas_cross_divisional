@@ -6447,6 +6447,9 @@ h3, h4, h5, h6, .semibold, blockquote {
 blockquote, blockquote p {
   color: #2C2C33; }
 
+.capitalize {
+  text-transform: capitalize; }
+
 .iconfont {
   font-family: 'flagship-icon'; }
 

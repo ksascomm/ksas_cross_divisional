@@ -7,9 +7,9 @@
 	</header> <!-- end article header -->
 					
 	<div class="entry-content" itemprop="articleBody">
-		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
-		<?php the_content('<button class="tiny">Read more...</button>'); ?>
-	</div> <!-- end article section -->
+		<?php the_excerpt('<button class="tiny">Read more...</button>'); ?>
+	</div> <!-- end article section -->					
+	
+	<hr>	
 								    						
 </article> <!-- end article -->
-<hr>

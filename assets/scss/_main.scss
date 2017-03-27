@@ -52,6 +52,9 @@ blockquote, blockquote p {
 	color: $black;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
 
 .iconfont {
 	font-family:'flagship-icon';
