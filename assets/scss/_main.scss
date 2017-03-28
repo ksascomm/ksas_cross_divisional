@@ -519,7 +519,22 @@ body.rust {
 		    color: #ccc;
 		    margin-left: -15px;
 		  }
-		}
+	}
+	&::-webkit-input-placeholder {
+      color: $black;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: $black;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: $black;
+    }
+
+    &:-ms-input-placeholder {
+       color: $black;
+    }
 }
 
 
@@ -697,7 +712,7 @@ img.news {
 
 #main a[href$= ".pdf"]:after,#main a[href$= ".doc"]:after,#main a[href$= ".docx"]:after,#main a[href$= ".xls"]:after,#main a[href$= ".xlsx"]:after,#main a[href$= ".ppt"]:after,#main a[href$= ".pptx"]:after{
 font-family: 'FontAwesome';
-color:#2C2C33;
+color: $black;
 font-size: 1.5rem;
 padding-left:.4rem;       
 }
@@ -1118,50 +1133,6 @@ footer {
     font-size: 12px;
     color: #CCC;
     margin: 20px 0 0;
-  }
-}
-
-#fields_search {
-  fieldset {
-    background: #d9c89e;
-    background: rgba(217, 200, 158, 0.3);
-    padding: 15px;
-    border: none;
-  }
-  h6 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 6px;
-  }
-  input {
-    &[type="text"] {
-      height: 40px;
-      margin-bottom: 10px;
-      border-top-right-radius: 7px;
-      border-bottom-right-radius: 7px;
-      display: inline;
-      float: left;
-      width: 80%;
-      background: #4a484c;
-      color: #ccc;
-      font-family: $font-header;
-      font-size: 16px;
-      border: none;
-    }
-    &[type="submit"] {
-      background: $black;
-      height: 40px;
-      width: 45px;
-      font-family: 'flagship-icon';
-      border-top-left-radius: 7px;
-      border-bottom-left-radius: 7px;
-      font-size: 26px;
-      border: none;
-      float: left;
-      padding: 0;
-      color: #ccc;
-      margin-left: 10px;
-    }
   }
 }
 	
