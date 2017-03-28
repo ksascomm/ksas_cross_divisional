@@ -6663,6 +6663,8 @@ NAVIGATION STYLES
   background-color: #005eb8; }
   .top-bar .title-area {
     z-index: 1; }
+  .top-bar .is-dropdown-submenu-parent.is-down-arrow > a::after {
+    border-color: #fff transparent transparent; }
   .top-bar ul {
     background-color: #005eb8; }
     .top-bar ul li {

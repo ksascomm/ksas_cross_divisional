@@ -345,6 +345,9 @@ NAVIGATION STYLES
 	.title-area {
 		z-index: 1;
 	}
+	.is-dropdown-submenu-parent.is-down-arrow > a::after {
+		border-color: #fff transparent transparent;
+	}
 	ul {
 		background-color: $primary-color;
 		li {
