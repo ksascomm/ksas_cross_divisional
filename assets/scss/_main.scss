@@ -202,6 +202,10 @@ h1, .h1, .page-title, .entry-title.single-title {
 	font-size: 2rem;
 } 
 
+h1.search-result {
+  font-size: 1.25rem !important;
+}
+
 
 h2, .h2 {
 font-size: 1.8rem;
@@ -686,6 +690,25 @@ POSTS & CONTENT STYLES
 
 img.news {
 	margin-bottom: 1rem !important;
+}
+
+#main a[href$= ".pdf"]:after,#main a[href$= ".doc"]:after,#main a[href$= ".docx"]:after,#main a[href$= ".xls"]:after,#main a[href$= ".xlsx"]:after,#main a[href$= ".ppt"]:after,#main a[href$= ".pptx"]:after{
+font-family: 'FontAwesome';
+color:#2C2C33;
+font-size: 1.5rem;
+padding-left:.4rem;       
+}
+#main a[href$= ".pdf"]:after{
+content: '\f1c1';
+}
+#main a[href$= ".doc"]:after,#main a[href$= ".docx"]:after{
+content: '\f1c2';
+}
+#main a[href$= ".xls"]:after,#main a[href$= ".xlsx"]:after{
+content: '\f1c3';
+}
+#main a[href$= ".ppt"]:after,#main a[href$= ".pptx"]:after{
+content: '\f1c4';
 }
 
 
