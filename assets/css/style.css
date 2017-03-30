@@ -8138,17 +8138,17 @@ SIDEBARS & ASIDES
 .widget ul {
   margin: 0; }
 
-.widget_text, .widget_black_studio_tinymce, .widget_recent_entries {
+.widget_text, .widget_black_studio_tinymce, .widget_recent_entries, .widget_ai1ec_agenda_widget {
   border-bottom: 0.0625rem solid #cacaca;
   padding-top: .75rem;
   padding-bottom: 1.5rem; }
-  .widget_text .widgettitle, .widget_black_studio_tinymce .widgettitle, .widget_recent_entries .widgettitle {
+  .widget_text .widgettitle, .widget_black_studio_tinymce .widgettitle, .widget_recent_entries .widgettitle, .widget_ai1ec_agenda_widget .widgettitle {
     padding-top: 5px; }
-  .widget_text .textwidget, .widget_black_studio_tinymce .textwidget, .widget_recent_entries .textwidget {
+  .widget_text .textwidget, .widget_black_studio_tinymce .textwidget, .widget_recent_entries .textwidget, .widget_ai1ec_agenda_widget .textwidget {
     font-size: 1rem; }
-  .widget_text ul, .widget_black_studio_tinymce ul, .widget_recent_entries ul {
+  .widget_text ul, .widget_black_studio_tinymce ul, .widget_recent_entries ul, .widget_ai1ec_agenda_widget ul {
     margin-left: 1rem; }
-  .widget_text:last-child, .widget_black_studio_tinymce:last-child, .widget_recent_entries:last-child {
+  .widget_text:last-child, .widget_black_studio_tinymce:last-child, .widget_recent_entries:last-child, .widget_ai1ec_agenda_widget:last-child {
     border: none; }
 
 /*********************
@@ -8215,7 +8215,7 @@ PLUGIN STYLES
   margin: 0; }
 
 li.person {
-  margin-bottom: 15px;
+  margin-bottom: 1.25rem;
   min-height: 95px;
   padding-left: 20px;
   padding-top: 3px;
@@ -8230,7 +8230,7 @@ li.person {
 li.person.sub-head h2 {
   font-size: 1.75rem;
   margin: 0 0 10px 0;
-  color: #000; }
+  color: #2C2C33; }
 
 li.person img {
   max-width: 150px;
@@ -8243,6 +8243,72 @@ li.person h3 {
 
 li.person h4 {
   font-size: 1.125rem; }
+
+footer.timely.ai1ec-event-footer {
+  background: inherit; }
+
+.timely p {
+  font-size: 16px;
+  font-family: "gentona-light", Arial, sans-serif !important; }
+
+.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details, .ai1ec-event-location {
+  font-family: "gentona-book", Arial, sans-serif !important; }
+
+.ai1ec-agenda-view .ai1ec-event .ai1ec-event-time {
+  opacity: 1;
+  font-weight: inherit; }
+
+.ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today {
+  background: none !important; }
+
+.ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+  border-top: none !important;
+  background: none !important; }
+
+.timely {
+  font-family: inherit !important; }
+
+.ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-time, .ai1ec-agenda-widget-view .ai1ec-event > a {
+  color: #2C2C33 !important; }
+
+.ai1ec-agenda-widget-view .ai1ec-month {
+  background: #005eb8 !important; }
+
+.ai1ec-agenda-view .ai1ec-month {
+  background: #005eb8 !important; }
+
+.ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+  color: #005eb8 !important; }
+
+.entry-content .timely a:hover, .comment-content .timely a:hover, .site-footer .widget .timely a:hover, .entry-content .timely a:visited, .comment-content .timely a:visited, .site-footer .widget .timely a:visited, .ai1ec-agenda-view .ai1ec-event:hover .ai1ec-event-title {
+  color: #2C2C33 !important; }
+
+#calendar_section {
+  margin-bottom: 10px; }
+
+.events-feed .ai1ec-time, .events-feed .ai1ec-location {
+  font-size: 1rem; }
+
+.events-feed .ai1ec-agenda-view .ai1ec-date {
+  background: none; }
+
+.events-feed .ai1ec-agenda-view .ai1ec-event {
+  border: none; }
+
+.events-feed .ai1ec-pagination, .events-feed .ai1ec-subscribe-container, .events-feed .ai1ec-clearfix, .events-feed .ai1ec-title-buttons.ai1ec-btn-toolbar, .events-feed .ai1ec-calendar-toolbar, .events-feed span.ai1ec-categories {
+  display: none; }
+
+.events-feed .ai1ec-event-time, .events-feed .ai1ec-event-location {
+  font-size: 1rem !important; }
+
+.events-feed .ai1ec-event-title {
+  font-size: 1.25rem !important; }
+
+.events-feed .timely .ai1ec-btn-default {
+  background: #005eb8;
+  color: #fff; }
+  .events-feed .timely .ai1ec-btn-default:hover {
+    border-bottom-color: #adadad !important; }
 
 /******************************************************************
 
