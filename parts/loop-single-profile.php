@@ -27,9 +27,7 @@
 					<span class="fa fa-map-marker" aria-hidden="true"></span> <span class="contact"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span><br>
 				<?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_lab_website', true) ) : ?>
-					<span class="fa fa-globe" aria-hidden="true"></span> <br>
-					<span class="contact">
-						<a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" onclick="ga('send', 'event', 'People Directory', 'Group/Lab Website', '<?php the_title(); ?> | <?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>')" target="_blank">Group/Lab Website</a>
+					<span class="fa fa-globe" aria-hidden="true"></span> <span class="contact"><a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" onclick="ga('send', 'event', 'People Directory', 'Group/Lab Website', '<?php the_title(); ?> | <?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>')" target="_blank">Group/Lab Website</a>
 					</span>
 				<?php endif; ?>
 			</p>
