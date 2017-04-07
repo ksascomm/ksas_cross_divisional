@@ -13,7 +13,7 @@
 		?> 
     	<div class="imageblockleft small-centered medium-uncentered columns">
     		<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-				<a href="<?php echo $thumb_url; ?>" data-lightbox="image-1">
+				<a href="<?php echo $thumb_url; ?>" data-fancybox>
 					<?php if (!is_singular('ai1ec_event')) : ?>
 						<?php the_post_thumbnail('full', array('class'	=> "thumbnail", 'itemprop' => 'image')); ?>
 					<?php endif;?>
