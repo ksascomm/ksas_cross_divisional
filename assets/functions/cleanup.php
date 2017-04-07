@@ -11,9 +11,7 @@ function joints_start() {
     add_filter( 'wp_head', 'joints_remove_wp_widget_recent_comments_style', 1 );
     // clean up comment styles in the head
     add_action('wp_head', 'joints_remove_recent_comments_style', 1);
-    // clean up gallery output in wp
-    //add_filter('gallery_style', 'joints_gallery_style');
-
+    
     // launching this stuff after theme setup
     joints_theme_support();
 
@@ -59,11 +57,6 @@ function joints_remove_recent_comments_style() {
   if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
     remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
   }
-}
-
-// Remove injected CSS from gallery
-function joints_gallery_style($css) {
-  return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
 }
 
 // This removes the annoying […] to a Read More link
