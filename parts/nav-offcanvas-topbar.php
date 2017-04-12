@@ -8,8 +8,8 @@
 	        <div class="small-12 columns">
 	  			<div class="mobile-logo">
 	  				<a href="<?php echo network_site_url(); ?>">
-	  					<?php global $blog_id; $os = array(93,125);
- 						if (in_array($blog_id, $os)) :?>
+	  					<?php global $blog_id; $jhulogo = array(93,125);
+ 						if (in_array($blog_id, $jhulogo)) :?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="jhu logo">
 	  					<?php else : ?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.png" alt="jhu logo">
@@ -41,8 +41,8 @@
 				<div class="small-12 medium-4 large-3 columns">
 					<div class="logo">
 						<a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">
-	  					 <?php global $blog_id; $os = array(93,125);
- 						if (in_array($blog_id, $os)) :?>
+	  					 <?php global $blog_id; $jhulogo = array(93,125);
+ 						if (in_array($blog_id, $jhulogo)) :?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu.png" alt="jhu logo">
 	  					<?php else : ?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo.png" alt="jhu logo">
@@ -51,7 +51,14 @@
 					</div>
 				</div>
 				<div class="small-12 medium-5 large-6 columns">
-					<h1><a href="<?php echo site_url(); ?>"><?php echo get_bloginfo( 'title' ); ?><small><?php echo get_bloginfo ( 'description' ); ?></small></a></h1>
+					<h1 itemprop="headline">
+						<a href="<?php echo site_url(); ?>">
+							<?php if( !empty( get_bloginfo('description') )) : ?>
+								<small itemprop="description"><?php echo get_bloginfo ( 'description' ); ?></small>
+							<?php endif; ?>
+							<?php echo get_bloginfo( 'title' ); ?>
+						</a>
+					</h1>
 				</div>
 				<div class="small-12 medium-3 large-3 columns">
 					<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" id="search-bar">
