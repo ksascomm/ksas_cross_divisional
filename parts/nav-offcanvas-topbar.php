@@ -23,15 +23,6 @@
   				<h1 class="center"><a href="<?php echo site_url(); ?>"><small><?php echo get_bloginfo ( 'description' ); ?></small><?php echo get_bloginfo( 'title' ); ?></a></h1>
   			</div>
   		</div>
-  		<div class="row">
-  			<div class="small-8 small-offset-2 columns">
-				<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" id="search-bar">
-                	<input type="submit" class="icon-search" value="&#xe004;" />
-                	<label for="s" class="screen-reader-text"><?php _x( 'Search for:', 'label' ); ?></label>
-                	<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search this site" aria-label="search"/>
-                </form>
-			</div>
-  		</div>
 	</div>
 
 	<div id="desktop-nav">
@@ -50,7 +41,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="small-12 medium-5 large-6 columns">
+				<div class="small-12 medium-5 large-7 columns">
 					<h1 itemprop="headline">
 						<a href="<?php echo site_url(); ?>">
 							<?php if( !empty( get_bloginfo('description') )) : ?>
@@ -60,7 +51,7 @@
 						</a>
 					</h1>
 				</div>
-				<div class="small-12 medium-3 large-3 columns">
+				<div class="small-12 medium-3 large-2 columns">
 					<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" id="search-bar">
 	                	<input type="submit" class="icon-search" value="&#xe004;" />
 	                	<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search this site" aria-label="search"/>

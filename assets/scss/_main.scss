@@ -488,13 +488,13 @@ body.rust {
 #search-bar {
 	@include breakpoint (large) {
 		margin-top: 3.4rem;
+		float: right;
 	}
 	@include breakpoint (small) {
 		margin-top: 1rem;
 	}	
-	background: #333;
-	color: #ccc;
 	font-family: $font-header;
+
 	input {
 		&[type="text"] {
 		    height: 31px;
@@ -505,6 +505,7 @@ body.rust {
 		    float: left;
 		    width: 87%;
 		    border: none;
+		    font-size: .9rem;
 		  }
 		  &[type="submit"] {
 		    background: #666;

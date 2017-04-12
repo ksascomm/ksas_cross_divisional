@@ -8218,12 +8218,11 @@ body.rust .sidebar .nav a {
 
 #search-bar {
   margin-top: 1rem;
-  background: #333;
-  color: #ccc;
   font-family: "quadon", Arial, sans-serif; }
   @media print, screen and (min-width: 64em) {
     #search-bar {
-      margin-top: 3.4rem; } }
+      margin-top: 3.4rem;
+      float: right; } }
   #search-bar input[type="text"] {
     height: 31px;
     background: white;
@@ -8232,7 +8231,8 @@ body.rust .sidebar .nav a {
     border-bottom-right-radius: .5rem;
     float: left;
     width: 87%;
-    border: none; }
+    border: none;
+    font-size: .9rem; }
   #search-bar input[type="submit"] {
     background: #666;
     height: 31px;
