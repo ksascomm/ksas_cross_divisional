@@ -12,6 +12,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
 		
+	<meta name="date" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
+	<title><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); echo ' | Johns Hopkins University';?> </title>		
+
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
 			<!-- Icons & Favicons -->
