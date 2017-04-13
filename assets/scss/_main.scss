@@ -76,26 +76,39 @@ li.external a::after {
 }
 
 ul.nav {
-  list-style: none;
-  li {
-    padding: 10px 0 8px 0px;
-    font-size: 1rem;
-    ul li {
-     border-top: none;
-     font-size: 1rem;
-     padding: 5px 0 0px 5px;
-     text-indent: -15px;
-     margin-left: 15px;
-     list-style: none;
-      &:before {
-        content: "\e010";
-        font-family: 'flagship-icon';
-        color: #999;
-        margin-right: 5px;
-        vertical-align: middle;
-        font-size: 75%;
-      }
-    }
+	margin-left: 1rem;
+  	list-style: none;
+	li {
+		padding: 10px 0 8px 0px;
+		font-size: 1rem;
+		&:before {
+			font-family: 'FontAwesome';
+		    content: '\f054';
+		    padding-right: .5rem;
+		}
+		ul li {
+			border-top: none;
+			font-size: 1rem;
+			padding: 5px 0 0px 5px;
+			text-indent: -15px;
+			margin-left: 15px;
+			list-style: none;
+		&:before {
+		    content: "\e010";
+		    font-family: 'flagship-icon';
+		    color: lighten($black, 25% );
+		    margin-right: 5px;
+		    vertical-align: middle;
+		    font-size: 75%;
+		}
+   		}
+	}
+}
+
+ul.nav > {
+  .current_page_item:before, .current_page_ancestor:before, .current-menu-item:before, .current-menu-ancestor:before {
+    font-family: 'FontAwesome';
+    content: '\f078';
   }
 }
 
@@ -383,6 +396,9 @@ body.black {
 		a {
 			color: $black;
 		}
+		li:before {
+			color: $black;
+		}
 	}
 }
 body.green {
@@ -402,6 +418,9 @@ body.green {
 		a {
 			color: $green;
 		}
+		li:before {
+			color: $green;
+		}
 	}
 }
 body.red {
@@ -417,10 +436,13 @@ body.red {
 			border-color: #fff transparent transparent;
 		}
 	}
-	.sidebar  .nav {
+	.sidebar .nav {
 		a {
 			color: $red;
 		}
+		li:before {
+			color: $red;
+		}		
 	}
 }
 body.rust {
@@ -440,6 +462,9 @@ body.rust {
 		a {
 			color: $rust;
 		}
+		li:before {
+			color: $rust;
+		}		
 	}
 }
 

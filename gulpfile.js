@@ -144,7 +144,7 @@ gulp.task('default', function() {
 });
 
 // Watch files for changes
-gulp.task('watch', ['styles', 'browser-sync', 'images', 'icons'], function() {
+gulp.task('watch', ['styles', 'browser-sync', 'icons'], function() {
 
   function logFileChange(event) {
     var fileName = require('path').relative(__dirname, event.path);
