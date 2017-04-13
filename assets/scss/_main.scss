@@ -570,6 +570,17 @@ body.rust {
 	}
 }
 
+ul.breadcrumbs {
+	margin-left: .5rem !important;
+	li {
+		font-size: 1rem;
+		text-transform: inherit;
+		a:hover {
+			text-decoration: none;
+		}
+	}
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
