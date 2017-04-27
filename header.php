@@ -68,7 +68,7 @@
 						 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 		 				
 							<div class="show-for-print">
-								<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.small.horizontal.blue.jpg" alt="krieger logo">
+								<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger-print.jpg" alt="krieger logo">
 								<h1><?php echo get_bloginfo ( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
 							</div>						
 

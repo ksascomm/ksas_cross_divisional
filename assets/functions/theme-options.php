@@ -93,6 +93,15 @@ function flagship_sub_options_page_fields() {
 		"type"    => "select",
 		"choices" => array('blue','black','green','red', 'rust'),
 		"std"    => "blue");
+	$options[17] =
+	array (		
+		"section" => "select_section",
+		"id"      => FLAGSHIP_SUB_SHORTNAME . "_shield",
+		"title"   => __( 'Shield', 'flagship_sub_textdomain' ),
+		"desc"    => __( 'Which shield should appear in the header?', 'flagship_sub_textdomain' ),
+		"type"    => "select",
+		"choices" => array('ksas','jhu'),
+		"std"    => "ksas");
 	return $options;
 		
 }
