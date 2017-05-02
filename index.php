@@ -28,7 +28,31 @@ $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>
 		    </main> <!-- end #main -->
 		    
 			<div class="small-12 large-3 large-pull-9 columns hide-for-print archive" role="navigation"> 
-				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
+			
+				<div class="sidebar">
+					
+					<div class="offset-gutter" id="sidebar_header">
+						<h5 class="grey">Also in 
+							<a href="<?php echo site_url(); ?>/about" class="white bold">About</a>
+						</h5>
+					</div>
+
+					<?php wp_nav_menu( array( 
+						'theme_location' => 'main-nav', 
+						'menu_class' => 'nav', 
+						'container_class' => '',
+						'sub_menu' => true,
+					)); ?>
+
+		
+				<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+
+					<?php dynamic_sidebar( 'sidebar1' ); ?>
+					
+				<?php endif; ?>
+
+				</div>
+
 			</div>
 
 		</div> <!-- end #inner-content -->
