@@ -1,7 +1,5 @@
 <!-- By default, this menu will use off-canvas for small
 	 and a topbar for medium-up -->
-<?php $theme_option = flagship_sub_get_global_options(); 
-$shield = $theme_option['flagship_sub_shield']; ?>
 <div class="top-bar hide-for-print" id="top-bar-menu">
 
 	<div id="mobile-nav">
@@ -9,7 +7,8 @@ $shield = $theme_option['flagship_sub_shield']; ?>
 	        <div class="small-12 columns">
 	  			<div class="mobile-logo">
 	  				<a href="<?php echo network_site_url(); ?>">
-						<?php $theme_option = flagship_sub_get_global_options(); 
+						<?php $theme_option = flagship_sub_get_global_options();
+						$shield = $theme_option['flagship_sub_shield'];
  							if ($shield == 'jhu') : ?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
 	  					<?php else : ?>
@@ -20,7 +19,7 @@ $shield = $theme_option['flagship_sub_shield']; ?>
 	  		</div>
 	  	</div>
   		<div class="row">
-  			<div class="small-12 columns">	
+  			<div class="small-12 columns">
   				<h1 class="center"><a href="<?php echo site_url(); ?>"><small><?php echo get_bloginfo ( 'description' ); ?></small><?php echo get_bloginfo( 'title' ); ?></a></h1>
   			</div>
   		</div>
@@ -32,14 +31,18 @@ $shield = $theme_option['flagship_sub_shield']; ?>
 			<div class="row">
 				<div class="small-12 medium-4 large-3 columns">
 					<div class="logo">
-						<a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">
-	  					 <?php $theme_option = flagship_sub_get_global_options(); 
+						
+	  					 <?php $theme_option = flagship_sub_get_global_options();
  							if ($shield == 'jhu') : ?>
-	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-vertical.png" alt="Johns Hopkins University">
+ 							<a href="http://www.jhu.edu/" title="Johns Hopkins University">
+	  							<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-vertical.png" alt="Johns Hopkins University">
+	  						</a>
 	  					<?php else : ?>
-	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-vertical.png" alt="Krieger School of Arts and Sciences">
+	  						<a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">
+	  							<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-vertical.png" alt="Krieger School of Arts and Sciences">
+	  						</a>
 	  					<?php endif; ?>
-						</a>
+						
 					</div>
 				</div>
 				<div class="small-12 medium-5 large-7 columns">
@@ -62,7 +65,7 @@ $shield = $theme_option['flagship_sub_shield']; ?>
 		</div>
 	</div>
 	<div class="top-bar-right show-for-medium">
-		<?php joints_top_nav(); ?>	
+		<?php joints_top_nav(); ?>
 	</div>
 	<div class="top-bar-right float-right show-for-small-only">
 		<ul class="menu">
