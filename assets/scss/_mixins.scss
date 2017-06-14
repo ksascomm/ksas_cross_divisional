@@ -61,6 +61,14 @@ TYPOGRAPHY
 }
 
 @font-face {
+  font-family: 'gentona-bold';
+  src: url('../fonts/gentona/Gentona-Bold.eot');
+  src: url('../fonts/gentona/Gentona-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Bold.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Bold.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'gentona-light';
   src: url('../fonts/gentona/Gentona-Light.eot');
   src: url('../fonts/gentona/Gentona-Light.eot?#iefix') format('embedded-opentype'),
@@ -82,10 +90,10 @@ TYPOGRAPHY
   font-style: normal;
 }
 
-$font-stack: 'gentona-light', Arial, sans-serif;
-$font-header: 'quadon', Arial, sans-serif;
-$font-subhead: 'gentona-book', Arial, sans-serif;
-
+$font-stack: 'gentona-light', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-header: 'quadon', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-subhead: 'gentona-book', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-stack-bold: 'gentona-bold', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 
 //Use the best ampersand - http://simplebits.com/notebook/2008/08/14/ampersands-2/
 span.amp {

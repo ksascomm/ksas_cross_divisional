@@ -33,7 +33,7 @@ $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>
 					
 					<div class="offset-gutter" id="sidebar_header">
 						<h5 class="grey">Also in 
-							<a href="<?php echo site_url(); ?>/about" class="white bold">About</a>
+							<a href="<?php echo site_url(); ?>/about" class="white">About</a>
 						</h5>
 					</div>
 

@@ -7029,6 +7029,11 @@ TYPOGRAPHY
   src: url("../fonts/gentona/Gentona-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/gentona/Gentona-Book.woff") format("woff"), url("../fonts/gentona/Gentona-Book.ttf") format("truetype"); }
 
 @font-face {
+  font-family: 'gentona-bold';
+  src: url("../fonts/gentona/Gentona-Bold.eot");
+  src: url("../fonts/gentona/Gentona-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gentona/Gentona-Bold.woff") format("woff"), url("../fonts/gentona/Gentona-Bold.ttf") format("truetype"); }
+
+@font-face {
   font-family: 'gentona-light';
   src: url("../fonts/gentona/Gentona-Light.eot");
   src: url("../fonts/gentona/Gentona-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/gentona/Gentona-Light.woff") format("woff"), url("../fonts/gentona/Gentona-Light.ttf") format("truetype"); }
@@ -7048,12 +7053,12 @@ span.amp {
   font-style: italic; }
 
 strong, b, .bold {
-  font-family: "gentona-book", Arial, sans-serif;
+  font-family: "gentona-book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 400;
   font-style: normal; }
 
 .b.em, .strong.em, em, i {
-  font-family: "gentona-light", Arial, sans-serif;
+  font-family: "gentona-light", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 300;
   font-style: italic; }
 
@@ -7636,18 +7641,18 @@ Stylesheet: Main Stylesheet
 GENERAL STYLES
 *********************/
 body {
-  font-family: "gentona-light", Arial, sans-serif;
+  font-family: "gentona-light", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 112.5%; }
 
 h1, h2 {
-  font-family: "quadon", Arial, sans-serif;
+  font-family: "quadon", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 400;
   font-style: normal; }
 
 h3, h4, h5, h6, .semibold, blockquote {
-  font-family: "gentona-book", Arial, sans-serif;
+  font-family: "gentona-book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 400;
   font-style: normal; }
 
@@ -7984,7 +7989,7 @@ body.rust .sidebar .nav li:before {
 
 #search-bar {
   margin-top: 1rem;
-  font-family: "quadon", Arial, sans-serif; }
+  font-family: "quadon", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
   @media print, screen and (min-width: 64em) {
     #search-bar {
       margin-top: 3.4rem;
@@ -8043,10 +8048,10 @@ POSTS & CONTENT STYLES
     font-size: 1.5rem; }
     .news-feed h1.entry-title {
       font-size: 1.25rem;
-      font-family: "gentona-book", Arial, sans-serif; }
+      font-family: "gentona-book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
   .news-feed h2 {
     font-size: 1.25rem;
-    font-family: "gentona-book", Arial, sans-serif; }
+    font-family: "gentona-book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 #content #inner-content {
   padding: 1.25rem 0rem 1rem; }
@@ -8083,7 +8088,7 @@ POSTS & CONTENT STYLES
   padding: 0px; }
 
 .byline {
-  font-family: "gentona-book", Arial, sans-serif;
+  font-family: "gentona-book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   margin-bottom: 0rem; }
 
 .entry-content .imageblockleft {
@@ -8324,6 +8329,9 @@ SIDEBARS & ASIDES
     margin-bottom: 0;
     color: #E5E2E0; }
     .sidebar h5 a {
+      color: #fff;
+      font-family: "gentona-bold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+    .sidebar h5 a:focus, .sidebar h5 a:hover, .sidebar h5 a:visited, .sidebar h5 a:visited:focus, .sidebar h5 a:visited:hover {
       color: #fff; }
   .sidebar h6 {
     margin-bottom: 7px;
@@ -8449,10 +8457,10 @@ footer.timely.ai1ec-event-footer {
 
 .timely p {
   font-size: 16px;
-  font-family: "gentona-light", Arial, sans-serif !important; }
+  font-family: "gentona-light", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important; }
 
 .ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details, .ai1ec-event-location {
-  font-family: "gentona-book", Arial, sans-serif !important; }
+  font-family: "gentona-book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important; }
 
 .ai1ec-agenda-view .ai1ec-event .ai1ec-event-time {
   opacity: 1;
