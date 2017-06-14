@@ -13,16 +13,7 @@
 		<meta class="foundation-mq">
 		
 	<meta name="date" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
-	
-	<?php $url = network_site_url(); if ($url = array("http://pineapple.dev/", "http://sites.krieger.jhu.edu")) : ?>
-
-		<title><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); echo ' | Johns Hopkins University';?> </title>
-
-	<?php else: ?>
-
-			<title><?php bloginfo('name'); echo ' | Johns Hopkins University';?> </title>
-
-	<?php endif;?>
+	<title><?php $current_site = get_current_site(); $current_domain = $current_site->domain;if( $current_domain == 'bicycle.dev' || $current_domain ==  'krieger.jhu.edu' ) : ?><?php wp_title(' | ', 'echo', 'right'); ?><?php elseif ($current_domain == 'pineapple.dev' || $current_domain ==  'sites.krieger.jhu.edu'): ?><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); echo ' | Johns Hopkins University';?><?php endif;?></title>	
 
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
