@@ -1,7 +1,7 @@
 <div class="hero">	
 	<div class="row">
 			<div class="large-8 columns">
-				<img src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" class="radius-top" />
+				<img src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" alt="slider <?php the_title(); ?>" class="radius-top" />
 			</div>
 			<div class="small-12 large-4 columns vertical radius-topright">
 				<div id="caption">
