@@ -178,6 +178,9 @@ a, a:visited {
 		  	color: $black;
 		  	border-bottom-style: solid;
 		}
+		&.button {
+			border-bottom: none;
+		}
 	}
 	ul.accordion a.accordion-title {
 	  border-bottom: 1px solid #e6e6e6;
@@ -571,9 +574,9 @@ body.rust {
 	}
 }
 
-ul.breadcrumbs {
+ul.breadcrumbs, .breadcrumbs {
 	margin-left: .5rem !important;
-	li {
+	li, span {
 		font-size: 1rem;
 		text-transform: inherit;
 		a:hover {
@@ -581,6 +584,8 @@ ul.breadcrumbs {
 		}
 	}
 }
+
+
 
 /*********************
 POSTS & CONTENT STYLES
@@ -1064,12 +1069,9 @@ SIDEBARS & ASIDES
 			margin-top:0;
 			margin-bottom:0;
 			color: $grey;
-			 a {
+			span.white {
 			 	color: #fff;
 			 	font-family: $font-stack-bold;
-			 }
-			 a:focus, a:hover, a:visited, a:visited:focus, a:visited:hover {
-			 	color: #fff;
 			 }
 		}
 		h6 {

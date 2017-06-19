@@ -7760,6 +7760,8 @@ a, a:visited {
   #main a:hover, #main a:active {
     color: #2C2C33;
     border-bottom-style: solid; }
+  #main a.button {
+    border-bottom: none; }
 
 #main ul.accordion a.accordion-title {
   border-bottom: 1px solid #e6e6e6; }
@@ -8031,12 +8033,12 @@ body.rust .sidebar .nav li:before {
   .menu > li:not(.menu-text) > a {
     font-size: 15px; } }
 
-ul.breadcrumbs {
+ul.breadcrumbs, .breadcrumbs {
   margin-left: .5rem !important; }
-  ul.breadcrumbs li {
+  ul.breadcrumbs li, ul.breadcrumbs span, .breadcrumbs li, .breadcrumbs span {
     font-size: 1rem;
     text-transform: inherit; }
-    ul.breadcrumbs li a:hover {
+    ul.breadcrumbs li a:hover, ul.breadcrumbs span a:hover, .breadcrumbs li a:hover, .breadcrumbs span a:hover {
       text-decoration: none; }
 
 /*********************
@@ -8328,11 +8330,9 @@ SIDEBARS & ASIDES
     margin-top: 0;
     margin-bottom: 0;
     color: #E5E2E0; }
-    .sidebar h5 a {
+    .sidebar h5 span.white {
       color: #fff;
       font-family: "gentona-bold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
-    .sidebar h5 a:focus, .sidebar h5 a:hover, .sidebar h5 a:visited, .sidebar h5 a:visited:focus, .sidebar h5 a:visited:hover {
-      color: #fff; }
   .sidebar h6 {
     margin-bottom: 7px;
     color: #000; }

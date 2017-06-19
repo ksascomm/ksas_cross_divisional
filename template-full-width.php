@@ -12,7 +12,7 @@ Template Name: Full Width (No Sidebar)
 	
 		    <main id="main" class="small-12 large-9 large-push-1 columns" role="main">
 
-				<?php get_template_part( 'parts/nav', 'breadcrumbs' ); ?>
+			<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

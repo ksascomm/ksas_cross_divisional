@@ -7,7 +7,7 @@ $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>
 		<div id="inner-content" class="row">
 	
 		     <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
-
+				<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?> 
 		    	<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 		
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -33,7 +33,7 @@ $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>
 					
 					<div class="offset-gutter" id="sidebar_header">
 						<h5 class="grey">Also in 
-							<a href="<?php echo site_url(); ?>/about" class="white">About</a>
+							<span class="white">About</span>
 						</h5>
 					</div>
 
