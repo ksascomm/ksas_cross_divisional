@@ -150,7 +150,7 @@
 		<div class="small-12 large-3 large-pull-9 columns hide-for-print" role="navigation"> 
 			<div class="sidebar">
 				<div class="offset-gutter" id="sidebar_header">
-					<h5 class="grey">Also in <a href="<?php echo site_url(); ?>/people" class="white bold">People</a></h5>
+					<h5 class="grey">Also in <span class="white">People</span></h5>
 				</div>
 				<?php 
 					wp_nav_menu( array( 
