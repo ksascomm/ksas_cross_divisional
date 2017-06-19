@@ -4,11 +4,13 @@
 
 	<div id="inner-content" class="row">
 
-		<main id="main" class="small-12 large-8 large-push-3 columns" role="main">
+		<main id="main" class="large-12 small-12 columns" role="main">
+		
 		<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
 		<?php if (has_term('', 'role') && !has_term('job-market-candidate', 'role')) : ?>
-			
-				<div class="float-right">
+			<div class="row">
+				<div class="small-12 medium-3 medium-offset-9 columns">
 					<label for="jump">
 						<h5>Jump to Faculty Member</h5>
 					</label>
@@ -28,24 +30,20 @@
 						<?php endwhile; ?>
 					</select>
 				</div>
+			</div>
 		<?php endif; ?>	
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<header class="article-header">	
-					<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-				</header>
-				<div class="row bio">
-					<div class="small-12 medium-4 columns">
+				<div class="small-12 medium-4 columns bio">
 
+					<header class="article-header">	
 					<?php if ( has_post_thumbnail()) { ?> 
 							<?php the_post_thumbnail('full', array('class' => 'headshot')); ?>
-						<?php } ?>	
-
-					</div>
-					<div class="small-12 medium-8 columns end">	
-
+						<?php } ?>			    
+							<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 				   <?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
 				   		<h2><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h2>
 				   <?php endif; ?>
+					</header>
 				    <p class="listing">
 				    	<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?>
 				    		<span class="fa fa-map-marker" aria-hidden="true"></span> <?php echo get_post_meta($post->ID, 'ecpt_office', true); ?><br>
@@ -87,10 +85,9 @@
 						<?php endif; ?>
 				    </p>
 				</div>
-				</div>
+			<div class="small-12 medium-8 columns end">
 			<?php if (has_term('', 'role') && !has_term('job-market-candidate', 'role')) : ?>
-				<div class="row">
-				<ul class="tabs margin10" data-tabs id="profile-tabs">
+				<ul class="tabs" data-tabs id="profile-tabs">
 					<?php if ( get_post_meta($post->ID, 'ecpt_bio', true) ) : ?>
 						<li class="tabs-title is-active"><a href="#bioTab">Biography</a></li>
 					<?php endif; ?>
@@ -142,26 +139,12 @@
 						 <div class="tabs-panel" id="extra2Tab"><?php echo get_post_meta($post->ID, 'ecpt_extra_tab2', true); ?></div>
 					<?php endif; ?>			
 				</div>
-				</div>
 			<?php endif; ?>
-		<?php endwhile; endif; ?>
-		</article>	
-		</main> <!-- end #main -->
-		<div class="small-12 large-3 large-pull-9 columns hide-for-print" role="navigation"> 
-			<div class="sidebar">
-				<div class="offset-gutter" id="sidebar_header">
-					<h5 class="grey">Also in <span class="white">People</span></h5>
-				</div>
-				<?php 
-					wp_nav_menu( array( 
-							'theme_location' => 'main-nav', 
-							'menu_class' => 'nav', 
-							'container_class' => '',
-							'submenu' => 'People',
-						));
-				?>
 			</div>
-		</div>
+	<?php endwhile; endif; ?>
+	</article>	
+		</main> <!-- end #main -->
+
 	</div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
