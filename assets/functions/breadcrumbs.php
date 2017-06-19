@@ -18,7 +18,7 @@ function dimox_breadcrumbs() {
 
     $wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // the opening wrapper tag
     $wrap_after     = '</div><!-- .breadcrumbs -->'; // the closing wrapper tag
-    $sep            = '›'; // separator between crumbs
+    $sep            = '/'; // separator between crumbs
     $sep_before     = '<span class="sep">'; // tag before separator
     $sep_after      = '</span>'; // tag after separator
     $show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show

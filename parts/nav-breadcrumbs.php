@@ -16,7 +16,7 @@
 				<?php else : ?>
 					<li><a href="<?php echo $home_url; ?>/about/archive">News Archive</a></li>
 				<?php endif;?>
-				<li><a href="<?php echo get_permalink(); ?>"><?php echo $article_title; ?></a></li>
+				<li><?php echo $article_title; ?></li>
 			</ul>
 		</nav>	<?php } 
 	elseif (is_singular('ai1ec_event')) { ?>
