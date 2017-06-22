@@ -7916,6 +7916,23 @@ body.black .sidebar .nav a {
 body.black .sidebar .nav li:before {
   color: #2C2C33; }
 
+body.black #main a, body.black .textwidget a {
+  color: #2C2C33;
+  border-bottom: .125em dotted;
+  border-bottom-color: rgba(0, 0, 0, 0.2); }
+  body.black #main a:hover, body.black #main a:active, body.black .textwidget a:hover, body.black .textwidget a:active {
+    color: #2C2C33;
+    border-bottom-style: solid; }
+
+body.black .button {
+  background-color: #2C2C33; }
+
+body.black .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, body.black .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
+  color: #2C2C33; }
+
+body.black .ai1ec-agenda-view .ai1ec-month, body.black .ai1ec-agenda-widget-view .ai1ec-month {
+  background: #2C2C33; }
+
 body.green .top-bar, body.green #sidebar_header {
   background-color: #007a53; }
   body.green .top-bar ul, body.green #sidebar_header ul {
@@ -7930,6 +7947,23 @@ body.green .sidebar .nav a {
 
 body.green .sidebar .nav li:before {
   color: #007a53; }
+
+body.green #main a, body.green .textwidget a {
+  color: #007a53;
+  border-bottom: .125em dotted;
+  border-bottom-color: rgba(0, 0, 0, 0.2); }
+  body.green #main a:hover, body.green #main a:active, body.green .textwidget a:hover, body.green .textwidget a:active {
+    color: #2C2C33;
+    border-bottom-style: solid; }
+
+body.green .button {
+  background-color: #007a53; }
+
+body.green .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, body.green .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
+  color: #007a53; }
+
+body.green .ai1ec-agenda-view .ai1ec-month, body.green .ai1ec-agenda-widget-view .ai1ec-month {
+  background: #007a53; }
 
 body.red .top-bar, body.red #sidebar_header {
   background-color: #8a2a2b; }
@@ -7946,6 +7980,23 @@ body.red .sidebar .nav a {
 body.red .sidebar .nav li:before {
   color: #8a2a2b; }
 
+body.red #main a, body.red .textwidget a {
+  color: #8a2a2b;
+  border-bottom: .125em dotted;
+  border-bottom-color: rgba(0, 0, 0, 0.2); }
+  body.red #main a:hover, body.red #main a:active, body.red .textwidget a:hover, body.red .textwidget a:active {
+    color: #2C2C33;
+    border-bottom-style: solid; }
+
+body.red .button {
+  background-color: #8a2a2b; }
+
+body.red .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, body.red .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
+  color: #8a2a2b; }
+
+body.red .ai1ec-agenda-view .ai1ec-month, body.red .ai1ec-agenda-widget-view .ai1ec-month {
+  background: #8a2a2b; }
+
 body.rust .top-bar, body.rust #sidebar_header {
   background-color: #6f2c3f; }
   body.rust .top-bar ul, body.rust #sidebar_header ul {
@@ -7960,6 +8011,23 @@ body.rust .sidebar .nav a {
 
 body.rust .sidebar .nav li:before {
   color: #6f2c3f; }
+
+body.rust #main a, body.rust .textwidget a {
+  color: #6f2c3f;
+  border-bottom: .125em dotted;
+  border-bottom-color: rgba(0, 0, 0, 0.2); }
+  body.rust #main a:hover, body.rust #main a:active, body.rust .textwidget a:hover, body.rust .textwidget a:active {
+    color: #2C2C33;
+    border-bottom-style: solid; }
+
+body.rust .button {
+  background-color: #6f2c3f; }
+
+body.rust .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, body.rust .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
+  color: #6f2c3f; }
+
+body.rust .ai1ec-agenda-view .ai1ec-month, body.rust .ai1ec-agenda-widget-view .ai1ec-month {
+  background: #6f2c3f; }
 
 .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
   border-color: transparent transparent transparent #fff; }
@@ -8473,23 +8541,26 @@ footer.timely.ai1ec-event-footer {
   border-top: none !important;
   background: none !important; }
 
+a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1ec-popup-trigger {
+  border-bottom: 1px solid #c2c2c2 !important; }
+
 .timely {
   font-family: inherit !important; }
 
 .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-time, .ai1ec-agenda-widget-view .ai1ec-event > a {
-  color: #2C2C33 !important; }
+  color: #2C2C33; }
 
 .ai1ec-agenda-widget-view .ai1ec-month {
-  background: #005eb8 !important; }
+  background: #005eb8; }
 
 .ai1ec-agenda-view .ai1ec-month {
-  background: #005eb8 !important; }
+  background: #005eb8; }
 
 .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
-  color: #005eb8 !important; }
+  color: #005eb8; }
 
 .entry-content .timely a:hover, .comment-content .timely a:hover, .site-footer .widget .timely a:hover, .entry-content .timely a:visited, .comment-content .timely a:visited, .site-footer .widget .timely a:visited, .ai1ec-agenda-view .ai1ec-event:hover .ai1ec-event-title {
-  color: #2C2C33 !important; }
+  color: #2C2C33; }
 
 #calendar_section {
   margin-bottom: 10px; }

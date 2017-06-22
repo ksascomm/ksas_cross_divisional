@@ -404,6 +404,26 @@ body.black {
 			color: $black;
 		}
 	}
+	#main, .textwidget {
+		a {
+			color: $black;
+			border-bottom: .125em dotted;
+			border-bottom-color: rgba(0,0,0,.2);
+			&:hover, &:active {
+			  	color: $black;
+			  	border-bottom-style: solid;
+			}
+		}
+	}
+	.button {
+		background-color: $black;
+	}
+	.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
+		color: $black;
+	}
+	.ai1ec-agenda-view .ai1ec-month, .ai1ec-agenda-widget-view .ai1ec-month {
+		background: $black;
+	}		
 }
 body.green {
 	.top-bar, #sidebar_header {
@@ -425,6 +445,26 @@ body.green {
 		li:before {
 			color: $green;
 		}
+	}
+	#main, .textwidget {
+		a {
+			color: $green;
+			border-bottom: .125em dotted;
+			border-bottom-color: rgba(0,0,0,.2);
+			&:hover, &:active {
+			  	color: $black;
+			  	border-bottom-style: solid;
+			}
+		}
+	}
+	.button {
+		background-color: $green;
+	}
+	.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
+		color: $green;
+	}
+	.ai1ec-agenda-view .ai1ec-month, .ai1ec-agenda-widget-view .ai1ec-month {
+		background: $green;
 	}
 }
 body.red {
@@ -448,6 +488,26 @@ body.red {
 			color: $red;
 		}		
 	}
+	#main, .textwidget {
+		a {
+			color: $red;
+			border-bottom: .125em dotted;
+			border-bottom-color: rgba(0,0,0,.2);
+			&:hover, &:active {
+			  	color: $black;
+			  	border-bottom-style: solid;
+			}
+		}
+	}
+	.button {
+		background-color: $red;
+	}
+	.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
+		color: $red;
+	}
+	.ai1ec-agenda-view .ai1ec-month, .ai1ec-agenda-widget-view .ai1ec-month {
+		background: $red;
+	}		
 }
 body.rust {
 	.top-bar, #sidebar_header {
@@ -470,6 +530,26 @@ body.rust {
 			color: $rust;
 		}		
 	}
+	#main, .textwidget {
+		a {
+			color: $rust;
+			border-bottom: .125em dotted;
+			border-bottom-color: rgba(0,0,0,.2);
+			&:hover, &:active {
+			  	color: $black;
+			  	border-bottom-style: solid;
+			}
+		}
+	}
+	.button {
+		background-color: $rust;
+	}
+	.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
+		color: $rust;
+	}
+	.ai1ec-agenda-view .ai1ec-month, .ai1ec-agenda-widget-view .ai1ec-month {
+		background: $rust;
+	}		
 }
 
 .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
@@ -1270,6 +1350,10 @@ footer.timely.ai1ec-event-footer {
   background: none !important;
 }
 
+a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1ec-popup-trigger {
+	border-bottom: 1px solid #c2c2c2 !important;
+}
+
 .timely {
   font-family: inherit !important;
 }
@@ -1277,24 +1361,24 @@ footer.timely.ai1ec-event-footer {
 .ai1ec-agenda-widget-view {
   .ai1ec-event {
     .ai1ec-event-time, > a {
-      color: $black !important;
+      color: $black;
     }
   }
   .ai1ec-month {
-    background: $primary-color !important;
+    background: $primary-color;
   }
 }
 
 .ai1ec-agenda-view .ai1ec-month {
-  background: $primary-color !important;
+  background: $primary-color;
 }
 
 .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
-  color: $primary-color !important;
+  color: $primary-color;
 }
 
 .entry-content .timely a:hover, .comment-content .timely a:hover, .site-footer .widget .timely a:hover, .entry-content .timely a:visited, .comment-content .timely a:visited, .site-footer .widget .timely a:visited, .ai1ec-agenda-view .ai1ec-event:hover .ai1ec-event-title {
-  color: $black !important;
+  color: $black;
 }
 
 #calendar_section {
