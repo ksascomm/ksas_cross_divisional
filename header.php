@@ -13,7 +13,7 @@
 		<meta class="foundation-mq">
 		
 	<meta name="date" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
-	<title><?php $current_site = get_current_site(); $current_domain = $current_site->domain;if( $current_domain == 'bicycle.dev' || $current_domain ==  'krieger.jhu.edu' ) : ?><?php wp_title(' | ', 'echo', 'right'); ?><?php elseif ($current_domain == 'pineapple.dev' || $current_domain ==  'sites.krieger.jhu.edu'): ?><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); echo ' | Johns Hopkins University';?><?php endif;?></title>	
+	<title><?php $current_site = get_current_site(); $current_domain = $current_site->domain;if ( $current_domain == 'bicycle.dev' || $current_domain == 'krieger.jhu.edu' ) : ?><?php wp_title(' | ', 'echo', 'right'); ?><?php elseif ($current_domain == 'pineapple.dev' || $current_domain == 'sites.krieger.jhu.edu' ) : ?><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); echo ' | Johns Hopkins University';?><?php endif;?></title>	
 
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
@@ -69,7 +69,7 @@
 		 				
 							<div class="show-for-print">
 								<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger-print.jpg" alt="krieger logo">
-								<h1><?php echo get_bloginfo ( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
+								<h1><?php echo get_bloginfo( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
 							</div>						
 
 					</header> <!-- end .header -->

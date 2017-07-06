@@ -6,8 +6,10 @@
 				<a href="<?php the_permalink(); ?>">
 					<h6><?php the_date(); ?></h6>
 					<h5 class="black"><?php the_title();?></h5>
-					<?php if ( has_post_thumbnail()) { ?> 
-						<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+					<?php if ( has_post_thumbnail() ) { ?> 
+						<?php the_post_thumbnail('thumbnail', array(
+	'class'	=> 'floatleft',
+)); ?>
 					<?php } ?>
 				</a>
 					<?php the_excerpt(); ?>

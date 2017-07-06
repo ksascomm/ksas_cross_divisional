@@ -6,7 +6,7 @@
 	
 		    <main id="main" class="small-12 large-8 large-push-4 columns" role="main">
     
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			    <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 			 
 					<!-- To see additional archive styles, visit the /parts directory -->
 					<?php get_template_part( 'parts/loop', 'archive' ); ?>

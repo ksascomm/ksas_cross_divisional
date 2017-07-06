@@ -1,6 +1,6 @@
 <?php
 // Comment Layout
-function joints_comments($comment, $args, $depth) {
+function joints_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class('panel'); ?>>
 		<div class="media-object">
@@ -18,7 +18,7 @@ function joints_comments($comment, $args, $depth) {
 						<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'jointswp')); ?> </a></time>
 						<?php edit_comment_link(__('(Edit)', 'jointswp'),'  ','') ?>
 					</header>
-					<?php if ($comment->comment_approved == '0') : ?>
+					<?php if ($comment->comment_approved == '0' ) : ?>
 						<div class="alert alert-info">
 							<p><?php _e('Your comment is awaiting moderation.', 'jointswp') ?></p>
 						</div>
@@ -26,7 +26,10 @@ function joints_comments($comment, $args, $depth) {
 					<section class="comment_content clearfix">
 						<?php comment_text() ?>
 					</section>
-					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+					<?php comment_reply_link(array_merge( $args, array(
+	'depth' => $depth,
+	'max_depth' => $args['max_depth'],
+))) ?>
 				</article>
 			</div>
 		</div>

@@ -15,8 +15,10 @@ var gulp  = require('gulp'),
     bower = require('gulp-bower');
     imageop = require('gulp-image-optimization');
     babel = require('gulp-babel'),
+    phpcs = require('gulp-phpcs'),
     argv = require('yargs').argv;
 
+var $ = require('gulp-load-plugins')();
 var config = {
      sassPath: './resources/sass',
      bowerDir: './bower_components' 
@@ -24,6 +26,13 @@ var config = {
 
 var URL = 'pineapple.dev/';
 
+var PATHS = {
+  phpcs: [
+    '**/*.php',
+    '!wpcs',
+    '!wpcs/**',
+  ]
+};
 // IF YOU UPDATE FOUNDATION VIA BOWER, RUN THIS TO SAVE UPDATED FILES TO /VENDOR
 gulp.task('bower', function() {
   return bower({ cmd: 'update'})
@@ -168,3 +177,25 @@ gulp.task('watch', ['styles', 'browser-sync', 'icons'], function() {
 
 });
 
+// PHP Code Sniffer task
+gulp.task('phpcs', function() {
+  return gulp.src(PATHS.phpcs)
+    .pipe(phpcs({
+      bin: 'wpcs/vendor/bin/phpcs',
+      standard: './codesniffer.ruleset.xml',
+      showSniffCode: true,
+    }))
+    .pipe($.phpcs.reporter('log'));
+});
+
+// PHP Code Beautifier task
+gulp.task('phpcbf', function () {
+  return gulp.src(PATHS.phpcs)
+  .pipe($.phpcbf({
+    bin: 'wpcs/vendor/bin/phpcbf',
+    standard: './codesniffer.ruleset.xml',
+    warningSeverity: 0
+  }))
+  .on('error', $.util.log)
+  .pipe(gulp.dest('.'));
+});

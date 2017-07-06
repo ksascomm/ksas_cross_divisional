@@ -9,7 +9,7 @@
 	  				<a href="<?php echo network_site_url(); ?>">
 						<?php $theme_option = flagship_sub_get_global_options();
 						$shield = $theme_option['flagship_sub_shield'];
- 							if ($shield == 'jhu') : ?>
+ 							if ('jhu' === $shield ) : ?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
 	  					<?php else : ?>
 	  						<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-horizontal.png" alt="Krieger School of Arts and Sciences">
@@ -20,7 +20,7 @@
 	  	</div>
   		<div class="row">
   			<div class="small-12 columns">
-  				<h1 class="center"><a href="<?php echo site_url(); ?>"><small><?php echo get_bloginfo ( 'description' ); ?></small><?php echo get_bloginfo( 'title' ); ?></a></h1>
+  				<h1 class="center"><a href="<?php echo site_url(); ?>"><small><?php echo get_bloginfo( 'description' ); ?></small><?php echo get_bloginfo( 'title' ); ?></a></h1>
   			</div>
   		</div>
 	</div>
@@ -33,7 +33,7 @@
 					<div class="logo">
 						
 	  					 <?php $theme_option = flagship_sub_get_global_options();
- 							if ($shield == 'jhu') : ?>
+ 							if ('jhu' === $shield ) : ?>
  							<a href="http://www.jhu.edu/" title="Johns Hopkins University">
 	  							<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-vertical.png" alt="Johns Hopkins University">
 	  						</a>
@@ -48,8 +48,8 @@
 				<div class="small-12 medium-5 large-7 columns">
 					<h1 itemprop="headline">
 						<a href="<?php echo site_url(); ?>">
-							<?php if( !empty( get_bloginfo('description') )) : ?>
-								<small itemprop="description"><?php echo get_bloginfo ( 'description' ); ?></small>
+							<?php if ( ! empty( get_bloginfo('description') ) ) : ?>
+								<small itemprop="description"><?php echo get_bloginfo( 'description' ); ?></small>
 							<?php endif; ?>
 							<?php echo get_bloginfo( 'title' ); ?>
 						</a>

@@ -1,4 +1,4 @@
-<?php if( 0 === ( $wp_query->current_post  )  % 4 ): ?>
+<?php if ( 0 === ( $wp_query->current_post  ) % 4 ) : ?>
 
     <div class="row archive-grid" data-equalizer> <!--Begin Row:--> 
 
@@ -26,9 +26,8 @@
 			
 		</div>
 
-<?php if( 0 === ( $wp_query->current_post + 1 )  % 4  ||  ( $wp_query->current_post + 1 ) ===  $wp_query->post_count ): ?>
+<?php if ( 0 === ( $wp_query->current_post + 1 ) % 4  ||  ( $wp_query->current_post + 1 ) === $wp_query->post_count ) : ?>
 
    </div>  <!--End Row: --> 
 
 <?php endif; ?>
-

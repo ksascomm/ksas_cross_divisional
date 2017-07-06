@@ -5,3 +5,20 @@ For Kreiger-based organizations that also cross divisions. Doesn't require major
 - Using the command line, navigate to your theme directory
 - Run npm install
 - Run gulp to confirm everything is working
+
+#### Using WPCS
+This theme comes with tools to check for WordPress Coding Standards. To enable this feature you'll first need to make sure  [Composer](https://getcomposer.org/) is installed. Then to install PHP Codesniffer and the WordPress Coding Standards set of "Sniffs", simply run:
+```bash
+$ composer create-project wp-coding-standards/wpcs:dev-master --no-dev
+```
+When prompted to remove existing VCS, answer Yes by typing `Y` if you are forking this project.
+
+Once you have installed the packages, you can check your entire theme by running:
+```bash
+$ gulp phpcs
+```
+
+If there are errors that Code Sniffer can fix automatically, run the following command to fix them:
+```bash
+$ gulp phpcbf
+```

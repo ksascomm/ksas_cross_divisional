@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php $theme_option = flagship_sub_get_global_options(); 
+<?php $theme_option = flagship_sub_get_global_options();
 $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>	
 			
 	<div id="content">
@@ -7,10 +7,10 @@ $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>
 		<div id="inner-content" class="row">
 	
 		     <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
-				<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?> 
+				<?php if (function_exists('dimox_breadcrumbs') ) { dimox_breadcrumbs();} ?> 
 		    	<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 		
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			    <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 			 		<div class="news-feed">
 						<!-- To see additional archive styles, visit the /parts directory -->
 						<?php get_template_part( 'parts/loop', 'archive' ); ?>
@@ -37,9 +37,9 @@ $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>
 						</h5>
 					</div>
 
-					<?php wp_nav_menu( array( 
-						'theme_location' => 'main-nav', 
-						'menu_class' => 'nav', 
+					<?php wp_nav_menu( array(
+						'theme_location' => 'main-nav',
+						'menu_class' => 'nav',
 						'container_class' => '',
 						'sub_menu' => true,
 					)); ?>

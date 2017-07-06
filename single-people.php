@@ -8,7 +8,7 @@
 		
 		<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-		<?php if (has_term('', 'role') && !has_term('job-market-candidate', 'role')) : ?>
+		<?php if (has_term('', 'role') && ! has_term('job-market-candidate', 'role') ) : ?>
 			<div class="row">
 				<div class="small-12 medium-3 medium-offset-9 columns">
 					<label for="jump">
@@ -24,8 +24,9 @@
 							'meta_key' => 'ecpt_people_alpha',
 							'orderby' => 'meta_value',
 							'order' => 'ASC',
-							'posts_per_page' => '-1')); ?>
-						<?php while ($jump_menu_query->have_posts()) : $jump_menu_query->the_post(); ?>				
+							'posts_per_page' => '-1',
+)); ?>
+						<?php while ($jump_menu_query->have_posts() ) : $jump_menu_query->the_post(); ?>				
 							<option value="<?php the_permalink() ?>"><?php the_title(); ?></option>
 						<?php endwhile; ?>
 					</select>
@@ -36,8 +37,10 @@
 				<div class="small-12 medium-4 columns bio">
 
 					<header class="article-header">	
-					<?php if ( has_post_thumbnail()) { ?> 
-							<?php the_post_thumbnail('full', array('class' => 'headshot')); ?>
+					<?php if ( has_post_thumbnail() ) { ?> 
+							<?php the_post_thumbnail('full', array(
+	'class' => 'headshot',
+)); ?>
 						<?php } ?>			    
 							<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 				   <?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
@@ -61,7 +64,7 @@
 				    		<span class="fa fa-fax" aria-hidden="true"></span>  <?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?><br>
 				    	<?php endif; ?>
 				    
-				    	<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : $email = get_post_meta($post->ID, 'ecpt_email', true); ?>
+				    	<?php $email = get_post_meta($post->ID, 'ecpt_email', true); if ( get_post_meta($post->ID, 'ecpt_email', true) ) :  ?>
 								<span class="fa fa-envelope" aria-hidden="true"></span> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;<?php echo email_munge($email); ?>">
 								
 									<?php echo email_munge($email); ?> </a><br>
@@ -86,7 +89,7 @@
 				    </p>
 				</div>
 			<div class="small-12 medium-8 columns end">
-			<?php if (has_term('', 'role') && !has_term('job-market-candidate', 'role')) : ?>
+			<?php if (has_term('', 'role') && ! has_term('job-market-candidate', 'role') ) : ?>
 				<ul class="tabs" data-tabs id="profile-tabs">
 					<?php if ( get_post_meta($post->ID, 'ecpt_bio', true) ) : ?>
 						<li class="tabs-title is-active"><a href="#bioTab">Biography</a></li>
@@ -99,7 +102,7 @@
 						 <li class="tabs-title"><a href="#teachingTab">Teaching</a></li>
 					<?php endif; ?>
 					
-					<?php if ( get_post_meta($post->ID, 'ecpt_publications', true)) : ?>
+					<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) ) : ?>
 							 <li class="tabs-title"><a href="#publicationsTab">Publications</a></li>
 					<?php endif; ?>
 					<?php if ( get_post_meta($post->ID, 'ecpt_extra_tab_title', true) ) : ?>
@@ -125,7 +128,7 @@
 						 <div class="tabs-panel" id="teachingTab"><?php echo get_post_meta($post->ID, 'ecpt_teaching', true); ?></div>
 					<?php endif; ?>
 					
-					<?php if ( get_post_meta($post->ID, 'ecpt_publications', true)) : ?>
+					<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) ) : ?>
 						 <div class="tabs-panel" id="publicationsTab">
 							<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) ) : echo get_post_meta($post->ID, 'ecpt_publications', true); endif; ?>
 						</div>

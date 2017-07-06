@@ -1,7 +1,7 @@
 <li class="person <?php echo get_the_roles($post); ?>">
 	<div class="row">
 		<div class="small-12 columns">
-			<?php if ( has_post_thumbnail()) { ?>
+			<?php if ( has_post_thumbnail() ) { ?>
 				<?php the_post_thumbnail('directory'); ?>
 			<?php } ?>
 			<h3 class="no-margin">
@@ -19,7 +19,7 @@
 				<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?>
 					<span class="fa fa-fax" aria-hidden="true"></span> <span class="contact"> <?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?></span><br>
 				<?php endif; ?>
-				<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : $email = get_post_meta($post->ID, 'ecpt_email', true); ?>
+				<?php $email = get_post_meta($post->ID, 'ecpt_email', true); if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?>
 					<span class="fa fa-envelope" aria-hidden="true"></span> <span class="contact"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;<?php echo email_munge($email); ?>">
 					<?php echo email_munge($email); ?></a></span><br>
 				<?php endif; ?>

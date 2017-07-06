@@ -12,9 +12,9 @@ Template Name: Page with Sidebar (specified widget)
 	
 		    <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
 		    
-			<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+			<?php if (function_exists('dimox_breadcrumbs') ) { dimox_breadcrumbs();} ?>
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
 						<?php get_template_part( 'parts/loop', 'page' ); ?>
 						
@@ -27,10 +27,10 @@ Template Name: Page with Sidebar (specified widget)
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 					
 					<!-- Page Specific Sidebar -->
-					<?php if ( have_posts()) : while ( have_posts() ) : the_post(); 
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 						$sidebar = get_post_meta($post->ID, 'ecpt_page_sidebar', true);
 						dynamic_sidebar($sidebar);
-					endwhile; endif; wp_reset_query();
+					endwhile; endif; wp_reset_postdata();
 					?>
 					<!-- END Page Specific Sidebar -->
 

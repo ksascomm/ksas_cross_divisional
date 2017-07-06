@@ -1,7 +1,7 @@
 <li class="person <?php echo get_the_roles($post); ?>">
 	<div class="row">
 		<div class="small-12 columns">
-			<?php if ( has_post_thumbnail()) { ?>
+			<?php if ( has_post_thumbnail() ) { ?>
 				<?php the_post_thumbnail('directory'); ?>
 			<?php } ?>
 			<h3 class="no-margin">
