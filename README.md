@@ -13,12 +13,12 @@ $ composer create-project wp-coding-standards/wpcs:dev-master --no-dev
 ```
 When prompted to remove existing VCS, answer Yes by typing `Y` if you are forking this project.
 
-Once you have installed the packages, you can check your entire theme by running:
+Once you have installed the packages, check the theme by running:
 ```bash
 $ gulp phpcs
 ```
 
-If there are errors that Code Sniffer can fix automatically, run the following command to fix them:
+Code Sniffer can fix errors automatically! Simply run the following command to fix them:
 ```bash
 $ gulp phpcbf
 ```
