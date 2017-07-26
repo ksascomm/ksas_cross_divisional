@@ -28,6 +28,7 @@ $green: #007a53;      //green
 $red: #8a2a2b;        //red
 $rust: #6f2c3f;       //rust
 $grey: #E5E2E0;       //grey
+$darkgrey: #b4b2ad;   //dark grey
 
 /*********************
 TYPOGRAPHY
@@ -69,6 +70,12 @@ TYPOGRAPHY
 }
 
 @font-face {
+  font-family: 'gentona-semibold';
+  src: url('../fonts/gentona/Gentona-SemiBold.eot');
+  src: url('../fonts/gentona/Gentona-SemiBold.eot?#iefix') format("embedded-opentype"), url('../fonts/gentona/Gentona-SemiBold.woff') format("woff"), url('../fonts/gentona/Gentona-SemiBold.ttf') format("truetype");
+}
+
+@font-face {
   font-family: 'gentona-light';
   src: url('../fonts/gentona/Gentona-Light.eot');
   src: url('../fonts/gentona/Gentona-Light.eot?#iefix') format('embedded-opentype'),
@@ -94,6 +101,9 @@ $font-stack: 'gentona-light', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-s
 $font-header: 'quadon', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $font-subhead: 'gentona-book', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $font-stack-bold: 'gentona-bold', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-stack-semibold: 'gentona-semibold', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
+$font-awesome: FontAwesome, 'gentona-bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 //Use the best ampersand - http://simplebits.com/notebook/2008/08/14/ampersands-2/
 span.amp {

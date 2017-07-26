@@ -262,17 +262,16 @@ HEADER STYLES
 
 .header {
 	background: $primary-color;
-	 .logo{
-		width: 222px;
-    	height: 142px;
-    	padding-top: 7px;
+	.logo{
+    	padding: .5rem;
+    	margin-right: .5rem;
 	 }
-	 img.centered {
-	 	 display: block;
-    margin-left: auto;
-    margin-right: auto 
-	 }
-	 h1 {
+	img.centered {
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto 
+	}
+	h1 {
     	@include breakpoint(medium) {
 		 	font-size: 2rem;
 	    	line-height: 1.1em;
@@ -280,46 +279,31 @@ HEADER STYLES
     	@include breakpoint(large) {
 		 	font-size: 2.35rem;
 	    	line-height: 1.1em;
-	    	margin-top:3.4rem;
+	    	margin-top:1rem;
     	}
-		 	small {
-		 		font-size: 50%;
-			 	color: #fff;
-			 	margin-bottom: 1px;
-			 	display: block;
-		    	line-height: 1.3;
-		 	}
-		 	a, a:visited {
-		 		color: #fff;
-					&:hover, &:focus {
-						color: #fff;
-					}
-		 	}
+	 	small {
+	 		font-size: 50%;
+		 	color: #fff;
+		 	margin-bottom: 1px;
+		 	display: block;
+	    	line-height: 1.3;
+	 	}
+	 	a, a:visited {
+	 		color: #fff;
+				&:hover, &:focus {
+					color: #fff;
+				}
+	 	}
 	}
 }
 
-.mobile-logo {
-  position: relative;
-  margin: 0 auto;
-  img {
-   display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  a {
-    margin-top: 0;
-  }
-  &:hover {
-  background: none;
-  }
-}
-
-#mobile-nav {
-  background: $primary-color;
-   h1 {
-   	text-align: center;
-   }
+#logo_nav{
+	@include breakpoint(small) {
+		text-align: center;
+	}
+	@include breakpoint(large) {
+		text-align: inherit;
+	}
 }
 
 @media only screen and (min-width: 512px) and (max-width: 566px) {
@@ -329,30 +313,21 @@ HEADER STYLES
 	}
 }
 
-@media only screen and (max-width: 767px) {
-  .mobile-logo {
-    img {
-      width: 75%;
-    }
-  }
-}
 
 @media only screen and (max-width: 1023px) {
-    #desktop-nav {
-    display: none;
-  }
     html, body {
     overflow-x: hidden;
   }
+  	#logo_nav {
+  		.logo {
+			img {
+				padding: 1rem;
+      			margin-bottom: 1rem;
+			}
+		}
+  	}
 }
 
-
-@media only screen and (min-width: 1023px) {
-    #mobile-nav {
-    display: none;
-  }
-}
-    
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -380,6 +355,20 @@ NAVIGATION STYLES
 	}
 	input {
 		margin-right: inherit;
+	}
+	.menu {
+    	font-family: $font-stack-bold;
+	}
+	.top-bar-right {
+		a {
+	      color: $white;
+	      &:hover:not(.button) {
+	        background: darken($primary-color, 10%);
+	      }
+	      li:not(:last-child) {
+	        border-right: none;
+	      }
+	    }
 	}
 }
 
@@ -423,7 +412,18 @@ body.black {
 	}
 	.ai1ec-agenda-view .ai1ec-month, .ai1ec-agenda-widget-view .ai1ec-month {
 		background: $black;
-	}		
+	}
+	.top-bar-right {
+		a {
+	      color: $white;
+	      &:hover:not(.button) {
+	        background: darken($black, 10%);
+	      }
+	      li:not(:last-child) {
+	        border-right: none;
+	      }
+	    }		
+	}	
 }
 body.green {
 	.top-bar, #sidebar_header {
@@ -466,6 +466,17 @@ body.green {
 	.ai1ec-agenda-view .ai1ec-month, .ai1ec-agenda-widget-view .ai1ec-month {
 		background: $green;
 	}
+	.top-bar-right {
+		a {
+	      color: $white;
+	      &:hover:not(.button) {
+	        background: darken($green, 10%);
+	      }
+	      li:not(:last-child) {
+	        border-right: none;
+	      }
+	    }		
+	}		
 }
 body.red {
 	.top-bar, #sidebar_header {
@@ -507,7 +518,18 @@ body.red {
 	}
 	.ai1ec-agenda-view .ai1ec-month, .ai1ec-agenda-widget-view .ai1ec-month {
 		background: $red;
-	}		
+	}
+	.top-bar-right {
+		a {
+	      color: $white;
+	      &:hover:not(.button) {
+	        background: darken($red, 10%);
+	      }
+	      li:not(:last-child) {
+	        border-right: none;
+	      }
+	    }		
+	}			
 }
 body.rust {
 	.top-bar, #sidebar_header {
@@ -549,7 +571,18 @@ body.rust {
 	}
 	.ai1ec-agenda-view .ai1ec-month, .ai1ec-agenda-widget-view .ai1ec-month {
 		background: $rust;
-	}		
+	}
+	.top-bar-right {
+		a {
+	      color: $white;
+	      &:hover:not(.button) {
+	        background: darken($rust, 10%);
+	      }
+	      li:not(:last-child) {
+	        border-right: none;
+	      }
+	    }		
+	}			
 }
 
 .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
@@ -1140,24 +1173,24 @@ SIDEBARS & ASIDES
 .sidebar {
 	background: $grey;
 	padding: 0px 20px 1px 20px;
-		@include breakpoint (large) {
-			margin-top: 1rem;
-			margin-bottom: 1.5rem;	
-		}
-		h5 {
-			padding-left:20px;
-			margin-top:0;
-			margin-bottom:0;
-			color: $grey;
-			span.white {
-			 	color: #fff;
-			 	font-family: $font-stack-bold;
-			 }
-		}
-		h6 {
-			margin-bottom:7px;
-			color:#000;
-		}
+	@include breakpoint (large) {
+		margin-top: 1rem;
+		margin-bottom: 1.5rem;	
+	}
+	h5 {
+		padding-left:20px;
+		margin-top:0;
+		margin-bottom:0;
+		color: $grey;
+		span.white {
+		 	color: $white;
+		 	font-family: $font-stack-bold;
+		 }
+	}
+	h6 {
+		margin-bottom:7px;
+		color: $black;
+	}
 }
 
 #searchsubmit {
@@ -1218,6 +1251,17 @@ footer {
 			color: #ccc;    	
 	    }
 	}
+  .jhushield {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint(small) {
+      width: 300px;
+    }
+    @include breakpoint(medium) {
+      width: 350px;
+    }
+  }	
 }
 
 .inline-list li a {
@@ -1246,7 +1290,9 @@ footer {
 #menu-footer-links {
   margin-top: 15px;
   a {
-    font-size: 12px;
+    font-size: 1rem;
+    font-family: $font-stack-bold;
+    color: $white;
   }
 }
 
@@ -1254,9 +1300,19 @@ footer {
   clear: left;
   p {
     text-align: center;
-    font-size: 12px;
-    color: #CCC;
-    margin: 20px 0 0;
+    font-size: .95rem;
+    color: $grey;
+    margin: 2rem 0;
+  }
+}
+
+.social-media {
+  a {
+    float: right;
+    .fa {
+      padding: 0 .5rem;
+      color: $white;
+    }
   }
 }
 	
@@ -1414,6 +1470,132 @@ a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1
     color: #fff;
     &:hover {
       border-bottom-color: #adadad !important;
+    }
+  }
+}
+
+.featured-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: rem-calc(200);
+  position: relative;
+}
+
+.roof {
+  background-color: $primary-color;
+  width: 100%;
+  padding: .5rem 0;
+  li.roof-padding {
+    padding-top: .85rem;
+  }
+  a {
+    color: $white;
+  &:hover {
+    color: $black;
+  }
+  }
+  li.bar {
+    a:after { 
+      content: "|";
+      color: $black;
+      @include breakpoint (medium) {
+        margin-left: 1em; }
+      }
+  }
+  form { 
+     @include breakpoint (medium) {
+      width: 200px;
+      margin-top: -5px;
+    }
+  }
+  input {
+    height: 1.75rem;
+    &[type="submit"] {
+      font-family: $font-awesome;
+    }
+  }
+  .button {
+    background-color: #418def;
+  }
+  .roof-menu {
+    font-size: 1rem;
+     @include breakpoint (medium) {
+        float: left;
+        padding-left: 1rem;
+      }
+      @include breakpoint (large) {
+         float: right;
+      }
+  }
+  .menu.simple {
+    a.button {
+      padding: 0.7rem 1rem;
+    }
+  }
+}
+
+div#offCanvasTop1 {
+  background: $white;
+}
+
+#global-links {
+  h3 {
+    font-size: 1.25rem;
+    font-family: $font-stack-semibold;
+  }
+  .menu {
+  display: inherit;
+    li {
+      display: list-item;
+      a {
+        padding: 0.35rem 1rem; 
+        font-family: $font-stack-bold;
+        color: $primary-color;
+        &:hover, &:active {
+            color: $black;
+        }
+      }      
+    }
+  }
+}
+
+.off-canvas {
+  background: $black;
+  .menu.nested {
+  }
+  .menu > li > a {
+  	font-size: 1rem;
+    color: $white;
+    font-family: $font-stack-semibold;
+    &:hover {
+      background: $darkgrey;
+    }
+  }
+    // submenu arrow
+  .is-accordion-submenu-parent {
+    > a::after {
+      border-color: $white transparent transparent;
+    }
+    &.active > a::after {
+      border-color: $white transparent transparent;
+    }
+  }
+    form { 
+    margin-top: 1rem;
+  }
+  input {
+    &[type="submit"] {
+      font-family: $font-awesome;
+    }
+  }
+  .input-group-button {
+     @include breakpoint (small) {
+       @include grid-column(12);
+     }
+    .button {
+      background-color: #418def;
+      width: 100%;
     }
   }
 }

@@ -4,7 +4,7 @@
 	
 		<div id="inner-content" class="row">
 
-		    <main id="main" class="small-12 large-8 large-push-3 columns" role="main">
+		    <main id="main" class="small-12 large-9 large-push-3 columns" role="main">
 				
 				<?php if (function_exists('dimox_breadcrumbs') ) { dimox_breadcrumbs();} ?>  
 
