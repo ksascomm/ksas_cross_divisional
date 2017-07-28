@@ -10,8 +10,9 @@
 			<div class="small-12 large-4 columns">
 				<div class="logo">
   					 <?php $theme_option = flagship_sub_get_global_options();
+  							$shield = $theme_option['flagship_sub_shield'];
 							if ('jhu' === $shield ) : ?>
-							<a href="http://www.jhu.edu/" title="Johns Hopkins University">
+						<a href="http://www.jhu.edu/" title="Johns Hopkins University">
   							<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
   						</a>
   					<?php else : ?>
