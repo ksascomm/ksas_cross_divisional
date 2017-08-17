@@ -135,11 +135,11 @@
 					<?php endif; ?>
 				
 					<?php if ( get_post_meta($post->ID, 'ecpt_extra_tab', true) ) : ?>
-						<div class="content"  id="extraTab"><?php echo get_post_meta($post->ID, 'ecpt_extra_tab', true); ?></div>
+						<div class="tabs-panel" id="extraTab"><?php echo get_post_meta($post->ID, 'ecpt_extra_tab', true); ?></div>
 					<?php endif; ?>
 					
 					<?php if ( get_post_meta($post->ID, 'ecpt_extra_tab2', true) ) : ?>
-						 <div class="tabs-panel" id="extra2Tab"><?php echo get_post_meta($post->ID, 'ecpt_extra_tab2', true); ?></div>
+						<div class="tabs-panel" id="extra2Tab"><?php echo get_post_meta($post->ID, 'ecpt_extra_tab2', true); ?></div>
 					<?php endif; ?>			
 				</div>
 			<?php endif; ?>
