@@ -133,7 +133,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
 			if ( in_array( $item->menu_item_parent, $menu_item_parents ) ) {
 				// part of sub-tree: keep!
 				$menu_item_parents[] = $item->ID;
-			} else if ( ! ( isset( $args->show_parent ) && in_array( $item->ID, $menu_item_parents ) ) ) {
+			} elseif ( ! ( isset( $args->show_parent ) && in_array( $item->ID, $menu_item_parents ) ) ) {
 				// not part of sub-tree: away with it!
 				unset( $sorted_menu_items[ $key ] );
 			}
