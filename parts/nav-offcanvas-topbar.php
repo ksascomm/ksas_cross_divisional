@@ -16,7 +16,7 @@
   							<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
   						</a>
   					<?php else : ?>
-  						<a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">
+  						<a href="http://krieger.jhu.edu" title="Krieger School of Arts & Sciences">
   							<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-horizontal-md.png" alt="Krieger School of Arts and Sciences">
   						</a>
   					<?php endif; ?>
