@@ -62,7 +62,7 @@ function flagship_sub_options_page_fields() {
 		'desc'    => __( 'What do you want Home to be called in your breadcrumb navigation?', 'flagship_sub_textdomain' ),
 		'type'    => 'text',
 		'class'   => 'nohtml',
-		'std'    =>'Home',
+		'std'     => 'Home',
 );
 	$options[6] =
 	array(
@@ -82,15 +82,6 @@ function flagship_sub_options_page_fields() {
 		'desc'    => __( 'Enter the department address', 'flagship_sub_textdomain' ),
 		'type'    => 'textarea',
 		'std'     => 'Zanvyl Krieger School of Arts & Sciences',
-);
-	$options[14] =
-	array(
-		'section' => 'homepage_section',
-		'id'      => FLAGSHIP_SUB_SHORTNAME . '_news_query_cond',
-		'title'   => __( 'News Feed Option', 'flagship_sub_textdomain' ),
-		'desc'    => __( 'Do you want to exclude faculty books from your news feeds?', 'flagship_sub_textdomain' ),
-		'type'    => 'checkbox',
-		'std'     => '0',
 );
 	$options[16] =
 	array(
