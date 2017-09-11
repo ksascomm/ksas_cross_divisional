@@ -1,11 +1,11 @@
 <ul class="menu simple roof-menu">
 	<li class="roof-padding">
-		<form method="GET" action="<?php echo site_url('/search'); ?>" role="search" aria-label="Utility Bar Search">
+		<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" aria-label="Utility Bar Search">
 			<div class="input-group">
 				<label for="utility-search" class="screen-reader-text">
 	                Search This Website
 	            </label>
-				<input type="text" value="<?php echo get_search_query(); ?>" name="q" id="utility-search" placeholder="Search this site" aria-label="Search This Website"/>
+				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search this site" aria-label="Search This Website"/>
 				<div class="input-group-button">
 	    			<input type="submit" class="button" value="&#xf002;" aria-label="search">
 	  			</div>	
