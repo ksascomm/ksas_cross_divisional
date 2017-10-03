@@ -7,7 +7,7 @@
 <div class="top-bar hide-for-print" id="top-bar-menu">
 	<div class="small-12 columns" id="logo_nav">
 		<div class="row">
-			<div class="small-12 large-4 columns">
+			<div class="small-12 large-3 columns">
 				<div class="logo">
   					 <?php $theme_option = flagship_sub_get_global_options();
   							$shield = $theme_option['flagship_sub_shield'];
@@ -23,7 +23,7 @@
 					
 				</div>
 			</div>
-			<div class="small-12 large-8 columns">
+			<div class="small-12 large-9 columns">
 				<h1 itemprop="headline">
 					<a href="<?php echo site_url(); ?>">
 						<?php if ( ! empty( get_bloginfo('description') ) ) : ?>

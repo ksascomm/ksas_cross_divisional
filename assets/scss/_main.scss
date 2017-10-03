@@ -262,9 +262,16 @@ HEADER STYLES
 
 .header {
 	background: $primary-color;
-	.logo{
+	.logo {
     	padding: .5rem;
     	margin-right: .5rem;
+    	a {
+    		img {
+    			@include breakpoint(large) {
+					width: 275px;
+    			}
+    		}
+    	}
 	 }
 	img.centered {
 		display: block;
@@ -323,6 +330,7 @@ HEADER STYLES
 			img {
 				padding: 1rem;
       			margin-bottom: 1rem;
+      			width: 250px;
 			}
 		}
   	}
@@ -1256,10 +1264,10 @@ footer {
     margin-left: auto;
     margin-right: auto;
     @include breakpoint(small) {
-      width: 300px;
+      width: 250px;
     }
     @include breakpoint(medium) {
-      width: 350px;
+      width: 275px;
     }
   }	
 }
