@@ -12,8 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
 		
-	<meta name="date" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
-	<title><?php $current_site = get_current_site(); $current_domain = $current_site->domain;if ( $current_domain == 'bicycle.dev' || $current_domain == 'krieger.jhu.edu' ) : ?><?php wp_title(' | ', 'echo', 'right'); ?><?php elseif ($current_domain == 'pineapple.dev' || $current_domain == 'sites.krieger.jhu.edu' ) : ?><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); echo ' | Johns Hopkins University';?><?php endif;?></title>	
+		<meta name="date" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
+		<title><?php $current_site = get_current_site(); $current_domain = $current_site->domain;if ( $current_domain == 'bicycle.dev' || $current_domain == 'krieger.jhu.edu' ) : ?><?php wp_title(' | ', 'echo', 'right'); ?><?php elseif ($current_domain == 'pineapple.dev' || $current_domain == 'sites.krieger.jhu.edu' ) : ?><?php wp_title(' | ', 'echo', 'right'); ?><?php bloginfo('name'); echo ' | Johns Hopkins University';?><?php endif;?></title>	
 
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
@@ -41,6 +41,15 @@
 	    <?php } ?>
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+		<meta property="og:site_name" content="Krieger School of Arts and Sciences" />
+	    <meta property="og:title" content="<?php echo get_bloginfo( 'title' ); ?> | Krieger School of Arts and Sciences | Johns Hopkins University" />
+	    <meta property="og:url" content="<?php echo site_url(); ?>" />
+	    <meta property="og:description" content="The Zanvyl Krieger School of Arts and Sciences is the core institution of Johns Hopkins University’s Homewood campus" />
+
+	    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/gilman.jpg" />
+	    <meta property="og:image:width" content="1600" />
+	    <meta property="og:image:height" content="400" />
 
 		<?php wp_head(); ?>
 
