@@ -77,6 +77,12 @@ gulp.task('icons', function() { 
     return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*') 
         .pipe(gulp.dest('./assets/fonts')); 
 });
+
+//copy any needed files from /vendor directory
+gulp.task('copy', function () {
+    gulp.src('./vendor/what-input/dist/what-input.min.js')
+        .pipe(gulp.dest('./assets/js'));
+});
     
 // JSHint, concat, and minify JavaScript
 gulp.task('site-js', function() {
