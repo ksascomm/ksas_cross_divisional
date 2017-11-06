@@ -32,12 +32,7 @@ var PATHS = {
     '!wpcs',
     '!wpcs/**',
   ]
-};
-// IF YOU UPDATE FOUNDATION VIA BOWER, RUN THIS TO SAVE UPDATED FILES TO /VENDOR
-gulp.task('bower', function() {
-  return bower({ cmd: 'update'})
-    .pipe(gulp.dest('vendor/'))
-});    
+};  
 
 gulp.task('browser-sync', ['styles'], function() {
 
@@ -80,7 +75,7 @@ gulp.task('icons', function() { 
 
 //copy any needed files from /vendor directory
 gulp.task('copy', function () {
-    gulp.src('./vendor/what-input/dist/what-input.min.js')
+    gulp.src('./bower_components/what-input/dist/what-input.min.js')
         .pipe(gulp.dest('./assets/js'));
 });
     
@@ -108,29 +103,29 @@ gulp.task('foundation-js', function() {
   return gulp.src([	
   		  
   		  // Foundation core - needed if you want to use any of the components below
-          './vendor/foundation-sites/js/foundation.core.js',
-          './vendor/foundation-sites/js/foundation.util.*.js',
+          './bower_components/foundation-sites/js/foundation.core.js',
+          './bower_components/foundation-sites/js/foundation.util.*.js',
           
           // Pick the components you need in your project
-          //'./vendor/foundation-sites/js/foundation.abide.js',
-          './vendor/foundation-sites/js/foundation.accordion.js',
-          './vendor/foundation-sites/js/foundation.accordionMenu.js',
-          './vendor/foundation-sites/js/foundation.drilldown.js',
-          './vendor/foundation-sites/js/foundation.dropdown.js',
-          './vendor/foundation-sites/js/foundation.dropdownMenu.js',
-          './vendor/foundation-sites/js/foundation.equalizer.js',
-          './vendor/foundation-sites/js/foundation.interchange.js',
-          //'./vendor/foundation-sites/js/foundation.magellan.js',
-          './vendor/foundation-sites/js/foundation.offcanvas.js',
-          './vendor/foundation-sites/js/foundation.orbit.js',
-          './vendor/foundation-sites/js/foundation.responsiveMenu.js',
-          //'./vendor/foundation-sites/js/foundation.responsiveToggle.js',
-          //'./vendor/foundation-sites/js/foundation.reveal.js',
-          //'./vendor/foundation-sites/js/foundation.slider.js',
-          //'./vendor/foundation-sites/js/foundation.sticky.js',
-          './vendor/foundation-sites/js/foundation.tabs.js',
-          //'./vendor/foundation-sites/js/foundation.toggler.js',
-          //'./vendor/foundation-sites/js/foundation.tooltip.js',
+          //'./bower_components/foundation-sites/js/foundation.abide.js',
+          './bower_components/foundation-sites/js/foundation.accordion.js',
+          './bower_components/foundation-sites/js/foundation.accordionMenu.js',
+          './bower_components/foundation-sites/js/foundation.drilldown.js',
+          './bower_components/foundation-sites/js/foundation.dropdown.js',
+          './bower_components/foundation-sites/js/foundation.dropdownMenu.js',
+          './bower_components/foundation-sites/js/foundation.equalizer.js',
+          './bower_components/foundation-sites/js/foundation.interchange.js',
+          //'./bower_components/foundation-sites/js/foundation.magellan.js',
+          './bower_components/foundation-sites/js/foundation.offcanvas.js',
+          './bower_components/foundation-sites/js/foundation.orbit.js',
+          './bower_components/foundation-sites/js/foundation.responsiveMenu.js',
+          //'./bower_components/foundation-sites/js/foundation.responsiveToggle.js',
+          //'./bower_components/foundation-sites/js/foundation.reveal.js',
+          //'./bower_components/foundation-sites/js/foundation.slider.js',
+          //'./bower_components/foundation-sites/js/foundation.sticky.js',
+          './bower_components/foundation-sites/js/foundation.tabs.js',
+          //'./bower_components/foundation-sites/js/foundation.toggler.js',
+          //'./bower_components/foundation-sites/js/foundation.tooltip.js',
   ])
   .pipe(babel({
     presets: ['es2015'],
@@ -179,7 +174,7 @@ gulp.task('watch', ['styles', 'browser-sync', 'icons'], function() {
     });
   
   // Watch foundation-js files
-  gulp.watch('./vendor/foundation-sites/js/*.js', ['foundation-js']);
+  gulp.watch('./bower_components/foundation-sites/js/*.js', ['foundation-js']);
 
 });
 
@@ -187,7 +182,7 @@ gulp.task('watch', ['styles', 'browser-sync', 'icons'], function() {
 gulp.task('phpcs', function() {
   return gulp.src(PATHS.phpcs)
     .pipe(phpcs({
-      bin: 'wpcs/vendor/bin/phpcs',
+      bin: 'wpcs/bower_components/bin/phpcs',
       standard: './codesniffer.ruleset.xml',
       showSniffCode: true,
     }))
@@ -198,7 +193,7 @@ gulp.task('phpcs', function() {
 gulp.task('phpcbf', function () {
   return gulp.src(PATHS.phpcs)
   .pipe($.phpcbf({
-    bin: 'wpcs/vendor/bin/phpcbf',
+    bin: 'wpcs/bower_components/bin/phpcbf',
     standard: './codesniffer.ruleset.xml',
     warningSeverity: 0
   }))

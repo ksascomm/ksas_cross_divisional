@@ -9,16 +9,16 @@ CSS file.
 ******************************************************************/
 
 // Import normalize from vendor files
-@import "../../vendor/foundation-sites/scss/vendor/normalize";
+@import "../../bower_components/foundation-sites/_vendor/normalize-scss/sass/normalize";
 
 // Import local Foundation overrides - Don't link to Bower version as it will be overwritten whenever updated
 @import "settings";
 
 // Import foundation.scss from vendor files
-@import "../../vendor/foundation-sites/scss/foundation";
+@import "../../bower_components/foundation-sites/scss/foundation";
 
 // Import Motion-UI from vendor files
-@import "../../vendor/motion-ui/src/motion-ui";
+@import "../../bower_components/motion-ui/src/motion-ui";
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
@@ -65,7 +65,7 @@ CSS file.
 
 // Import Font Awesome
 // Import foundation.scss from vendor files
-@import "../../vendor/font-awesome/scss/font-awesome";
+@import "../../bower_components/font-awesome/scss/font-awesome";
 
 // Import mixins
 @import "mixins";

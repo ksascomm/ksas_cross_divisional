@@ -4,6 +4,7 @@ For Kreiger-based organizations that also cross divisions. Doesn't require major
 - Install [node.js](https://nodejs.org).
 - Using the command line, navigate to your theme directory
 - Run npm install
+- Run bower install to get latest packages
 - Run gulp to confirm everything is working
 
 #### Using WPCS
