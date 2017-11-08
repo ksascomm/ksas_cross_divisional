@@ -103,8 +103,15 @@ function flagship_sub_options_page_fields() {
 		'choices' => array('ksas','jhu'),
 		'std'     => 'ksas',
 );
+	$options[18] =
+	array(
+		'section' => 'select_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_shield_location',
+		'title'   => __( 'Custom Shield Location', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Paste the media url for custom JHU shields', 'flagship_sub_textdomain' ),
+		'type'    => 'text',
+		'std'     => '',
+);	
 	return $options;
 
 }
-
-

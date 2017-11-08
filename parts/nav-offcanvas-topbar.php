@@ -15,12 +15,15 @@
 						<a href="http://www.jhu.edu/" title="Johns Hopkins University">
   							<img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
   						</a>
-  					<?php else : ?>
+  					<?php elseif ('custom' === $shield ) : ?>
+						<a href="http://www.jhu.edu/" title="Johns Hopkins University">
+							<img src="<?php echo $theme_option['flagship_sub_shield_location']; ?>" alt="Johns Hopkins University">
+						</a>
+  					<?php else: ?>
   						<a href="http://krieger.jhu.edu" title="Krieger School of Arts & Sciences">
   							<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-horizontal-md.png" alt="Krieger School of Arts and Sciences">
   						</a>
   					<?php endif; ?>
-					
 				</div>
 			</div>
 			<div class="small-12 large-9 columns">
