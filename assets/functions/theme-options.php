@@ -100,7 +100,7 @@ function flagship_sub_options_page_fields() {
 		'title'   => __( 'Shield', 'flagship_sub_textdomain' ),
 		'desc'    => __( 'Which shield should appear in the header?', 'flagship_sub_textdomain' ),
 		'type'    => 'select',
-		'choices' => array('ksas','jhu'),
+		'choices' => array('ksas','jhu','custom'),
 		'std'     => 'ksas',
 );
 	$options[18] =
