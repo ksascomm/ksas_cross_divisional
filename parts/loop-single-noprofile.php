@@ -16,6 +16,9 @@
 			<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
 				<h4 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h4>
 			<?php endif; ?>
+		  	<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?>
+		   		<h4 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h4>
+		   	<?php endif; ?>				
 			<p class="contact black">
 				<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?><span class="fa fa-phone-square" aria-hidden="true"></span> <?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?><br><?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?><span class="fa fa-envelope" aria-hidden="true"></span> <a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_email', true); ?>"> <?php echo get_post_meta($post->ID, 'ecpt_email', true); ?></a><br><?php endif; ?>

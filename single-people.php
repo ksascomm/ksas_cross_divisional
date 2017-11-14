@@ -37,16 +37,20 @@
 				<div class="small-12 medium-4 columns bio">
 
 					<header class="article-header">	
-					<?php if ( has_post_thumbnail() ) { ?> 
-							<?php the_post_thumbnail('full', array(
-	'class' => 'headshot',
-)); ?>
-						<?php } ?>			    
-							<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-				   <?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
-				   		<h2><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h2>
-				   <?php endif; ?>
+						<?php if ( has_post_thumbnail() ) { ?> 
+								<?php the_post_thumbnail('full', array(
+								'class' => 'headshot',
+								)); ?>
+						<?php } ?>
+						<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+						<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
+					   		<h2><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h2>
+					   	<?php endif; ?>
+					  	<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?>
+					   		<h3><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h3>
+					   	<?php endif; ?>
 					</header>
+
 				    <p class="listing">
 				    	<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?>
 				    		<span class="fa fa-map-marker" aria-hidden="true"></span> <?php echo get_post_meta($post->ID, 'ecpt_office', true); ?><br>

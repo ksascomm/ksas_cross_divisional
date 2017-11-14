@@ -12,6 +12,9 @@
 			<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
 				<h4 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h4>
 			<?php endif; ?>
+		  	<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?>
+		   		<h4 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h4>
+		   	<?php endif; ?>	
 			<p class="black">
 				<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
 					<span class="fa fa-phone-square" aria-hidden="true"></span> <span class="contact"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span><br>
