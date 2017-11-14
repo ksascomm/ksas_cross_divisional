@@ -431,7 +431,32 @@ body.black {
 	        border-right: none;
 	      }
 	    }		
-	}	
+	}
+	.entry-content .tabs-title {
+		a {
+			background: $grey;
+			color: $black;
+		    &:hover {
+		     	color: $black;
+		    }
+	  	}
+	  &.is-active {
+	    border-top-color: $black !important;
+	    a {
+	      background: $white;
+	      color: $black;
+	      &:hover {
+	        color: $black;
+	      }
+	    }
+	  }
+	}
+	.roof {
+		background-color: $black;
+		.menu.simple a.button {
+			background-color: lighten($black, 10%);
+		}
+	}
 }
 body.green {
 	.top-bar, #sidebar_header {
@@ -484,7 +509,32 @@ body.green {
 	        border-right: none;
 	      }
 	    }		
-	}		
+	}
+	.entry-content .tabs-title {
+		a {
+			background: $grey;
+			color: $green;
+		    &:hover {
+		     	color: $green;
+		    }
+	  	}
+	  &.is-active {
+	    border-top-color: $green !important;
+	    a {
+	      background: $white;
+	      color: $black;
+	      &:hover {
+	        color: $black;
+	      }
+	    }
+	  }
+	}
+	.roof {
+		background-color: $green;
+		.menu.simple a.button {
+			background-color: darken($green, 10%);
+		}
+	}
 }
 body.red {
 	.top-bar, #sidebar_header {
@@ -537,7 +587,32 @@ body.red {
 	        border-right: none;
 	      }
 	    }		
-	}			
+	}
+	.entry-content .tabs-title {
+		a {
+			background: $grey;
+			color: $red;
+		    &:hover {
+		     	color: $red;
+		    }
+	  	}
+		&.is-active {
+		    border-top-color: $red !important;
+		    a {
+		      background: $white;
+		      color: $black;
+		      &:hover {
+		        color: $black;
+		      }
+		    }
+		}
+	}
+	.roof {
+		background-color: $red;
+		.menu.simple a.button {
+			background-color: darken($red, 10%);
+		}
+	}		
 }
 body.rust {
 	.top-bar, #sidebar_header {
@@ -590,6 +665,31 @@ body.rust {
 	        border-right: none;
 	      }
 	    }		
+	}
+	.entry-content .tabs-title {
+		a {
+			background: $grey;
+			color: $rust;
+		    &:hover {
+		     	color: $rust;
+		    }
+	  	}
+		&.is-active {
+		border-top-color: $rust !important;
+			a {
+			  background: $white;
+			  color: $black;
+			  &:hover {
+			    color: $black;
+			  }
+			}
+		}
+	}
+	.roof {
+		background-color: $rust;
+		.menu.simple a.button {
+			background-color: darken($rust, 10%);
+		}
 	}			
 }
 
@@ -737,10 +837,9 @@ POSTS & CONTENT STYLES
 	.tabs-title {
 		a {
 		font-size: 1rem;
-		border-bottom: none;
-		border-bottom-color: rgba(0,0,0,.2);
+		border-bottom: none !important;
 			&:hover, &:active {
-			  	color: none;
+			  	color: inherit;
 			}
 		}
 	}
@@ -796,7 +895,7 @@ POSTS & CONTENT STYLES
 
 // Entry content  
 .entry-content {
-	  .imageblockleft {
+	.imageblockleft {
 	    float: left;
 	    max-width: 300px;
 	    margin-right: 1em;
@@ -808,7 +907,7 @@ POSTS & CONTENT STYLES
 	      }
 	    }
 	  }
-	  .wp-post-image {
+	.wp-post-image {
 	  margin-bottom: inherit;
 	  }	
 	img {
@@ -831,20 +930,43 @@ POSTS & CONTENT STYLES
 		margin-left: auto; 
 		display: block; 
 		clear: both; 
-	}
-			
+	}	
 	video, object {
 		max-width: 100%;
 		height: auto;
-		}
-
+	}
 	pre {
 		background: #eee;
 		border: 1px solid #cecece;
 		padding: 10px;
-		}
-
+	}
+	.tabs-panel {
+		padding-top: .5rem;
+	}
+	.tabs {
+		margin-left: .25rem!important;
+	}
 } 
+
+.entry-content .tabs-title {
+	a {
+		background: $grey;
+		color: $primary-color;
+	    &:hover {
+	     	color: $primary-color;
+	    }
+  	}
+  &.is-active {
+    border-top-color: $primary-color !important;
+    a {
+      background: $white;
+      color: $black;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
 
 .wp-caption {
 	max-width: 100%;

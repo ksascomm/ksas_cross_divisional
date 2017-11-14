@@ -7591,6 +7591,25 @@ body.black .top-bar-right a {
   body.black .top-bar-right a li:not(:last-child) {
     border-right: none; }
 
+body.black .entry-content .tabs-title a {
+  background: #E5E2E0;
+  color: #2C2C33; }
+  body.black .entry-content .tabs-title a:hover {
+    color: #2C2C33; }
+
+body.black .entry-content .tabs-title.is-active {
+  border-top-color: #2C2C33 !important; }
+  body.black .entry-content .tabs-title.is-active a {
+    background: #fefefe;
+    color: #2C2C33; }
+    body.black .entry-content .tabs-title.is-active a:hover {
+      color: #2C2C33; }
+
+body.black .roof {
+  background-color: #2C2C33; }
+  body.black .roof .menu.simple a.button {
+    background-color: #44444e; }
+
 body.green .top-bar, body.green #sidebar_header {
   background-color: #007a53; }
   body.green .top-bar ul, body.green #sidebar_header ul {
@@ -7629,6 +7648,25 @@ body.green .top-bar-right a {
     background: #004730; }
   body.green .top-bar-right a li:not(:last-child) {
     border-right: none; }
+
+body.green .entry-content .tabs-title a {
+  background: #E5E2E0;
+  color: #007a53; }
+  body.green .entry-content .tabs-title a:hover {
+    color: #007a53; }
+
+body.green .entry-content .tabs-title.is-active {
+  border-top-color: #007a53 !important; }
+  body.green .entry-content .tabs-title.is-active a {
+    background: #fefefe;
+    color: #2C2C33; }
+    body.green .entry-content .tabs-title.is-active a:hover {
+      color: #2C2C33; }
+
+body.green .roof {
+  background-color: #007a53; }
+  body.green .roof .menu.simple a.button {
+    background-color: #004730; }
 
 body.red .top-bar, body.red #sidebar_header {
   background-color: #8a2a2b; }
@@ -7669,6 +7707,25 @@ body.red .top-bar-right a {
   body.red .top-bar-right a li:not(:last-child) {
     border-right: none; }
 
+body.red .entry-content .tabs-title a {
+  background: #E5E2E0;
+  color: #8a2a2b; }
+  body.red .entry-content .tabs-title a:hover {
+    color: #8a2a2b; }
+
+body.red .entry-content .tabs-title.is-active {
+  border-top-color: #8a2a2b !important; }
+  body.red .entry-content .tabs-title.is-active a {
+    background: #fefefe;
+    color: #2C2C33; }
+    body.red .entry-content .tabs-title.is-active a:hover {
+      color: #2C2C33; }
+
+body.red .roof {
+  background-color: #8a2a2b; }
+  body.red .roof .menu.simple a.button {
+    background-color: #631e1f; }
+
 body.rust .top-bar, body.rust #sidebar_header {
   background-color: #6f2c3f; }
   body.rust .top-bar ul, body.rust #sidebar_header ul {
@@ -7707,6 +7764,25 @@ body.rust .top-bar-right a {
     background: #4a1e2a; }
   body.rust .top-bar-right a li:not(:last-child) {
     border-right: none; }
+
+body.rust .entry-content .tabs-title a {
+  background: #E5E2E0;
+  color: #6f2c3f; }
+  body.rust .entry-content .tabs-title a:hover {
+    color: #6f2c3f; }
+
+body.rust .entry-content .tabs-title.is-active {
+  border-top-color: #6f2c3f !important; }
+  body.rust .entry-content .tabs-title.is-active a {
+    background: #fefefe;
+    color: #2C2C33; }
+    body.rust .entry-content .tabs-title.is-active a:hover {
+      color: #2C2C33; }
+
+body.rust .roof {
+  background-color: #6f2c3f; }
+  body.rust .roof .menu.simple a.button {
+    background-color: #4a1e2a; }
 
 .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
   border-color: transparent transparent transparent #fff; }
@@ -7810,10 +7886,9 @@ POSTS & CONTENT STYLES
 
 #content .tabs-title a {
   font-size: 1rem;
-  border-bottom: none;
-  border-bottom-color: rgba(0, 0, 0, 0.2); }
+  border-bottom: none !important; }
   #content .tabs-title a:hover, #content .tabs-title a:active {
-    color: none; }
+    color: inherit; }
 
 #content .tabs-title.is-active {
   border-top: 3px solid; }
@@ -7881,6 +7956,26 @@ POSTS & CONTENT STYLES
   background: #eee;
   border: 1px solid #cecece;
   padding: 10px; }
+
+.entry-content .tabs-panel {
+  padding-top: .5rem; }
+
+.entry-content .tabs {
+  margin-left: 0.25rem !important; }
+
+.entry-content .tabs-title a {
+  background: #E5E2E0;
+  color: #005eb8; }
+  .entry-content .tabs-title a:hover {
+    color: #005eb8; }
+
+.entry-content .tabs-title.is-active {
+  border-top-color: #005eb8 !important; }
+  .entry-content .tabs-title.is-active a {
+    background: #fefefe;
+    color: #2C2C33; }
+    .entry-content .tabs-title.is-active a:hover {
+      color: #2C2C33; }
 
 .wp-caption {
   max-width: 100%;
