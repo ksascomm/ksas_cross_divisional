@@ -796,7 +796,6 @@ body.rust {
 }
 
 ul.breadcrumbs, .breadcrumbs {
-	margin-left: .5rem !important;
 	li, span {
 		font-size: 1rem;
 		text-transform: inherit;
@@ -1487,6 +1486,10 @@ li.person {
   margin-bottom: 0;
   background: none;
   padding: 0;
+}
+
+ul#directory {
+    margin-left: 1rem;
 }
 
 li.person {

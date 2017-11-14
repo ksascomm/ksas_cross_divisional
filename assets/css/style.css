@@ -7856,13 +7856,11 @@ body.rust .roof {
   .menu > li:not(.menu-text) > a {
     font-size: 15px; } }
 
-ul.breadcrumbs, .breadcrumbs {
-  margin-left: .5rem !important; }
-  ul.breadcrumbs li, ul.breadcrumbs span, .breadcrumbs li, .breadcrumbs span {
-    font-size: 1rem;
-    text-transform: inherit; }
-    ul.breadcrumbs li a:hover, ul.breadcrumbs span a:hover, .breadcrumbs li a:hover, .breadcrumbs span a:hover {
-      text-decoration: none; }
+ul.breadcrumbs li, ul.breadcrumbs span, .breadcrumbs li, .breadcrumbs span {
+  font-size: 1rem;
+  text-transform: inherit; }
+  ul.breadcrumbs li a:hover, ul.breadcrumbs span a:hover, .breadcrumbs li a:hover, .breadcrumbs span a:hover {
+    text-decoration: none; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -8292,6 +8290,9 @@ li.person {
   margin-bottom: 0;
   background: none;
   padding: 0; }
+
+ul#directory {
+  margin-left: 1rem; }
 
 li.person.sub-head h2 {
   font-size: 1.75rem;
