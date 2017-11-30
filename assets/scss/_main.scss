@@ -348,6 +348,9 @@ NAVIGATION STYLES
 	.is-dropdown-submenu-parent.is-down-arrow > a::after {
 		border-color: #fff transparent transparent;
 	}
+	.is-dropdown-submenu {
+		min-width: 225px;
+	}
 	ul {
 		background-color: $primary-color;
 		li {
@@ -414,6 +417,12 @@ body.black {
 	}
 	.button {
 		background-color: $black;
+	}
+	a.button {
+		color: $white !important;
+	}
+	a.button, a.accordion-title {
+		border: inherit;
 	}
 	.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
 		color: $black;
@@ -493,6 +502,12 @@ body.green {
 	.button {
 		background-color: $green;
 	}
+	a.button {
+		color: $white !important;
+	}
+	a.button, a.accordion-title {
+		border: inherit;
+	}
 	.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
 		color: $green;
 	}
@@ -571,6 +586,12 @@ body.red {
 	.button {
 		background-color: $red;
 	}
+	a.button {
+		color: $white !important;
+	}
+	a.button, a.accordion-title {
+		border: inherit;
+	}
 	.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
 		color: $red;
 	}
@@ -648,6 +669,12 @@ body.rust {
 	}
 	.button {
 		background-color: $rust;
+	}
+	a.button {
+		color: $white !important;
+	}
+	a.button, a.accordion-title {
+		border: inherit;
 	}
 	.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
 		color: $rust;

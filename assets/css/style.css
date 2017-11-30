@@ -7532,6 +7532,8 @@ NAVIGATION STYLES
     z-index: 1; }
   .top-bar .is-dropdown-submenu-parent.is-down-arrow > a::after {
     border-color: #fff transparent transparent; }
+  .top-bar .is-dropdown-submenu {
+    min-width: 225px; }
   .top-bar ul {
     background-color: #005eb8; }
     .top-bar ul li {
@@ -7577,6 +7579,12 @@ body.black #main a, body.black .textwidget a {
 
 body.black .button {
   background-color: #2C2C33; }
+
+body.black a.button {
+  color: #fefefe !important; }
+
+body.black a.button, body.black a.accordion-title {
+  border: inherit; }
 
 body.black .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, body.black .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
   color: #2C2C33; }
@@ -7636,6 +7644,12 @@ body.green #main a, body.green .textwidget a {
 body.green .button {
   background-color: #007a53; }
 
+body.green a.button {
+  color: #fefefe !important; }
+
+body.green a.button, body.green a.accordion-title {
+  border: inherit; }
+
 body.green .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, body.green .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
   color: #007a53; }
 
@@ -7694,6 +7708,12 @@ body.red #main a, body.red .textwidget a {
 body.red .button {
   background-color: #8a2a2b; }
 
+body.red a.button {
+  color: #fefefe !important; }
+
+body.red a.button, body.red a.accordion-title {
+  border: inherit; }
+
 body.red .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, body.red .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
   color: #8a2a2b; }
 
@@ -7751,6 +7771,12 @@ body.rust #main a, body.rust .textwidget a {
 
 body.rust .button {
   background-color: #6f2c3f; }
+
+body.rust a.button {
+  color: #fefefe !important; }
+
+body.rust a.button, body.rust a.accordion-title {
+  border: inherit; }
 
 body.rust .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title, body.rust .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title {
   color: #6f2c3f; }
