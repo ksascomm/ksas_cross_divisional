@@ -7532,8 +7532,6 @@ NAVIGATION STYLES
     z-index: 1; }
   .top-bar .is-dropdown-submenu-parent.is-down-arrow > a::after {
     border-color: #fff transparent transparent; }
-  .top-bar .is-dropdown-submenu {
-    min-width: 225px; }
   .top-bar ul {
     background-color: #005eb8; }
     .top-bar ul li {
