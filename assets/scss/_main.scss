@@ -60,21 +60,6 @@ blockquote, blockquote p {
 	font-family:'flagship-icon';
 }
 
-li.external a::after {
-	content:"\e007";
-	font-family:'flagship-icon';
-	font-style:normal;
-	speak:none;
-	font-weight:400;
-	line-height:normal;
-	color:#FFF;
-	-webkit-font-smoothing:antialiased;
-	float:none;
-	display:inline;
-	font-size:85%;
-	padding-left:4px;
-}
-
 ul.nav {
 	margin-left: 1rem;
   	list-style: none;
@@ -86,6 +71,12 @@ ul.nav {
 		    content: '\f054';
 		    padding-right: .5rem;
 		}
+		&.external a::after {
+			content:"\e007";
+			font-family:'flagship-icon';
+			font-size:85%;
+			padding-left:4px;
+		}
 		ul li {
 			border-top: none;
 			font-size: 1rem;
@@ -93,14 +84,14 @@ ul.nav {
 			text-indent: -15px;
 			margin-left: 15px;
 			list-style: none;
-		&:before {
-		    content: "\e010";
-		    font-family: 'flagship-icon';
-		    color: lighten($black, 25% );
-		    margin-right: 5px;
-		    vertical-align: middle;
-		    font-size: 75%;
-		}
+			&:before {
+			    content: "\e010";
+			    font-family: 'flagship-icon';
+			    color: lighten($black, 25% );
+			    margin-right: 5px;
+			    vertical-align: middle;
+			    font-size: 75%;
+			}
    		}
 	}
 }
@@ -358,6 +349,14 @@ NAVIGATION STYLES
 					&:hover, &:focus {
 						color: #fff;
 					}
+			}
+			//hack: float psuedo ::before element to right so it doesn't mess with F6's ::after dropdown arrows
+			&.external a::before {
+				content:"\e007";
+				font-family:'flagship-icon';
+				float:right;
+				font-size:85%;
+				padding-left:4px;
 			}
 		}
 	}

@@ -7324,20 +7324,6 @@ blockquote, blockquote p {
 .iconfont {
   font-family: 'flagship-icon'; }
 
-li.external a::after {
-  content: "\e007";
-  font-family: 'flagship-icon';
-  font-style: normal;
-  speak: none;
-  font-weight: 400;
-  line-height: normal;
-  color: #FFF;
-  -webkit-font-smoothing: antialiased;
-  float: none;
-  display: inline;
-  font-size: 85%;
-  padding-left: 4px; }
-
 ul.nav {
   margin-left: 1rem;
   list-style: none; }
@@ -7348,6 +7334,11 @@ ul.nav {
       font-family: 'FontAwesome';
       content: '\f054';
       padding-right: .5rem; }
+    ul.nav li.external a::after {
+      content: "\e007";
+      font-family: 'flagship-icon';
+      font-size: 85%;
+      padding-left: 4px; }
     ul.nav li ul li {
       border-top: none;
       font-size: 1rem;
@@ -7541,6 +7532,12 @@ NAVIGATION STYLES
         color: #fff; }
         .top-bar ul li a:hover, .top-bar ul li a:focus, .top-bar ul li a:visited:hover, .top-bar ul li a:visited:focus {
           color: #fff; }
+      .top-bar ul li.external a::before {
+        content: "\e007";
+        font-family: 'flagship-icon';
+        float: right;
+        font-size: 85%;
+        padding-left: 4px; }
   .top-bar input {
     margin-right: inherit; }
   .top-bar .menu {
