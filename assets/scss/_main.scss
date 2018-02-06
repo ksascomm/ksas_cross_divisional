@@ -973,6 +973,9 @@ POSTS & CONTENT STYLES
 	.tabs {
 		margin-left: .25rem!important;
 	}
+	summary {
+		display: inherit;
+	}	
 } 
 
 .entry-content .tabs-title {

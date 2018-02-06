@@ -7994,6 +7994,9 @@ POSTS & CONTENT STYLES
 .entry-content .tabs {
   margin-left: 0.25rem !important; }
 
+.entry-content summary {
+  display: inherit; }
+
 .entry-content .tabs-title a {
   background: #E5E2E0;
   color: #005eb8; }
