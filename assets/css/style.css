@@ -6975,8 +6975,7 @@ CSS3 GRADIENTS.
   .fancybox-error p {
     margin: 0;
     padding: 0;
-    color: #444;
-    font: 16px/20px "Helvetica Neue",Helvetica,Arial,sans-serif; }
+    color: #444; }
 
 .fancybox-close-small {
   position: absolute;
@@ -8109,7 +8108,6 @@ COMMENT STYLES
 .commentlist .vcard {
   margin-left: 50px; }
   .commentlist .vcard cite.fn {
-    font-weight: 700;
     font-style: normal; }
   .commentlist .vcard time {
     float: right; }
@@ -8299,12 +8297,13 @@ FOUNDATION STYLES
   background: #d9c89e;
   background: rgba(217, 200, 158, 0.5); }
 
-.accordion-title {
-  font-size: 16px;
-  font-weight: bold;
+.accordion-title, .tabs-title {
+  font-size: 1rem;
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
   background: #f6f6f6; }
 
-.accordion {
+.accordion, .tabs {
   padding-bottom: 1rem; }
 
 /*********************
@@ -8345,6 +8344,8 @@ li.person h3 {
   font-size: 1.5rem; }
 
 li.person h4 {
+  font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 300;
   font-size: 1.125rem; }
 
 footer.timely.ai1ec-event-footer {

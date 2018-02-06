@@ -1164,7 +1164,7 @@ COMMENT STYLES
 		margin-left: 50px;
 
 		cite.fn {
-			font-weight: 700;
+			//font-weight: 700;
 			font-style: normal;
 
 			a.url {}
@@ -1484,13 +1484,14 @@ FOUNDATION STYLES
     background: rgba(217,200,158,.5);
 }
 
-.accordion-title {
-	font-size: 16px;
-	font-weight: bold;
+.accordion-title, .tabs-title {
+	font-size: 1rem;
+  	font-family: $font-stack-semibold;
+  	font-weight: $font-stack-semibold-weight;
 	background: #f6f6f6;
 }
 
-.accordion {
+.accordion, .tabs  {
 	padding-bottom: 1rem;
 }
 
@@ -1538,6 +1539,8 @@ li.person {
   	font-size: 1.5rem;
   }
   h4{
+  	font-family: $font-stack;
+  	font-weight: $font-stack-weight;
   	font-size: 1.125rem;
   }
 }
