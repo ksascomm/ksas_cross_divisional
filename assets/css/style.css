@@ -7526,7 +7526,8 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .top-bar {
-  background-color: #005eb8; }
+  background-color: #005eb8;
+  padding-bottom: 0; }
   .top-bar .title-area {
     z-index: 1; }
   .top-bar .is-dropdown-submenu-parent.is-down-arrow > a::after {
@@ -8451,6 +8452,8 @@ a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1
     height: 1.75rem; }
     .roof input[type="submit"] {
       font-family: FontAwesome, "gentona-semibold", "Helvetica Neue", Roboto, sans-serif; }
+  .roof .input-group {
+    margin-bottom: 0; }
   .roof .button {
     background-color: #418def; }
   .roof .roof-menu {
@@ -8470,7 +8473,8 @@ div#offCanvasTop1 {
 
 #global-links h3 {
   font-size: 1.25rem;
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif; }
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600; }
 
 #global-links .menu {
   display: inherit; }
@@ -8479,6 +8483,7 @@ div#offCanvasTop1 {
     #global-links .menu li a {
       padding: 0.35rem 1rem;
       font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+      font-weight: 700;
       color: #005eb8; }
       #global-links .menu li a:hover, #global-links .menu li a:active {
         color: #2C2C33; }

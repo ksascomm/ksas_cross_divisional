@@ -334,6 +334,7 @@ NAVIGATION STYLES
 
 .top-bar {
 	background-color: $primary-color;
+	padding-bottom: 0;
 	.title-area {
 		z-index: 1;
 	}
@@ -1684,9 +1685,12 @@ a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1
       font-family: $font-awesome;
     }
   }
-  .button {
-    background-color: #418def;
-  }
+	.input-group {
+	  margin-bottom: 0;
+	}
+	.button {
+		background-color: #418def;
+  	}
   .roof-menu {
     font-size: 1rem;
      @include breakpoint (medium) {
@@ -1712,6 +1716,7 @@ div#offCanvasTop1 {
   h3 {
     font-size: 1.25rem;
     font-family: $font-stack-semibold;
+    font-weight: $font-stack-semibold-weight;
   }
   .menu {
   display: inherit;
@@ -1720,6 +1725,7 @@ div#offCanvasTop1 {
       a {
         padding: 0.35rem 1rem; 
         font-family: $font-stack-bold;
+        font-weight: $font-stack-bold-weight;
         color: $primary-color;
         &:hover, &:active {
             color: $black;
