@@ -7901,13 +7901,17 @@ POSTS & CONTENT STYLES
   .news-feed h1 {
     font-size: 1.5rem; }
     .news-feed h1.entry-title {
-      font-size: 1.25rem;
-      font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
-      font-weight: 600; }
+      font-size: 1.5rem;
+      font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+      font-weight: 700; }
   .news-feed h2 {
     font-size: 1.25rem;
     font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
     font-weight: 600; }
+  .news-feed h1.hub-title, .news-feed h1.feed-title {
+    font-size: 1.5rem;
+    font-family: "quadon-extrabold", "Helvetica Neue", Roboto, sans-serif;
+    font-weight: 700; }
 
 #content #inner-content {
   padding: 1.25rem 0rem 1rem; }

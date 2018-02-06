@@ -843,8 +843,8 @@ POSTS & CONTENT STYLES
 	  font-size: 1.5rem;
 	  &.entry-title {
 	    font-size: 1.25rem;
-	    font-family: $font-stack-semibold;
-	    font-weight: $font-stack-semibold-weight;
+	    font-family: $font-stack-bold;
+	    font-weight: $font-stack-bold-weight;
 	  }
 	}
    h2 {
@@ -852,6 +852,12 @@ POSTS & CONTENT STYLES
 	    font-family: $font-stack-semibold;
 	    font-weight: $font-stack-semibold-weight;
    }
+   h1.hub-title, h1.feed-title {
+    font-size: 1.5rem;
+    font-family: $font-header-extrabold;
+    font-weight: $font-header-extrabold-weight;
+   }
+
 }
 
 #content {
