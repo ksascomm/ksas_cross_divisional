@@ -100,7 +100,7 @@ function flagship_sub_options_page_fields() {
 		'title'   => __( 'Filter by Role', 'flagship_sub_textdomain' ),
 		'desc'    => __( 'Do you want to be able to filter by role (faculty, research staff, emertiti)?', 'flagship_sub_textdomain' ),
 		'type'    => 'checkbox',
-		'std'    => '0'
+		'std'    => '0',
 );		
 	$options[13] =
 	array(		
@@ -109,7 +109,7 @@ function flagship_sub_options_page_fields() {
 		'title'   => __( 'Filter by Expertise', 'flagship_sub_textdomain' ),
 		'desc'    => __( 'Do you want to be able to filter by expertise/research area?', 'flagship_sub_textdomain' ),
 		'type'    => 'checkbox',
-		'std'    => '0'
+		'std'    => '0',
 );	
 	$options[16] =
 	array(
@@ -139,6 +139,16 @@ function flagship_sub_options_page_fields() {
 		'desc'    => __( 'Paste the media url for custom JHU shields', 'flagship_sub_textdomain' ),
 		'type'    => 'text',
 		'std'     => '',
+);
+	$options[19] =
+	array(		
+		'section' => 'directory_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_research_label',
+		'title'   => __( 'Research/Expertise Label', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Enter the display label you would like for your research interest/expertise fields', 'flagship_sub_textdomain' ),
+		'type'    => 'text',
+		'class'   => 'nohtml',
+		'std'    => 'Research Interests',
 );	
 	return $options;
 

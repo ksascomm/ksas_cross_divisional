@@ -9,6 +9,7 @@ Template Name: People Directory
 		'child_of' => $post->ID,
 	) );
 	$theme_option = flagship_sub_get_global_options();
+	$research_label = $theme_option['flagship_sub_research_label'];
 	$roles = get_terms('role', array(
 						'orderby' 		=> 'ID',
 						'order'			=> 'ASC',
@@ -79,7 +80,7 @@ Template Name: People Directory
 			</div>
 		</div>
 		<?php if ($theme_option['flagship_sub_research_search'] == true) : ?>
-		<p>Filter all by Research Area:</p>
+		<p>Filter all by <?php echo $research_label; ?>:</p>
 		<?php $filters = get_terms('filter', array(
 			'orderby'       => 'name',
 			'order'         => 'ASC',
