@@ -1,6 +1,5 @@
 <?php get_header(); ?>
-<?php $theme_option = flagship_sub_get_global_options();
-$news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>	
+<?php $theme_option = flagship_sub_get_global_options(); ?>	
 			
 	<div id="content">
 	
