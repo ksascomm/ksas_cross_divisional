@@ -1553,6 +1553,134 @@ li.person {
   }
 }
 
+//Directory
+.directory {
+  list-style: none;
+  p {
+    margin-top: 20px;
+  }
+  li.person {
+  margin-bottom: 15px;
+  width: 90%;
+  min-height: 95px;
+  padding: 3px 10px 0 10px;
+    &.sub-head {
+      min-height: 1px;
+      margin-bottom: 0;
+      background: none;
+      padding: 0;
+        h2 {
+        font-size: 1.75rem;
+        margin: 0 0 10px 0;
+        color: $black;
+      }
+    }
+    img {
+      max-width: 150px;
+      clear: left;
+      float: left;
+      margin-right: 1rem;
+    }
+    .media-object {
+      @include breakpoint(medium) {
+        margin-bottom: 1.75rem;
+      }
+    }
+    ul.contact {
+      list-style: none;
+      margin-left: 0;
+      li {
+        @include breakpoint(small) {
+          font-size: .9rem;
+
+        }
+        @include breakpoint(medium) {
+          font-size: 1.125rem;
+        }
+      } 
+    }
+  }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.directory-search {
+  p {
+    font-family: $font-stack-semibold;
+    font-weight: $font-stack-semibold-weight;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem
+  }
+  .button {
+    background: $primary-color;
+    margin: .5rem;
+    font-family: $font-stack-bold;
+    font-weight: $font-stack-bold-weight;
+    font-size: 1rem;
+    &.is-checked {
+      background-color: transparent;
+      border: 1px solid $primary-color !important;
+      color: $primary-color;
+    }
+  }
+  .expertise-group {
+    .button {
+      background: #418fde;
+      font-family: $font-stack-bold;
+      font-weight: $font-stack-bold-weight;
+      &.is-checked {
+        background-color: transparent;
+        border: 1px solid #418fde !important;
+        color: #418fde;
+      }
+    }
+  }
+  .search-sort {
+    margin: .5rem 0;
+    @include breakpoint(large) {
+      position: relative;
+      .button.sort {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1rem;
+      }
+    }
+    .input-group {
+      margin-left: .5rem;
+    } 
+  }
+}
+
+.bio {
+  margin-bottom: 1rem;
+  img {
+    &.headshot {
+      @include breakpoint (small only) {
+        max-width: rem-calc(250px);
+      }
+    }
+  }
+}
+.people-directory {
+  margin-bottom: 3rem;
+}
+
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+
 footer.timely.ai1ec-event-footer {
     background: inherit;
 }
@@ -1695,7 +1823,7 @@ a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1
 	  margin-bottom: 0;
 	}
 	.button {
-		background-color: #418def;
+		background-color: #418fde;
   	}
   .roof-menu {
     font-size: 1rem;
@@ -1775,7 +1903,7 @@ div#offCanvasTop1 {
        @include grid-column(12);
      }
     .button {
-      background-color: #418def;
+      background-color: #418fde;
       width: 100%;
     }
   }

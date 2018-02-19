@@ -7901,7 +7901,7 @@ POSTS & CONTENT STYLES
   .news-feed h1 {
     font-size: 1.5rem; }
     .news-feed h1.entry-title {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
       font-weight: 700; }
   .news-feed h2 {
@@ -8354,6 +8354,100 @@ li.person h3 {
 li.person h4 {
   font-size: 1.125rem; }
 
+.directory {
+  list-style: none; }
+  .directory p {
+    margin-top: 20px; }
+  .directory li.person {
+    margin-bottom: 15px;
+    width: 90%;
+    min-height: 95px;
+    padding: 3px 10px 0 10px; }
+    .directory li.person.sub-head {
+      min-height: 1px;
+      margin-bottom: 0;
+      background: none;
+      padding: 0; }
+      .directory li.person.sub-head h2 {
+        font-size: 1.75rem;
+        margin: 0 0 10px 0;
+        color: #2C2C33; }
+    .directory li.person img {
+      max-width: 150px;
+      clear: left;
+      float: left;
+      margin-right: 1rem; }
+    @media print, screen and (min-width: 40em) {
+      .directory li.person .media-object {
+        margin-bottom: 1.75rem; } }
+    .directory li.person ul.contact {
+      list-style: none;
+      margin-left: 0; }
+      .directory li.person ul.contact li {
+        font-size: .9rem; }
+        @media print, screen and (min-width: 40em) {
+          .directory li.person ul.contact li {
+            font-size: 1.125rem; } }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.directory-search p {
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem; }
+
+.directory-search .button {
+  background: #005eb8;
+  margin: .5rem;
+  font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1rem; }
+  .directory-search .button.is-checked {
+    background-color: transparent;
+    border: 1px solid #005eb8 !important;
+    color: #005eb8; }
+
+.directory-search .expertise-group .button {
+  background: #418fde;
+  font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 700; }
+  .directory-search .expertise-group .button.is-checked {
+    background-color: transparent;
+    border: 1px solid #418fde !important;
+    color: #418fde; }
+
+.directory-search .search-sort {
+  margin: .5rem 0; }
+  @media print, screen and (min-width: 64em) {
+    .directory-search .search-sort {
+      position: relative; }
+      .directory-search .search-sort .button.sort {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1rem; } }
+  .directory-search .search-sort .input-group {
+    margin-left: .5rem; }
+
+.bio {
+  margin-bottom: 1rem; }
+  @media screen and (max-width: 39.9375em) {
+    .bio img.headshot {
+      max-width: 15.625rem; } }
+
+.people-directory {
+  margin-bottom: 3rem; }
+
+/* Start: Recommended Isotope styles */
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
 footer.timely.ai1ec-event-footer {
   background: inherit; }
 
@@ -8459,7 +8553,7 @@ a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1
   .roof .input-group {
     margin-bottom: 0; }
   .roof .button {
-    background-color: #418def; }
+    background-color: #418fde; }
   .roof .roof-menu {
     font-size: 1rem; }
     @media print, screen and (min-width: 40em) {
@@ -8520,7 +8614,7 @@ div#offCanvasTop1 {
     .off-canvas .input-group-button:last-child:not(:first-child) {
       float: right; }
     .off-canvas .input-group-button .button {
-      background-color: #418def;
+      background-color: #418fde;
       width: 100%; }
 
 /******************************************************************

@@ -1,4 +1,4 @@
-<li class="person <?php echo get_the_roles($post); ?>">
+<li class="person <?php echo get_the_directory_filters($post);?> <?php echo get_the_roles($post); ?>">
 	<div class="row">
 		<div class="small-12 columns">
 			<?php if ( has_post_thumbnail() ) { ?>
