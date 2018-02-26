@@ -35,7 +35,7 @@
 				<?php endif; ?>
 			</p>
 			<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?>
-				<p><strong>Research Interests:&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p>
+				<p><strong><?php echo $research_label; ?>&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p>
 			<?php endif; ?>
 	</div>
 </div>
