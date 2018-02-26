@@ -69,7 +69,7 @@ Template Name: People Directory
 		<div class="row search-sort">
 			<div class="large-8 column">
 				<label for="id_search">
-					<p>Search by name, title, and research interests:</p>
+					<p>Search by Name, Title<?php echo ', and ' . $research_label; ?></p>
 				</label>
 				<div class="input-group">
 					<span class="input-group-label">
@@ -109,8 +109,7 @@ Template Name: People Directory
 							'meta_key' => 'ecpt_people_alpha',
 							'orderby' => 'meta_value',
 							'order' => 'ASC',
-							'posts_per_page' => '-1',
-));
+							'posts_per_page' => '150',));
 
 				if ($people_query->have_posts() ) : ?>
 				<li class="person sub-head quicksearch-match <?php echo get_the_directory_filters($post);?> <?php echo get_the_roles($post); ?>"><h2 class="black capitalize"><?php echo $role_name; ?></h2></li>
