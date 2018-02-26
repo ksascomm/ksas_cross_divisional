@@ -25,6 +25,8 @@
 				<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?><span class="fa fa-map-marker" aria-hidden="true"></span> <?php echo get_post_meta($post->ID, 'ecpt_office', true); ?><?php endif; ?>
 			</p>
 			<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?>
+			<?php $theme_option = flagship_sub_get_global_options();
+			$research_label = $theme_option['flagship_sub_research_label'];?>					
 			<p><strong><?php echo $research_label; ?>:&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p>
 			<?php endif; ?>
 		</div>
