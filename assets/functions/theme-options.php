@@ -149,7 +149,46 @@ function flagship_sub_options_page_fields() {
 		'type'    => 'text',
 		'class'   => 'nohtml',
 		'std'    => 'Research Interests',
-);	
+);
+	$options[20] =
+	array(
+		'section' => 'homepage_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_hub_cond',
+		'title'   => __( 'Hub Feed Option', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Do you want to display articles from The Hub?', 'flagship_sub_textdomain' ),
+		'type'    => 'checkbox',
+		'std'    => '0',
+	);
+	$options[21] =
+	array(
+		'section' => 'homepage_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_hub_topic_keyword',
+		'title'   => __( 'Hub Topic or Keywords?', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Do you want to display Hub articles via topic or keyword? You may only select one.' ),
+		'type'    => 'select',
+		'choices' => array(' ', 'topic', 'keyword'),
+		'std'    => ' ',
+	);
+	$options[22] =
+	array(
+		'section' => 'homepage_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_hub_keywords',
+		'title'   => __( 'Hub Keywords', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Enter keywords. Use hyphens instead of spaces (comma separated, no spaces) ie. physics,arts-and-sciences.', 'flagship_sub_textdomain' ),
+		'type'    => 'text',
+		'class'   => 'nohtml',
+		'std'    => '',
+	);
+	$options[23] =
+	array(
+		'section' => 'homepage_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_hub_topic',
+		'title'   => __( 'Hub Topics', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Choose a relevant Hub Topic from the list above' ),
+		'type'    => 'select',
+		'choices' => array(' ', 'arts-culture', 'at-work', 'health', 'politics-society', 'science-technology', 'student-life', 'university-news', 'voices-opinion'),
+		'std'    => ' ',
+	);	
 	return $options;
 
 }
