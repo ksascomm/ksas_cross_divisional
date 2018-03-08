@@ -857,7 +857,18 @@ POSTS & CONTENT STYLES
     font-family: $font-header-extrabold;
     font-weight: $font-header-extrabold-weight;
    }
-
+   .hub-article {
+		img {
+    	width: 275px;
+    	margin-right: 1rem;
+		}
+		a.external::after {
+			content:"\e007";
+			font-family:'flagship-icon';
+			font-size:85%;
+			padding-left:4px;
+		}
+	}
 }
 
 #content {

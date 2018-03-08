@@ -96,6 +96,17 @@ TYPOGRAPHY
 }
 
 @font-face {
+  font-family: 'gentona-lightitalic';
+  src: url('../fonts/gentona/Gentona-LightItalic.eot');
+  src: url('../fonts/gentona/Gentona-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-LightItalic.woff') format('woff'),
+       url('../fonts/gentona/Gentona-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+@font-face {
   font-family: 'flagship-icon';
   src:url('../fonts/flagship/flagship-icon.eot');
 }
@@ -115,6 +126,7 @@ $font-header-extrabold: 'quadon-extrabold', 'Helvetica Neue', Roboto, sans-serif
 $font-header-extrabold-weight: 700;
 $font-stack: 'gentona-light', 'Helvetica Neue', Roboto,  sans-serif;
 $font-stack-weight: 300;
+$font-stack-italic: 'gentona-lightitalic', 'Helvetica Neue', Roboto,  sans-serif;
 $font-stack-semibold: 'gentona-semibold', 'Helvetica Neue', Roboto, sans-serif;
 $font-stack-semibold-weight: 600;
 $font-stack-bold: 'gentona-bold', 'Helvetica Neue', Roboto, sans-serif;
@@ -137,9 +149,8 @@ span.amp {
 
 //.b.em, .strong.em
 %extend_2 {
-  font-family: $font-stack;
+  font-family: $font-stack-italic;
   font-weight: $font-stack-weight;
-  font-style: italic;
 }
 
 /*********************
