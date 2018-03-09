@@ -59,4 +59,4 @@ if ('keyword' === $selection ) {
 	</div>
 	<hr>
 </article>
-<?php } ?>
+<?php } } ?>
