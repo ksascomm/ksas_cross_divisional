@@ -1472,7 +1472,11 @@ footer {
     font-size: 1rem;
     font-family: $font-stack-bold;
     font-weight: $font-stack-bold-weight;
-    color: $white;
+	color: $white;
+		&:hover {
+		border-bottom: 0.0625rem dashed;
+		transition: color 0.5s ease; 
+	}
   }
 }
 
@@ -1483,7 +1487,17 @@ footer {
     font-size: .95rem;
     color: $grey;
     margin: 2rem 0;
+    a {
+      font-family: $font-stack-bold;
+      font-weight: $font-stack-bold-weight;
+      color: $white;
+      &:hover {
+        border-bottom: 0.0625rem dashed;
+        transition: color 0.5s ease; 
+      }
+    }
   }
+
 }
 
 .social-media {

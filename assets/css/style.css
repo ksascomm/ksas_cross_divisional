@@ -8297,6 +8297,9 @@ footer {
     font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
     font-weight: 700;
     color: #fefefe; }
+    #menu-footer-links a:hover {
+      border-bottom: 0.0625rem dashed;
+      transition: color 0.5s ease; }
 
 #copyright {
   clear: left; }
@@ -8305,6 +8308,13 @@ footer {
     font-size: .95rem;
     color: #E5E2E0;
     margin: 2rem 0; }
+    #copyright p a {
+      font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+      font-weight: 700;
+      color: #fefefe; }
+      #copyright p a:hover {
+        border-bottom: 0.0625rem dashed;
+        transition: color 0.5s ease; }
 
 .social-media a {
   float: right; }
