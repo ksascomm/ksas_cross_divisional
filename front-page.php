@@ -2,15 +2,12 @@
 	<div id="content">
 		<?php
 			$theme_option = flagship_sub_get_global_options();
-			if ( false === ( $slider_query = get_transient( 'slider_query' ) ) ) {
 			$slider_query = new WP_Query(array(
-			'post_type' => 'slider',
-			'posts_per_page' => '2',
-			'orderby' => 'menu_order',
-			'order' => 'ASC',
-));
-		set_transient( 'slider_query', $slider_query, 2592000 );
-			}
+				'post_type' => 'slider',
+				'posts_per_page' => '2',
+				'orderby' => 'menu_order',
+				'order' => 'ASC',
+			));
 			if ( $slider_query->have_posts() ) :?> 
 
 			<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
@@ -49,15 +46,11 @@
 			   
 			    <?php  // News Query
 					$news_quantity = $theme_option['flagship_sub_news_quantity'];
-					if ( false === ( $news_query = get_transient( 'news_mainpage_query' ) ) ) {
-					
-						$news_query = new WP_Query(array(
-							'post_type' => 'post',
-							'posts_per_page' => $news_quantity,
-						));
+					$news_query = new WP_Query(array(
+						'post_type' => 'post',
+						'posts_per_page' => $news_quantity,
+					));
 		
-					set_transient( 'news_mainpage_query', $news_query, 2592000 );
-					}
 				if ( $news_query->have_posts() ) : ?>
 
 				<div class="news-feed">
