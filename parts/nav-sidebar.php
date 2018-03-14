@@ -21,9 +21,9 @@
 			<div class="offset-gutter" id="sidebar_header">
 				<h5 class="grey">Also in 
 				<?php if (is_home() ) :?>
-					<span class="white">About</span>
+					<a href="<?php echo get_home_url(); ?>/about/"><span class="white">About</span></a>
 				<?php else : ?>
-					<span class="white"><?php echo $ancestor_title; ?></span>
+					<a href="<?php echo $ancestor_url;?>"><span class="white"><?php echo $ancestor_title; ?></span></a>
 				<?php endif;?>
 				</h5>
 			</div>
