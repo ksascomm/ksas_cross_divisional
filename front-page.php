@@ -4,7 +4,7 @@
 			$theme_option = flagship_sub_get_global_options();
 			$slider_query = new WP_Query(array(
 				'post_type' => 'slider',
-				'posts_per_page' => '2',
+				'posts_per_page' => '5',
 				'orderby' => 'menu_order',
 				'order' => 'ASC',
 			));
