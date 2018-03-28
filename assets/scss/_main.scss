@@ -65,8 +65,9 @@ ul.nav {
 		font-size: 1rem;
 		&:before {
 			font-family: 'FontAwesome';
-		    content: '\f054';
+		    content: '\f0da';
 		    padding-right: .5rem;
+		    color: #666;
 		}
 		&.external a::after {
 			content:"\e007";
@@ -82,12 +83,11 @@ ul.nav {
 			margin-left: 15px;
 			list-style: none;
 			&:before {
-			    content: "\e010";
-			    font-family: 'flagship-icon';
-			    color: lighten($black, 25% );
+				font-family: 'FontAwesome';
+			    content: '\f0da';
+			    color: #666;
 			    margin-right: 5px;
 			    vertical-align: middle;
-			    font-size: 75%;
 			}
    		}
 	}
@@ -96,7 +96,8 @@ ul.nav {
 ul.nav > {
   .current_page_item:before, .current_page_ancestor:before, .current-menu-item:before, .current-menu-ancestor:before {
     font-family: 'FontAwesome';
-    content: '\f078';
+    content: '\f0d7';
+    color: #000;
   }
 }
 

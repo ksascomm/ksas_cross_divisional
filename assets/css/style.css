@@ -7342,8 +7342,9 @@ ul.nav {
     font-size: 1rem; }
     ul.nav li:before {
       font-family: 'FontAwesome';
-      content: '\f054';
-      padding-right: .5rem; }
+      content: '\f0da';
+      padding-right: .5rem;
+      color: #666; }
     ul.nav li.external a::after {
       content: "\e007";
       font-family: 'flagship-icon';
@@ -7357,16 +7358,16 @@ ul.nav {
       margin-left: 15px;
       list-style: none; }
       ul.nav li ul li:before {
-        content: "\e010";
-        font-family: 'flagship-icon';
-        color: #676777;
+        font-family: 'FontAwesome';
+        content: '\f0da';
+        color: #666;
         margin-right: 5px;
-        vertical-align: middle;
-        font-size: 75%; }
+        vertical-align: middle; }
 
 ul.nav > .current_page_item:before, ul.nav > .current_page_ancestor:before, ul.nav > .current-menu-item:before, ul.nav > .current-menu-ancestor:before {
   font-family: 'FontAwesome';
-  content: '\f078'; }
+  content: '\f0d7';
+  color: #000; }
 
 .icon-arrow-right-2:before {
   content: "\e010"; }
