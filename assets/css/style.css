@@ -8463,6 +8463,41 @@ li.person h4 {
 .people-directory {
   margin-bottom: 3rem; }
 
+.field {
+  margin-bottom: 1.25rem;
+  min-height: 200px; }
+  @media print, screen and (min-width: 40em) {
+    .field {
+      border-width: .25em;
+      min-height: 300px; } }
+  @media print, screen and (min-width: 64em) {
+    .field {
+      min-height: 325px;
+      margin-bottom: 30px; } }
+  .field p {
+    color: #2C2C33;
+    font-size: .9rem;
+    line-height: 1.3;
+    font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+    font-weight: 300; }
+  .field p.contact {
+    font-size: 13px;
+    margin-bottom: 10px; }
+  .field h3 {
+    font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 1rem; }
+  .field .button {
+    padding: .3rem;
+    cursor: auto;
+    font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+    font-weight: 300; }
+
+.research-project .button {
+  padding: .5rem;
+  font-size: .9rem; }
+
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
 .isotope-item {
@@ -8640,6 +8675,53 @@ div#offCanvasTop1 {
     .off-canvas .input-group-button .button {
       background-color: #418fde;
       width: 100%; }
+
+.testimonial-container {
+  margin-bottom: 1rem;
+  background-color: #fefefe;
+  color: #2C2C33;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 0; }
+  .testimonial-container .testimonial-avatar .testimonial-image {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 11.875rem;
+    height: 11.875rem;
+    padding: 0.9375rem; }
+    .testimonial-container .testimonial-avatar .testimonial-image:hover {
+      transform: scale(1.1); }
+  .testimonial-container .testimonial-bio {
+    padding: 1rem;
+    text-align: center; }
+    .testimonial-container .testimonial-bio h2 {
+      font-size: 1.25rem;
+      font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+      font-weight: 700; }
+    .testimonial-container .testimonial-bio h3 {
+      font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.3; }
+      .testimonial-container .testimonial-bio h3 span.light {
+        font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+        font-weight: 300; }
+  .testimonial-container .testimonial-button {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif; }
+
+.testimonial-content h1 {
+  font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-right: 1rem; }
+
+.testimonial-content p {
+  padding-right: 1rem; }
 
 /******************************************************************
 
