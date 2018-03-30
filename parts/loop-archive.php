@@ -9,6 +9,9 @@
 	</header> <!-- end article header -->
 					
 	<div class="entry-content" itemprop="articleBody">
+		<?php the_post_thumbnail('news', array(
+	'class' => 'floatleft news',
+)); ?>
 		<?php the_excerpt('<button class="tiny">Read more...</button>'); ?>
 	</div> <!-- end article section -->					
 	
