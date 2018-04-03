@@ -66,7 +66,7 @@ Template Name: Alumni Testimonials
 								<p><strong>Internship:</strong> <?php echo get_post_meta($post->ID, 'ecpt_internship', true); ?></p>
 							<?php endif; ?>
 							<?php if ( get_post_meta($post->ID, 'ecpt_job', true) ) : ?>
-								<p><strong>Current Job:</strong> <?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></p>
+								<p><?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></p>
 							<?php endif; ?>
 							<?php the_content(); ?>
 							</div>
