@@ -1980,31 +1980,24 @@ div#offCanvasTop1 {
   }
 }
 
-$testimonial-container-margin-bottom: 1rem;
-$testimonial-container-radius: $global-radius;
-$testimonial-container-background: $white;
-$testimonial-container-color: $black;
-$testimonial-container-image-size: rem-calc(190);
-
-.testimonial-container {
-  margin-bottom: $testimonial-container-margin-bottom;
-  background-color: $testimonial-container-background;
-  color: $black;
-  overflow: hidden;
-  padding: 0;
-  border-radius: $testimonial-container-radius;
-}
+.testimonial {
+	.testimonial-avatar {
+		padding-bottom: 0;
+	}
   .testimonial-bio {
+  	padding-top: 0;
     h2 {
       font-size: 1.25rem;
       font-family: $font-stack-bold;
       font-weight: $font-stack-bold-weight;
+      margin-bottom: 0;
     }
     h3 {
       font-family: $font-stack-semibold;
       font-weight: $font-stack-semibold-weight;
       font-size: .9rem;
       line-height: 1.3;
+      padding-top: 0;
       span.light {
         font-family: $font-stack;
         font-weight: $font-stack-weight;
@@ -2013,8 +2006,10 @@ $testimonial-container-image-size: rem-calc(190);
   }
   .testimonial-button {
     font-family: $font-stack;
+    font-weight: $font-stack-weight;
     margin-top: 1rem;
   }
+}  
 
 .testimonial-content {
   h1 {

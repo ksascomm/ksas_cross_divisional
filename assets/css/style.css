@@ -8677,30 +8677,29 @@ div#offCanvasTop1 {
       background-color: #418fde;
       width: 100%; }
 
-.testimonial-container {
-  margin-bottom: 1rem;
-  background-color: #fefefe;
-  color: #2C2C33;
-  overflow: hidden;
-  padding: 0;
-  border-radius: 0; }
+.testimonial .testimonial-avatar {
+  padding-bottom: 0; }
 
-.testimonial-bio h2 {
-  font-size: 1.25rem;
-  font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
-  font-weight: 700; }
+.testimonial .testimonial-bio {
+  padding-top: 0; }
+  .testimonial .testimonial-bio h2 {
+    font-size: 1.25rem;
+    font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0; }
+  .testimonial .testimonial-bio h3 {
+    font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 1.3;
+    padding-top: 0; }
+    .testimonial .testimonial-bio h3 span.light {
+      font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+      font-weight: 300; }
 
-.testimonial-bio h3 {
-  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
-  font-weight: 600;
-  font-size: .9rem;
-  line-height: 1.3; }
-  .testimonial-bio h3 span.light {
-    font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
-    font-weight: 300; }
-
-.testimonial-button {
+.testimonial .testimonial-button {
   font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 300;
   margin-top: 1rem; }
 
 .testimonial-content h1 {
