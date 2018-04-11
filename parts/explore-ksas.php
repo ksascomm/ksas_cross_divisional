@@ -12,8 +12,8 @@
 			</div>
 		</form>
 	</li>
-	<li class="roof-padding bar"><a href="https://www.jhu.edu/admissions/visit/" target="_blank">Visit</a></li>
-	<li class="roof-padding"><a href="http://krieger.jhu.edu/magazine/" target="_blank">A&S Magazine</a></li>
+	<li class="roof-padding bar"><a href="https://www.jhu.edu/admissions/visit/" target="_blank" rel="noopener">Visit</a></li>
+	<li class="roof-padding"><a href="http://krieger.jhu.edu/magazine/" target="_blank" rel="noopener">A&S Magazine</a></li>
 	<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore KSAS <span class="fa fa-bars" aria-hidden="true"></span></a></li>
 	<div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas aria-hidden="true">
 		<div id="global-links" class="row small-up-2 medium-up-3 large-up-3">
