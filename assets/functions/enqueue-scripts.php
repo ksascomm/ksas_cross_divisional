@@ -2,6 +2,12 @@
 function site_scripts() {
   global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
+    // Deregister the jquery version bundled with WordPress.
+        wp_deregister_script( 'jquery' );
+
+    // CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
+        wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', false );
+
     // Load What-Input files in footer
     wp_enqueue_script( 'what-input', get_template_directory_uri() . '/assets/js/what-input.min.js', array(), '', true );
 
@@ -20,3 +26,18 @@ function site_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
+
+// Defer non-essential/plugin javascript files
+// Defer jQuery Parsing using the HTML5 defer property
+if (!(is_admin() )) {
+    function defer_parsing_of_js ( $url ) {
+        if ( FALSE === strpos( $url, '.js' ) ) return $url;
+        if ( strpos( $url, 'jquery.min.js' ) ) return $url;
+         if ( strpos( $url, 'what-input.min.js' ) ) return $url;
+        if ( strpos( $url, 'foundation.min.js' ) ) return $url;
+        if ( strpos( $url, 'scripts.js' ) ) return $url;
+        // return "$url' defer ";
+        return "$url' defer onload='";
+    }
+    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+}
