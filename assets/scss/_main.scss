@@ -177,6 +177,10 @@ a, a:visited {
 	ul, ol {
 	margin-left: 2rem;
 	}
+	input.button {
+		font-family: $font-stack-semibold;
+    	font-weight: $font-stack-semibold-weight;
+	}
 }
 
 

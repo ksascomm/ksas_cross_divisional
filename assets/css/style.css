@@ -7099,6 +7099,10 @@ a, a:visited {
 #main ul, #main ol {
   margin-left: 2rem; }
 
+#main input.button {
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600; }
+
 .textwidget p a, .textwidget ul a {
   border-bottom: .125em dotted;
   border-bottom-color: rgba(0, 0, 0, 0.2); }
