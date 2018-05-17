@@ -37,15 +37,16 @@
 				</h1>
 			</div>
 		</div>
-
 	</div>
-	<div class="top-bar-right show-for-large">
-		<?php joints_top_nav(); ?>
-	</div>
-	<div class="top-bar-left hide-for-large mobile-menu">
-		<ul class="menu">
-			<li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li>
-			<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
-		</ul>
+	<div class="row">
+		<div class="top-bar-left show-for-large">
+			<?php joints_top_nav(); ?>
+		</div>
+		<div class="top-bar-left hide-for-large mobile-menu">
+			<ul class="menu">
+				<li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li>
+				<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
+			</ul>
+		</div>
 	</div>
 </div>
