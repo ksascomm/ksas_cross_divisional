@@ -2,18 +2,16 @@
 	<li class="roof-padding">
 		<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" aria-label="Utility Bar Search">
 			<div class="input-group">
+				<div class="input-group-button">
+	    			<input type="submit" class="button" value="&#xf002;" aria-label="search">
+	  			</div>
 				<label for="s" class="screen-reader-text">
 	                Search This Website
 	            </label>
-				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search this site" aria-label="Search This Website"/>
-				<div class="input-group-button">
-	    			<input type="submit" class="button" value="&#xf002;" aria-label="search">
-	  			</div>	
+				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search this site" aria-label="Search This Website"/>	
 			</div>
 		</form>
 	</li>
-	<li class="roof-padding bar"><a href="https://www.jhu.edu/admissions/visit/" target="_blank" rel="noopener">Visit</a></li>
-	<li class="roof-padding"><a href="http://krieger.jhu.edu/magazine/" target="_blank" rel="noopener">A&S Magazine</a></li>
 	<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore KSAS <span class="fa fa-bars" aria-hidden="true"></span></a></li>
 	<div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas aria-hidden="true">
 		<div id="global-links" class="row small-up-2 medium-up-3 large-up-3">
