@@ -340,6 +340,7 @@ NAVIGATION STYLES
 .top-bar {
 	background-color: $primary-color;
 	padding-bottom: 0;
+	padding-top: 0;
 	.title-area {
 		z-index: 1;
 	}
@@ -374,7 +375,8 @@ NAVIGATION STYLES
     	font-family: $font-stack-bold;
     	font-weight: $font-stack-bold-weight;
 	}
-	.top-bar-right {
+	.top-bar-right, .top-bar-left {
+		padding-top: .5rem;
 		a {
 	      color: $white;
 	      &:hover:not(.button) {
@@ -1862,7 +1864,7 @@ a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1
 .roof {
   background-color: $primary-color;
   width: 100%;
-  padding: .5rem 0;
+  padding: .5rem 0 0;
   li.roof-padding {
     padding-top: .85rem;
   }

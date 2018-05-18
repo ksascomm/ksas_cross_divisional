@@ -7207,7 +7207,8 @@ NAVIGATION STYLES
 *********************/
 .top-bar {
   background-color: #005eb8;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  padding-top: 0; }
   .top-bar .title-area {
     z-index: 1; }
   .top-bar .is-dropdown-submenu-parent.is-down-arrow > a::after {
@@ -7232,12 +7233,14 @@ NAVIGATION STYLES
   .top-bar .menu {
     font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
     font-weight: 700; }
-  .top-bar .top-bar-right a {
-    color: #fefefe; }
-    .top-bar .top-bar-right a:hover:not(.button) {
-      background: #004485; }
-    .top-bar .top-bar-right a li:not(:last-child) {
-      border-right: none; }
+  .top-bar .top-bar-right, .top-bar .top-bar-left {
+    padding-top: .5rem; }
+    .top-bar .top-bar-right a, .top-bar .top-bar-left a {
+      color: #fefefe; }
+      .top-bar .top-bar-right a:hover:not(.button), .top-bar .top-bar-left a:hover:not(.button) {
+        background: #004485; }
+      .top-bar .top-bar-right a li:not(:last-child), .top-bar .top-bar-left a li:not(:last-child) {
+        border-right: none; }
 
 body.black .top-bar, body.black #sidebar_header {
   background-color: #2C2C33; }
@@ -8260,7 +8263,7 @@ a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1
 .roof {
   background-color: #005eb8;
   width: 100%;
-  padding: .5rem 0; }
+  padding: .5rem 0 0; }
   .roof li.roof-padding {
     padding-top: .85rem; }
   .roof a {
