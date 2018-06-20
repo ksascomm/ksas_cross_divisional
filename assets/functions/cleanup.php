@@ -60,11 +60,11 @@ function joints_remove_recent_comments_style() {
 }
 
 // This removes the annoying […] to a Read More link
-function joints_excerpt_more( $more ) {
-	global $post;
+//function joints_excerpt_more( $more ) {
+//	global $post;
 	// edit here if you like
-return '<a class="excerpt-read-more" href="' . get_permalink($post->ID) . '" title="' . __('Read', 'jointswp') . get_the_title($post->ID) . '">' . __('... Read more &raquo;', 'jointswp') . '</a>';
-}
+//return '<a class="excerpt-read-more" href="' . get_permalink($post->ID) . '" title="' . __('Read', 'jointswp') . get_the_title($post->ID) . '">' . __('... Read more &raquo;', 'jointswp') . '</a>';
+//}
 
 // Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
 function remove_sticky_class( $classes ) {
