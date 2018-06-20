@@ -1,9 +1,13 @@
 <article <?php post_class(''); ?> itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="post-<?php the_ID(); ?>">
 	<header class="article-header" aria-label="<?php the_title();?>">	
 		<h1 class="entry-title single-title" itemprop="headline">
-			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" id="post-<?php the_ID(); ?>">
-				<?php the_title(); ?>
-			</a>
+			<?php if ( get_post_meta($post->ID, 'ecpt_external_link', true) ) : ?>
+				<a href="<?php echo get_post_meta($post->ID, 'ecpt_external_link', true); ?>" class="external" target="_blank" rel="noopener" title="<?php the_title(); ?>" id="post-<?php the_ID(); ?>">
+					<?php the_title(); ?>
+				</a>
+			<?php else : ?>
+				<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a>
+			<?php endif; ?>
 		</h1>
 		<?php get_template_part( 'parts/content', 'byline' ); ?>
 	</header> <!-- end article header -->

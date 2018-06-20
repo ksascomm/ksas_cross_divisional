@@ -7603,6 +7603,11 @@ POSTS & CONTENT STYLES
     font-family: 'flagship-icon';
     font-size: 85%;
     padding-left: 4px; }
+  .news-feed article.post a.external::after {
+    content: "\e007";
+    font-family: 'flagship-icon';
+    font-size: 85%;
+    padding-left: 4px; }
 
 #content #inner-content {
   padding: 1.25rem 0rem 1rem; }

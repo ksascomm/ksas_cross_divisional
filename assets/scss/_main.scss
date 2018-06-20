@@ -876,6 +876,14 @@ POSTS & CONTENT STYLES
 			padding-left:4px;
 		}
 	}
+	article.post {
+		a.external::after {
+			content:"\e007";
+			font-family:'flagship-icon';
+			font-size:85%;
+			padding-left:4px;
+		}
+	}
 }
 
 #content {
