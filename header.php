@@ -54,7 +54,9 @@
 	<!-- Uncomment this line if using the Off-Canvas Menu --> 
 	<?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme'];?>
 	<body <?php body_class($color_scheme); ?>>
-	<a class="skiplink show-on-focus" href="#inner-content">Skip to main content</a>
+		<div role="navigation" aria-label="Skip to main content">
+			<a class="skiplink show-on-focus" href="#inner-content">Skip to main content</a>
+		</div>
 		<div class="off-canvas-wrapper">
 							
 				<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
