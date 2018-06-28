@@ -50,21 +50,16 @@ Template Name: People Directory
 		<?php endwhile; endif; ?>
 	<div class="directory-search callout lightgrey" role="region" aria-label="Filters">
 		<?php if ($theme_option['flagship_sub_role_search'] == true) : ?>
-		<?php $roles = get_terms('role', array(
-			'orderby'       => 'ID',
-			'order'         => 'ASC',
-			'hide_empty'    => true,
-			));
-			$count_roles =  count($roles);
-		if ( $count_roles > 0 ) : ?>
-		<p>Filter by Title:</p>
-		<ul class="filter-list menu role-group" data-filter-group="role">
-			<?php foreach ( $roles as $role ) : ?>
-			<li class="role-filter">
-				<a class="button capitalize" href="javascript:void(0)" data-filter=".<?php echo $role->slug; ?>" class="selected"><?php echo $role->name; ?></a>
-			</li>
-			<?php endforeach; ?>
-		</ul>
+			<?php $count_roles =  count($roles);
+				if ( $count_roles > 0 ) : ?>
+			<p>Filter by Title:</p>
+			<ul class="filter-list menu role-group" data-filter-group="role">
+				<?php foreach ( $roles as $role ) : ?>
+				<li class="role-filter">
+					<a class="button capitalize" href="javascript:void(0)" data-filter=".<?php echo $role->slug; ?>" class="selected"><?php echo $role->name; ?></a>
+				</li>
+				<?php endforeach; ?>
+			</ul>
 		<?php endif; endif; ?>
 		<div class="row search-sort">
 			<div class="large-8 column">
@@ -112,7 +107,7 @@ Template Name: People Directory
 							'posts_per_page' => '150',));
 
 				if ($people_query->have_posts() ) : ?>
-				<li class="person sub-head quicksearch-match <?php echo get_the_directory_filters($post);?> <?php echo get_the_roles($post); ?>"><h2 class="black capitalize"><?php echo $role_name; ?></h2></li>
+				<li class="person sub-head quicksearch-match <?php echo $role->slug; ?>"><h2 class="black capitalize"><?php echo $role_name; ?></h2></li>
 				
 				<?php while ($people_query->have_posts() ) : $people_query->the_post(); ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_bio', true) ) {

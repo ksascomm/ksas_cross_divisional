@@ -1,44 +1,46 @@
 <li class="person <?php echo get_the_directory_filters($post);?> <?php echo get_the_roles($post); ?>">
-	<div class="row">
-		<div class="small-12 columns">
-			<?php if ( has_post_thumbnail() ) { ?>
+	<div class="media-object">		
+		<?php if ( has_post_thumbnail() ) { ?>
+			<div class="media-object-section hide-for-print">
 				<?php the_post_thumbnail('directory'); ?>
-			<?php } ?>
-			<h3 class="no-margin">
+			</div>
+		<?php } ?>
+		<div class="media-object-section">
+			<h3>
 				<a href="<?php the_permalink();?>" title="<?php the_title(); ?>">
 					<?php the_title(); ?>
 				</a>
 			</h3>
 			<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
-				<h4 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h4>
+				<h4><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h4>
 			<?php endif; ?>
 		  	<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?>
-		   		<h4 class="no-margin"><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h4>
+		   		<h4"><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h4>
 		   	<?php endif; ?>	
-			<p class="black">
+			<ul class="contact">
 				<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
-					<span class="fa fa-phone-square" aria-hidden="true"></span> <span class="contact"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span><br>
+					<li><span class="fa fa-phone-square"></span> <?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></li>
 				<?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?>
-					<span class="fa fa-fax" aria-hidden="true"></span> <span class="contact"> <?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?></span><br>
+					<li><span class="fa fa-fax" aria-hidden="true"></span> <?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?></li>
 				<?php endif; ?>
 				<?php $email = get_post_meta($post->ID, 'ecpt_email', true); if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?>
-					<span class="fa fa-envelope" aria-hidden="true"></span> <span class="contact"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;<?php echo email_munge($email); ?>">
-					<?php echo email_munge($email); ?></a></span><br>
+					<li><span class="fa fa-envelope" aria-hidden="true"></span> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;<?php echo email_munge($email); ?>">
+					<?php echo email_munge($email); ?></a></li>
 				<?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?>
-					<span class="fa fa-map-marker" aria-hidden="true"></span> <span class="contact"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span><br>
+					<li><span class="fa fa-envelope"></span> <?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></li>
 				<?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_lab_website', true) ) : ?>
-					<span class="fa fa-globe" aria-hidden="true"></span> <span class="contact"><a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" onclick="ga('send', 'event', 'People Directory', 'Group/Lab Website', '<?php the_title(); ?> | <?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>')" target="_blank">Group/Lab Website</a>
-					</span>
+					<li><span class="fa fa-globe" aria-hidden="true"></span> <a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" onclick="ga('send', 'event', 'People Directory', 'Group/Lab Website', '<?php the_title(); ?> | <?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>')" target="_blank">Group/Lab Website</a>
+					</li>
 				<?php endif; ?>
-			</p>
-			<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?>
-			<?php $theme_option = flagship_sub_get_global_options();
-			$research_label = $theme_option['flagship_sub_research_label'];?>					
-				<p><strong><?php echo $research_label; ?>&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p>
-			<?php endif; ?>
+				<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : 
+					$theme_option = flagship_sub_get_global_options();
+					$research_label = $theme_option['flagship_sub_research_label'];?>					
+					<li><strong><?php echo $research_label; ?>:&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></li>
+				<?php endif; ?>
+			</ul>
+		</div>
 	</div>
-</div>
 </li>
