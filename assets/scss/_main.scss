@@ -1626,7 +1626,7 @@ li.person {
     }
     ul.contact {
       list-style: none;
-      margin-left: 0;
+      margin-left: 0 !important;
       li {
         @include breakpoint(small) {
           font-size: .9rem;

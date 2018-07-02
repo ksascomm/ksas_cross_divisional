@@ -8092,7 +8092,7 @@ li.person h4 {
         margin-bottom: 1.75rem; } }
     .directory li.person ul.contact {
       list-style: none;
-      margin-left: 0; }
+      margin-left: 0 !important; }
       .directory li.person ul.contact li {
         font-size: .9rem; }
         @media print, screen and (min-width: 40em) {
