@@ -18,7 +18,7 @@
 	if ( $kiddies ) { ?>
 
 		<div class="sidebar">
-			<div class="offset-gutter" id="sidebar_header">
+			<div class="offset-gutter" id="sidebar_header" role="navigation" aria-label="Sidebar Menu">
 				<h5 class="grey">Also in 
 				<?php if (is_home() ) :?>
 					<a href="<?php echo get_home_url(); ?>/about/"><span class="white">About</span></a>

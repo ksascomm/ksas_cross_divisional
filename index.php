@@ -26,11 +26,11 @@
 																								
 		    </main> <!-- end #main -->
 		    
-			<div class="small-12 large-3 large-pull-9 columns hide-for-print archive" role="navigation"> 
+			<aside class="small-12 large-3 large-pull-9 columns hide-for-print archive"> 
 			
 				<div class="sidebar">
 					
-					<div class="offset-gutter" id="sidebar_header">
+					<div class="offset-gutter" id="sidebar_header" role="navigation" aria-label="Sidebar Menu">
 						<h5 class="grey">Also in 
 							<span class="white">About</span>
 						</h5>
@@ -52,7 +52,7 @@
 
 				</div>
 
-			</div>
+			</aside>
 
 		</div> <!-- end #inner-content -->
 

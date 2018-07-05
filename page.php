@@ -15,7 +15,7 @@
 			    <?php endwhile; endif; ?>							
 			    					
 			</main> <!-- end #main -->
-			<aside class="small-12 large-3 large-pull-9 columns hide-for-print" role="navigation" aria-labelledby="sidebar_header"> 
+			<aside class="small-12 large-3 large-pull-9 columns hide-for-print"> 
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 			</aside>
 		    

@@ -28,9 +28,9 @@
 		
 			</main> <!-- end #main -->
 	
-			<div class="small-12 large-4 large-pull-8 columns hide-for-print" role="navigation"> 
+			<aside class="small-12 large-4 large-pull-8 columns hide-for-print"> 
 				<?php get_sidebar(); ?>
-			</div>
+			</aside>
 	    
 	    </div> <!-- end #inner-content -->
 	    

@@ -77,7 +77,7 @@ Template Name: People Directory (No Isotope/JS)
 		</main>
 		<!-- end #main -->
 	<?php if ( count( $children ) >= 1 ) : ?>
-		<div class="small-12 large-3 large-pull-9 columns" role="navigation">
+		<aside class="small-12 large-3 large-pull-9 columns">
 
 			<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 			
@@ -88,7 +88,7 @@ Template Name: People Directory (No Isotope/JS)
 			endwhile; endif; wp_reset_postdata();
 			?>
 			<!-- END Page Specific Sidebar -->
-		</div>
+		</aside>
 	<?php endif;?>
 		</div> <!-- end #inner-content -->
 	</div>
