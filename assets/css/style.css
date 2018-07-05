@@ -7161,7 +7161,7 @@ HEADER STYLES
 .header {
   background: #005eb8; }
   .header .logo {
-    padding: .5rem;
+    padding-top: .5rem;
     margin-right: .5rem; }
     @media print, screen and (min-width: 64em) {
       .header .logo a img {
