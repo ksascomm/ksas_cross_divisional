@@ -1,6 +1,6 @@
 <!-- By default, this menu will use off-canvas for small
 	 and a topbar for medium-up -->
-<div class="row roof show-for-large">	 
+<div class="roof show-for-large">	 
 	<?php get_template_part( 'parts/explore', 'ksas' ); ?>
 </div>
 
