@@ -7585,30 +7585,35 @@ ul.breadcrumbs li, ul.breadcrumbs span, .breadcrumbs li, .breadcrumbs span {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-.news-feed {
-  padding: 10px; }
-  .news-feed h1 {
-    font-size: 1.5rem; }
-    .news-feed h1.entry-title {
-      font-size: 1.25rem;
-      font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
-      font-weight: 700; }
-  .news-feed h2 {
+.news-feed h1 {
+  font-size: 1.5rem; }
+  .news-feed h1.entry-title {
     font-size: 1.25rem;
-    font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
-    font-weight: 600; }
-  .news-feed h1.hub-title, .news-feed h1.feed-title {
-    font-size: 1.5rem;
-    font-family: "quadon-extrabold", "Helvetica Neue", Roboto, sans-serif;
+    font-family: "gentona-bold", "Helvetica Neue", Roboto, sans-serif;
     font-weight: 700; }
-  .news-feed .hub-article img {
-    width: 275px;
-    margin-right: 1rem; }
-  .news-feed .hub-article a.external::after {
-    content: "\e007";
-    font-family: 'flagship-icon';
-    font-size: 85%;
-    padding-left: 4px; }
+
+.news-feed h2 {
+  font-size: 1.25rem;
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600; }
+
+.news-feed h1.hub-title, .news-feed h1.feed-title {
+  font-size: 1.5rem;
+  font-family: "quadon-extrabold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 700; }
+
+.news-feed .hub-article img {
+  width: 275px;
+  margin-right: 1rem; }
+
+.news-feed .hub-article a.external::after {
+  content: "\e007";
+  font-family: 'flagship-icon';
+  font-size: 85%;
+  padding-left: 4px; }
+
+.news-feed article.post {
+  padding-left: .75rem; }
   .news-feed article.post a.external::after {
     content: "\e007";
     font-family: 'flagship-icon';
@@ -7906,7 +7911,7 @@ SIDEBARS & ASIDES
   @media print, screen and (min-width: 64em) {
     .sidebar {
       margin-top: 1rem;
-      margin-bottom: 1.5rem; } }
+      margin-bottom: 1rem; } }
   .sidebar h5 {
     padding-left: 20px;
     margin-top: 0;
@@ -7927,9 +7932,7 @@ SIDEBARS & ASIDES
   margin: 0; }
 
 .widget_text, .widget_black_studio_tinymce, .widget_recent_entries, .widget_ai1ec_agenda_widget, .ksas_testimonial {
-  border-bottom: 0.0625rem solid #cacaca;
-  padding-top: .75rem;
-  padding-bottom: 1.5rem; }
+  border-bottom: 0.0625rem solid #cacaca; }
   .widget_text .widgettitle, .widget_black_studio_tinymce .widgettitle, .widget_recent_entries .widgettitle, .widget_ai1ec_agenda_widget .widgettitle, .ksas_testimonial .widgettitle {
     padding-top: 5px; }
   .widget_text .textwidget, .widget_black_studio_tinymce .textwidget, .widget_recent_entries .textwidget, .widget_ai1ec_agenda_widget .textwidget, .ksas_testimonial .textwidget {
@@ -7938,6 +7941,9 @@ SIDEBARS & ASIDES
     margin-left: 1rem; }
   .widget_text:last-child, .widget_black_studio_tinymce:last-child, .widget_recent_entries:last-child, .widget_ai1ec_agenda_widget:last-child, .ksas_testimonial:last-child {
     border: none; }
+
+.timely.ai1ec-agenda-widget-view.ai1ec-clearfix {
+  margin-bottom: 1rem; }
 
 /*********************
 FOOTER STYLES
@@ -8183,6 +8189,9 @@ li.person h4 {
 .research-project .button {
   padding: .5rem;
   font-size: .9rem; }
+
+ul#profile-tabs {
+  margin-left: 1rem; }
 
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/

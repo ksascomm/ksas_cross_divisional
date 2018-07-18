@@ -845,7 +845,6 @@ POSTS & CONTENT STYLES
 *********************/
 
 .news-feed {
-  padding: 10px;
   	h1 {
 	  font-size: 1.5rem;
 	  &.entry-title {
@@ -877,6 +876,7 @@ POSTS & CONTENT STYLES
 		}
 	}
 	article.post {
+		padding-left: .75rem;
 		a.external::after {
 			content:"\e007";
 			font-family:'flagship-icon';
@@ -1368,7 +1368,7 @@ SIDEBARS & ASIDES
 	padding: 0px 20px 1px 20px;
 	@include breakpoint (large) {
 		margin-top: 1rem;
-		margin-bottom: 1.5rem;	
+		margin-bottom: 1rem;	
 	}
 	h5 {
 		padding-left:20px;
@@ -1424,12 +1424,17 @@ SIDEBARS & ASIDES
 		margin-left: 1rem;
 	}
 	border-bottom: 0.0625rem solid #cacaca;
-	padding-top: .75rem;
-    padding-bottom: 1.5rem;
+	//padding-top: .75rem;
+    //padding-bottom: .75rem;
     &:last-child {
     	border: none;
     }
 }
+
+.timely.ai1ec-agenda-widget-view.ai1ec-clearfix {
+    margin-bottom: 1rem;
+}
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -1750,6 +1755,11 @@ li.person {
   }
 }
 
+ul#profile-tabs {
+	margin-left: 1rem;
+}
+
+
 /* Start: Recommended Isotope styles */
 
 /**** Isotope Filtering ****/
@@ -1870,59 +1880,59 @@ a.ai1ec-date-title.ai1ec-load-view, a.ai1ec-event-container.ai1ec-load-event.ai1
 }
 
 .roof {
-  background-color: $primary-color;
-  width: 100%;
-  padding: .5rem 0 0;
-  li.roof-padding {
-    padding-top: .85rem;
-  }
-  a {
-    color: $white;
-  &:hover {
-    color: $black;
-  }
-  }
-  li.bar {
-    a:after { 
-      content: "|";
-      color: $black;
-      @include breakpoint (medium) {
-        margin-left: 1em; }
-      }
-  }
-  form { 
-     @include breakpoint (medium) {
-      width: 200px;
-      margin-top: -5px;
-    }
-  }
-  input {
-    height: 1.75rem;
-    &[type="submit"] {
-      font-family: $font-awesome;
-    }
-  }
+	background-color: $primary-color;
+	width: 100%;
+	padding: .5rem 0 0;
+	li.roof-padding {
+		padding-top: .85rem;
+	}
+	a {
+		color: $white;
+		&:hover {
+			color: $black;
+		}
+	}
+	li.bar {
+		a:after { 
+	  		content: "|";
+	  		color: $black;
+	  	@include breakpoint (medium) {
+	    	margin-left: 1em; }
+	  	}
+	}
+	form { 
+		@include breakpoint (medium) {
+			width: 200px;
+			margin-top: -5px;
+		}
+	}
+	input {
+		height: 1.75rem;
+		&[type="submit"] {
+	  		font-family: $font-awesome;
+		}
+	}
 	.input-group {
-	  margin-bottom: 0;
+		margin-bottom: 0;
 	}
 	.button {
 		background-color: #2A78C7;
-  	}
-  .roof-menu {
-    font-size: 1rem;
-     @include breakpoint (medium) {
-        float: left;
-        padding-left: 1rem;
-      }
-      @include breakpoint (large) {
-         float: right;
-      }
-  }
-  .menu.simple {
-    a.button {
-      padding: 0.7rem 1rem;
-    }
-  }
+	}
+	.roof-menu {
+	font-size: 1rem;
+	@include breakpoint (medium) {
+		float: left;
+		padding-left: 1rem;
+	}
+	@include breakpoint (large) {
+		float: right;
+		}
+	}
+	.menu.simple {
+		a.button {
+	  		padding: 0.7rem 1rem;
+		}
+	}
 }
 
 div#offCanvasTop1 {
