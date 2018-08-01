@@ -7649,6 +7649,9 @@ POSTS & CONTENT STYLES
   #caption {
     margin-top: 2em; } }
 
+#caption a.button {
+  color: #fefefe; }
+
 .page-title .vcard {
   border: 0px;
   padding: 0px; }

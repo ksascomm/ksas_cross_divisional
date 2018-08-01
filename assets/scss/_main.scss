@@ -921,6 +921,9 @@ POSTS & CONTENT STYLES
 	@include breakpoint (medium) {
 		margin-top: 2em;
 	}
+	a.button {
+		color: $white;
+	}
 }
 
 .single-title,
