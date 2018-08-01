@@ -10,21 +10,21 @@
 			));
 			if ( $slider_query->have_posts() ) :?> 
 
-			<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-			<ul class="orbit-container">
+			<div class="orbit" role="region" aria-label="Featured Images" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+				<ul class="orbit-container">
 
-			<?php if ($slider_query->post_count > 1 ) : ?>
+				<?php if ($slider_query->post_count > 1 ) : ?>
 
-			<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-   			<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-			<?php endif;?>
+				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+	   			<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+				<?php endif;?>
 
-			<?php while ($slider_query->have_posts() ) : $slider_query->the_post(); ?>
-				<li class="orbit-slide">	
-					<?php get_template_part('parts/content', 'slider'); ?>
-		   		</li>
-		   <?php endwhile;?>
-		   </ul>
+				<?php while ($slider_query->have_posts() ) : $slider_query->the_post(); ?>
+					<li class="orbit-slide">	
+						<?php get_template_part('parts/content', 'slider'); ?>
+			   		</li>
+			   <?php endwhile;?>
+			   </ul>
 		   </div>
 		   <?php endif; ?>
     
