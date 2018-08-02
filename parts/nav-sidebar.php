@@ -40,12 +40,11 @@
 <!-- End Sidebar -->
 
 
-<?php $sidebar = get_post_meta($post->ID, 'ecpt_page_sidebar', true);
-	if ( is_active_sidebar( $sidebar ) ) : ?>
+<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
 	<div class="sidebar">
-
-		<?php dynamic_sidebar($sidebar); ?>
+		<!--This is the Global Sidebar, not page-specific Sidebar #1 -->
+		<?php dynamic_sidebar( 'sidebar1' ); ?>
 		
 	</div>
 
