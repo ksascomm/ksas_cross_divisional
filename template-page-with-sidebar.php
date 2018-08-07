@@ -26,11 +26,13 @@ Template Name: Page with Sidebar (specified widget)
 				
 				<?php get_template_part( 'parts/nav', 'sidebar' ); ?>
 					
-					<!-- Page Specific Sidebar -->
+					<!-- Page Specific Sidebar, Not Global Sidebar1 -->
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-						$sidebar = get_post_meta($post->ID, 'ecpt_page_sidebar', true);
-						dynamic_sidebar($sidebar);
-					endwhile; endif; wp_reset_postdata();
+						$sidebar = get_post_meta($post->ID, 'ecpt_page_sidebar', true); ?>
+							<div class="sidebar widget-sidebar">
+								<?php dynamic_sidebar($sidebar); ?>
+							</div>
+					<?php endwhile; endif; wp_reset_postdata();
 					?>
 					<!-- END Page Specific Sidebar -->
 

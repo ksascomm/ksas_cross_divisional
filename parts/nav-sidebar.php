@@ -17,7 +17,7 @@
 	}
 	if ( $kiddies ) { ?>
 
-		<div class="sidebar">
+		<div class="sidebar navigation-sidebar">
 			<div class="offset-gutter" id="sidebar_header" role="navigation" aria-label="Sidebar Menu">
 				<h5 class="grey">Also in 
 				<?php if (is_home() ) :?>
@@ -42,7 +42,7 @@
 
 <?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
-	<div class="sidebar">
+	<div class="sidebar widget-sidebar">
 		<!--This is the Global Sidebar, not page-specific Sidebar #1 -->
 		<?php dynamic_sidebar( 'sidebar1' ); ?>
 		
