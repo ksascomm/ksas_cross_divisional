@@ -169,6 +169,7 @@ a, a:visited {
 		}
 		&.button {
 			border-bottom: none;
+			color: $white;
 		}
 	}
 	ul.accordion a.accordion-title {
@@ -1432,7 +1433,7 @@ SIDEBARS & ASIDES
 			background: $primary-color url('../images/whiteInBlue_corner.svg') no-repeat right bottom;
 			background-size: 2.666666666666667rem auto;
 			color: $white;
-						margin-bottom: 1.5rem;
+			margin-bottom: 1.5rem;
 			padding-bottom: .75rem;
 			.widgettitle {
 				font-size: 1.25rem;
