@@ -28,13 +28,13 @@ Template Name: Alumni Testimonials
 			);
 			?>
 			<?php if ($ksas_alumni_testimonial_query->have_posts() ) : ?>
-			<div class="row small-up-2 large-up-3"  data-equalizer data-equalize-by-row="true">
+			<div class="row small-up-2 large-up-3">
 				<?php
 				while ($ksas_alumni_testimonial_query->have_posts() ) :
 									$ksas_alumni_testimonial_query->the_post();
 				?>
 				<div class="column column-block">
-					<div class="card testimonial" data-equalizer-watch>
+					<div class="card testimonial">
 						<div class="card-section testimonial-avatar">
 							<?php
 							if ( has_post_thumbnail() ) {
