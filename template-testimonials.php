@@ -79,9 +79,9 @@ Template Name: Alumni Testimonials
 				<?php endwhile; ?>
 			</div>
 			<?php endif; ?>
-			</main> <!-- end #main -->
+		</main> <!-- end #main -->
 			
-			</div> <!-- end #inner-content -->
+	</div> <!-- end #inner-content -->
 			
-			</div> <!-- end #content -->
-			<?php get_footer(); ?>
+</div> <!-- end #content -->
+<?php get_footer(); ?>
