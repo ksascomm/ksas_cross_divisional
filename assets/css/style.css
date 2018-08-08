@@ -7998,6 +7998,14 @@ SIDEBARS & ASIDES
   .widget-sidebar .widget_text:nth-of-type(odd) ul, .widget-sidebar .widget_black_studio_tinymce:nth-of-type(odd) ul, .widget-sidebar .widget_recent_entries:nth-of-type(odd) ul {
     margin-left: 1rem; }
 
+.widget-sidebar .widget_search {
+  background: #E5E2E0;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .widget-sidebar .widget_search .button {
+    font-family: "gentona-light", "Helvetica Neue", Roboto, sans-serif;
+    font-weight: 300; }
+
 .timely.ai1ec-agenda-widget-view.ai1ec-clearfix {
   margin-bottom: 1rem; }
 

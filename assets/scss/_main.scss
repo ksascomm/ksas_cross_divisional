@@ -1503,6 +1503,15 @@ SIDEBARS & ASIDES
 			}
 		}
 	}
+	.widget_search {
+		background: $grey;
+		padding-left: 15px;
+		padding-right: 15px;
+		.button {
+			font-family: $font-stack;
+    		font-weight: $font-stack-weight;
+		}
+	}
 }
 .timely.ai1ec-agenda-widget-view.ai1ec-clearfix {
     margin-bottom: 1rem;
