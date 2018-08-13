@@ -8300,7 +8300,7 @@ li.person h4 {
   .directory-search .button.is-checked {
     background-color: transparent;
     border: 1px solid #005eb8 !important;
-    color: #005eb8; }
+    color: #005eb8 !important; }
 
 .directory-search .expertise-group .button {
   background: #418fde;
@@ -8309,7 +8309,7 @@ li.person h4 {
   .directory-search .expertise-group .button.is-checked {
     background-color: transparent;
     border: 1px solid #418fde !important;
-    color: #418fde; }
+    color: #418fde !important; }
 
 .directory-search .search-sort {
   margin: .5rem 0; }

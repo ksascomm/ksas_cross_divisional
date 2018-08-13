@@ -1891,7 +1891,7 @@ li.person {
     &.is-checked {
       background-color: transparent;
       border: 1px solid $primary-color !important;
-      color: $primary-color;
+      color: $primary-color !important;
     }
   }
   .expertise-group {
@@ -1902,7 +1902,7 @@ li.person {
       &.is-checked {
         background-color: transparent;
         border: 1px solid #418fde !important;
-        color: #418fde;
+        color: #418fde !important;
       }
     }
   }
