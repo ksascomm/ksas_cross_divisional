@@ -11,7 +11,7 @@ Template Name: People Directory
 	$theme_option = flagship_sub_get_global_options();
 	$research_label = $theme_option['flagship_sub_research_label'];
 	$roles = get_terms('role', array(
-						'orderby' 		=> 'ID',
+						'orderby' 		=> 'slug',
 						'order'			=> 'ASC',
 						'hide_empty'    => true,
 						));
