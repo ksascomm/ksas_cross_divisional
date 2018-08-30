@@ -1389,7 +1389,7 @@ SIDEBARS & ASIDES
 
 .widget {
 	ul {
-		margin: 0;
+		//margin: 0;
 
 		li {
 
@@ -1412,6 +1412,9 @@ SIDEBARS & ASIDES
 			padding-left: 15px;
 			padding-right: 15px;
 			font-size: 1rem;
+			ul {
+				margin-bottom: 1rem;
+			}
 		}
 		//blue background
 		&:nth-of-type(even) {
