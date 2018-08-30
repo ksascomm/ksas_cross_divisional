@@ -7110,13 +7110,6 @@ a, a:visited {
   font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
   font-weight: 600; }
 
-.textwidget p a, .textwidget ul a {
-  border-bottom: .125em dotted;
-  border-bottom-color: rgba(0, 0, 0, 0.2); }
-  .textwidget p a:hover, .textwidget p a:active, .textwidget ul a:hover, .textwidget ul a:active {
-    color: #2C2C33;
-    border-bottom-style: solid; }
-
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -7934,12 +7927,10 @@ SIDEBARS & ASIDES
 .widget ul {
   margin: 0; }
 
-.widget p {
-  font-size: 1rem; }
-
 .widget-sidebar .widget_text .textwidget, .widget-sidebar .widget_black_studio_tinymce .textwidget, .widget-sidebar .widget_recent_entries .textwidget {
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  font-size: 1rem; }
 
 .widget-sidebar .widget_text:nth-of-type(even), .widget-sidebar .widget_black_studio_tinymce:nth-of-type(even), .widget-sidebar .widget_recent_entries:nth-of-type(even) {
   background: #005eb8 url("../images/whiteInBlue_corner.svg") no-repeat right bottom;

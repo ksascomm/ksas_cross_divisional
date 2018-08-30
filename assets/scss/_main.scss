@@ -184,19 +184,6 @@ a, a:visited {
 	}
 }
 
-
-.textwidget {
-	p a, ul a {
-		border-bottom: .125em dotted;
-		border-bottom-color: rgba(0,0,0,.2);
-		&:hover, &:active {
-		  	color: $black;
-		  	border-bottom-style: solid;
-		}
-	}
-}
-
-
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -1417,9 +1404,6 @@ SIDEBARS & ASIDES
 
 		}
 	}
-	p {
-		font-size: 1rem;
-	}
 }
 
 .widget-sidebar { 
@@ -1427,6 +1411,7 @@ SIDEBARS & ASIDES
 		.textwidget {
 			padding-left: 15px;
 			padding-right: 15px;
+			font-size: 1rem;
 		}
 		//blue background
 		&:nth-of-type(even) {
